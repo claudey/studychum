@@ -21,25 +21,26 @@ body{
 .headline{
 	text-align: center;
 	font-size: 100px;
-	margin-bottom: 20px;
+	margin-bottom: 2px;
 }
 .tagline{
 	text-align: center;
 	font-size: 25px;
-	margin-bottom: 15px;
+	margin-bottom: 300px;
+	padding-top: -15px;
 }
 .sign-up{
 	margin: 0 auto;
-	max-width: 700px;
+	max-width: 885px;
 	text-align: center;
 	background: rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 }
 button{
 	border: 1px solid #DDDDDD;	
-	padding: 3px 4px 1px 6px;
-	margin: 5px 1px 3px 0px;
-	font-size: 40px;
+	padding: 7px 4px 0px 6px;
+	margin: 6px 6px 9px 0px;
+	font-size: 57px;
 	border-radius: 5px;
 	border: none;
 	background: limegreen;
@@ -54,9 +55,9 @@ input{
 	outline: none;
 	font-weight: lighter;
 	padding: 3px 0px 1px 3px;
-	margin: 5px 1px 3px 0px;
-	width: 568px;
-	font-size: 40px;
+	margin: 5px 0px 3px 0px;
+	width: 709px;
+	font-size: 63px;
 	border-radius: 5px;
 	border: none;
 }
