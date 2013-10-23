@@ -2,52 +2,76 @@ html{
 	overflow-y: scroll;
 	padding: 0;
 	margin: 0;
-	border: 0
+	border: 0;
 }
 body{
-	background-image: url("background.webp");
+	background-image: url("students.jpg");
 	background-size: cover;
-	margin: 0 auto
+	margin: 0 auto;
+	font-family: Arial;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
 }
 .main{
-	width:100%;
-	height: 100%
+	width:80%;
+	margin: 0 auto
 }
 .headline{
-	text-align: center 
+	text-align: center;
+	font-size: 100px;
+	margin-bottom: 20px;
 }
 .tagline{
-	text-align: center
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 15px;
 }
 .sign-up{
-	text-align: center
-}
-input{
-	padding: 5px;
-	font-size: 30px;
+	margin: 0 auto;
+	max-width: 700px;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
-	border: none
 }
 button{
-	outline: none;
-	padding: 3px 0px 3px 3px;
-	margin: 5px 1px 3px 0px;
 	border: 1px solid #DDDDDD;	
+	padding: 3px 4px 1px 6px;
+	margin: 5px 1px 3px 0px;
+	font-size: 40px;
+	border-radius: 5px;
+	border: none;
+	background: limegreen;
+	color: white;
+	cursor: pointer
 }
-input[type=text], textarea {
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-  outline: none;
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid #DDDDDD;
+input{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	font-weight: lighter;
+	padding: 3px 0px 1px 3px;
+	margin: 5px 1px 3px 0px;
+	width: 568px;
+	font-size: 40px;
+	border-radius: 5px;
+	border: none;
 }
  
-/*input[type=text]:focus, textarea:focus {
-  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-  padding: 3px 0px 3px 3px;
-  margin: 5px 1px 3px 0px;
-  border: 1px solid rgba(81, 203, 238, 1);
-}*/
+input:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(81, 203, 238, 1);
+	-webkit-transform: height 0.5;
+	   -moz-transform: height 0.5;
+	    -ms-transform: height 0.5;
+	     -o-transform: height 0.5;
+	        transform: height 0.5;
+}
+.success{
+	color: yellow;
+}
