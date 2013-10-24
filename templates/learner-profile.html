@@ -7,30 +7,73 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="profile.css">
 		<link rel="stylesheet" href='http://fonts.googleapis.om/css?family=Source+Sans+Pro'>
-		<link rel="stylesheet" href="../bootstrap-3.0.0/css/bootstrap.css">
-		<link rel="stylesheet" href="../assets/css/theme.css">
+		<!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"> -->
 		<link rel="stylesheet" href="../assets/css/profile.css">
+		<link rel="stylesheet" href="../assets/css/theme.css">
 </head>
 <body>
-	<div class="nav-bar">
-		<div class="leftList">
-			<ul>
-				<li>Home</li>
-				<li>Chums</li>
-				<li>Tutors</li>
-			</ul>
-		</div>
-		<div class="rightList pull-right">
-			<ul>
-				<li>User Name</li>
-			</ul>
-		</div>
-	</div>
+	<nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <a class="navbar-brand" href="#">StudyChum</a>
+	  </div>
+
+	  <!-- Collect the nav links, forms, and other content for toggling -->
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+	    <!-- <ul class="nav navbar-nav">
+	      <li class="active"><a href="#">Link</a></li>
+	      <li><a href="#">Link</a></li>
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">Action</a></li>
+	          <li><a href="#">Another action</a></li>
+	          <li><a href="#">Something else here</a></li>
+	          <li><a href="#">Separated link</a></li>
+	          <li><a href="#">One more separated link</a></li>
+	        </ul>
+	      </li>
+	    </ul>
+	    <form class="navbar-form navbar-left" role="search">
+	      <div class="form-group">
+	        <input type="text" class="form-control" placeholder="Search">
+	      </div>
+	      <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+	    </form> -->
+	    <ul class="nav navbar-nav navbar-right">
+	      <li ><a href="#"><img src="../assets/img/claude.jpg" alt="" class="profile-pic"></a></li>
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">C. Ayitey<b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">Profile</a></li>
+	          <li><a href="#">Settings</a></li>
+	          <li role="presentation" class="divider"></li>
+	          <li><a href="#">Log out</a></li>
+	        </ul>
+	      </li>
+	    </ul>
+	  </div><!-- /.navbar-collapse -->
+	</nav>
 	<div class="main-body">
-		<div class="side-nav">
-			
+		<div class="side-nav well-lg col-sm-2">
+			<ul class="list-group">
+			  <li class="list-group-item"><a href="">Chums</a></li>
+			  <li class="list-group-item"><a href="">Tutors</a></li>
+			  <li class="list-group-item"><a href="">Calendar</a></li>
+			  <li class="list-group-item"><a href="">Settings</a></li>
+			</ul>
 		</div>
 		<div class="body-content"></div>
 	</div>
+
+
+	 <script src="../assets/js/jquery-2.0.3.min.js"></script>
+	 <script src="../bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
