@@ -23,11 +23,11 @@ body{
 	text-align: center;
 	font-size: 100px;
 	margin-bottom: 2px;
-	/*color: #8A0868;*/
-	color: #04B404;
+	color: #8A0868;
 }
 .tagline{
-	font-family: 'Source Sans Pro', sans-serif;
+	/*font-family: 'Source Sans Pro', sans-serif;*/
+	font-family: 'Fondamento', sans-serif;
 	text-align: center;
 	font-size: 25px;
 	margin-bottom: 300px;
@@ -35,7 +35,7 @@ body{
 }
 .sign-up{
 	margin: 0 auto;
-	max-width: 440px;
+	max-width: 730px;
 	text-align: center;
 	background: rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
@@ -61,7 +61,7 @@ input{
 	font-weight: lighter;
 	padding: 3px 0px 1px 3px;
 	margin: 5px 0px 3px 0px;
-	width: 400px;
+	width: 709px;
 	font-size: 63px;
 	border-radius: 5px;
 	border: none;
@@ -95,8 +95,7 @@ input{
 	padding: 5px;
 	font-size: 30px;
 	border-radius: 0;
-	border: none;
-	text-align: center;
+	border: none
 }
 button{
 	outline: none;
@@ -105,10 +104,10 @@ button{
 	/*border: 1px solid #DDDDDD;*/
 	border: none;
 	width: 200px;
-	height: 45px;	
+	height: 35px;	
 	background-color: #04B404;
 	color: #fff;
-	font-size: 25px;
+	font-size: 15px;
 	font-weight: bolder;
 }
 input[type=text], textarea {
