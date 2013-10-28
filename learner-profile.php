@@ -62,7 +62,7 @@
 	    <ul class="nav navbar-nav navbar-right">
 	      <li ><a href="#"><img src="../assets/img/claude.jpg" alt="" class="profile-pic"></a></li>
 	      <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">C. Ayitey<b class="caret"></b></a>
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
 	        <ul class="dropdown-menu">
 	          <li><a href="#">Profile</a></li>
 	          <li><a href="#">Settings</a></li>
