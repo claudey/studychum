@@ -1,10 +1,16 @@
 .input-group:first-child{
 	margin-top: 20px
 }
+.form-action{
+	margin-top: 20px
+}
 .input-group{
 	margin-bottom: 10px;
 	margin-top: 10px
 }
 .space{
-	height: 120px;
+	height: 120px
+}
+.google{
+	width: 100%
 }
