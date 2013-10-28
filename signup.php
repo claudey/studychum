@@ -48,7 +48,7 @@
 													<p>Sign in with LinkedIn</p>
 												</div>
 												<div class="col-lg-6">
-													<p>Sign in with Google</p>
+													<a href="/learner">Sign in with Google</a>
 												</div>
 											</div>
 										</div>

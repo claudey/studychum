@@ -1,3 +1,18 @@
+<?php
+	require_once 'google/appengine/api/users/UserService.php';
+
+	use google\appengine\api\users\User;
+    use google\appengine\api\users\UserService;
+
+    $user = UserService::getCurrentUser();
+
+    if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+?>
+
 <html>
 <head>
 	<title>StudyChum - Your Profile</title>
@@ -52,7 +67,7 @@
 	          <li><a href="#">Profile</a></li>
 	          <li><a href="#">Settings</a></li>
 	          <li role="presentation" class="divider"></li>
-	          <li><a href="#">Log out</a></li>
+	          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 	        </ul>
 	      </li>
 	    </ul>
