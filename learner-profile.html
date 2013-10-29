@@ -55,11 +55,13 @@
 						<li><a href="#">New Language chums</a></li>
 					</ul>
 				</li>
+				<li><a href="#">Resources</a></li>
 			</ul>
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li ><a href="#"><img src="../assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+				<li><a href="#">Notifications <span class="badge">42</span></a></li>
+				<li><a href="#"><img src="../assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -76,10 +78,11 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="list-group">
-			  <li class="list-group-item"><a href="">Chums</a></li>
-			  <li class="list-group-item"><a href="">Tutors</a></li>
-			  <li class="list-group-item"><a href="">Calendar</a></li>
-			  <li class="list-group-item"><a href="">Settings</a></li>
+				<li class="list-group-item"><a href="#">Activity</a></li>
+				<li class="list-group-item"><a href="#">Chums</a></li>
+				<li class="list-group-item"><a href="#">Tutors</a></li>
+				<li class="list-group-item"><a href="#">Calendar</a></li>
+				<li class="list-group-item"><a href="#">Settings</a></li>
 			</ul>
 		</div>
 		<div class="col-sm-10">
@@ -101,7 +104,12 @@
 								<p>Username<p>
 								<input type="text" class="form-control" placeholder="Username">
 							</div>
-	
+
+							<div class="form-group">
+								<p>Email Address<p>
+								<input type="email" class="form-control" placeholder="Email address">
+							</div>
+								
 							<div class="form-group">
 								<p>Date of birth<p>
 								<input type="date" class="form-control">
@@ -120,11 +128,11 @@
 							</div>
 							<div class="form-group">
 								<p>Subject Interests<p>
-								<textarea class="form-control" placeholder="Enter learning interestes, separated by spaces"></textarea>
+								<textarea class="form-control" rows="3" placeholder="Enter learning interestes, separated by spaces"></textarea>
 							</div>
 							<div class="form-group">
 								<p>Current Courses<p>
-								<textarea class="form-control" placeholder="Your current courses, separated by spaces"></textarea>
+								<textarea class="form-control" rows="3" placeholder="Your current courses, separated by spaces"></textarea>
 							</div>
 							<br>
 							<div class="other">
