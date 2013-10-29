@@ -28,7 +28,7 @@
 
         <div class="container">
             <div class="row signup">
-                <p><a class="btn btn-lg btn-success" href="/signup">Sign Up Now!</a></p>
+                <p><a class="btn btn-lg btn-success" href="/learner">Log in with Gmail</a></p>
             </div>
         </div>
 
