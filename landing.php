@@ -12,6 +12,7 @@
         <title>StudyChum, find people with similar learning interests</title>
         <link rel="stylesheet" href="assets/css/chum.css">
         <link rel="stylesheet" href="assets/css/landing.css">
+        <link rel="shortcut icon" href="assets/img/favicon.png">
     </head>
     <body>
         <div class="main">
