@@ -62,7 +62,7 @@
 	      <button type="submit" class="btn btn-default">Submit</button>
 	    </form>  -->
 	    <ul class="nav navbar-nav navbar-right">
-	      <li ><a href="#"><img src="../assets/img/claude.jpg" alt="" class="profile-pic"></a></li>
+	      <li ><a href="#"><img src="../assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 	      <li class="dropdown">
 	        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
 	        <ul class="dropdown-menu">
