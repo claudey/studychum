@@ -21,8 +21,10 @@
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
-		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/theme.css">
+		<link rel="stylesheet" href="assets/css/chum.css">
+		<link rel="stylesheet" href="assets/css/profile.css">
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
@@ -82,7 +84,53 @@
 			  <li class="list-group-item"><a href="">Settings</a></li>
 			</ul>
 		</div>
-		<div class="body-content"></div>
+		<div class="body-content container">
+			<div class="row">
+				<h3>Complete your profile</h3>
+				<form class="form-horizontal" action="" method="POST">
+					<fieldset>
+						<div class="input-group">
+							<p>Full Name<p>
+							<input type="text" class="form-control" placeholder="Full Name">
+						</div>
+	
+						<div class="input-group">
+							<p>Username<p>
+							<input type="text" class="form-control" placeholder="Username">
+						</div>
+
+						<div class="input-group">
+							<p>Date of birth<p>
+							<input type="date" class="form-control">
+						</div>
+	
+						<div class="input-group">
+							<p>Education level</p>
+							<select class="form-control">
+								<option>Other</option>
+								<option>High School</option>
+								<option>High School Graduate</option>
+								<option>Some College</option>
+								<option>College</option>
+								<option>College Graduate</option>
+							</select>
+						</div>
+						<div class="input-group">
+							<p>Subject Interests<p>
+							<textarea class="form-control" placeholder="Enter learning interestes, separated by spaces"></textarea>
+						</div>
+						<div class="input-group">
+							<p>Current Courses<p>
+							<textarea class="form-control" placeholder="Your current courses, separated by spaces"></textarea>
+						</div>
+						<br>
+						<div class="other">
+							<p class="form-action"><a class="btn btn-lg btn-success" href="#">Save</a></p>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
 	</div>
 
 	 <script src="assets/js/jquery-2.0.3.min.js"></script>
