@@ -4,9 +4,13 @@
 }
 
 .profile-pic{
-	width: 35px;
-	height: 35px;}
-
-.side-nav {
-	width: 
+	width: 20px;
+	height: 20px
+}
+.profile{
+	width: 250px;
+	padding-bottom: 20px
+}
+.profile-heading{
+	padding-bottom: 20px
 }

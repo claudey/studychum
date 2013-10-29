@@ -3,6 +3,7 @@ html{
 	padding: 0;
 	margin: 0;
 	border: 0;
+	max-width: initial;
 }
 body{
 	margin: 0 auto;
@@ -10,4 +11,7 @@ body{
 	background-image: url('../img/sos.png');
 	background-repeat: repeat;
 	font-size: 16px
+}
+.navbar-default{
+	border-radius: 0
 }
