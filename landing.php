@@ -1,3 +1,7 @@
+<?php
+    include 'user.php';
+?>
+
 <!doctype html>
 <html>
     <head>
