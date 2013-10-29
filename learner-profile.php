@@ -1,3 +1,18 @@
+<?php
+	require_once 'google/appengine/api/users/UserService.php';
+
+	use google\appengine\api\users\User;
+    use google\appengine\api\users\UserService;
+
+    $user = UserService::getCurrentUser();
+
+    if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+?>
+
 <html>
 <head>
 	<title>StudyChum - Your Profile</title>
@@ -47,12 +62,12 @@
 	    <ul class="nav navbar-nav navbar-right">
 	      <li ><a href="#"><img src="../assets/img/claude.jpg" alt="" class="profile-pic"></a></li>
 	      <li class="dropdown">
-	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">C. Ayitey<b class="caret"></b></a>
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
 	        <ul class="dropdown-menu">
 	          <li><a href="#">Profile</a></li>
 	          <li><a href="#">Settings</a></li>
 	          <li role="presentation" class="divider"></li>
-	          <li><a href="#">Log out</a></li>
+	          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 	        </ul>
 	      </li>
 	    </ul>

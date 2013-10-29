@@ -1,0 +1,23 @@
+application: studychumapp
+version: 1
+runtime: php
+api_version: 1
+
+handlers:
+- url: /assets
+  static_dir: assets
+
+- url: /
+  script: index.php
+
+- url: /landingpage
+  script: landing.php
+
+- url: /learner
+  script: learner-profile.php
+
+- url: /signup
+  script: signup.php
+
+- url: /logout
+  script: logout.php

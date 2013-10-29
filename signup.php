@@ -48,7 +48,7 @@
 													<a href="#">Sign in with LinkedIn</a>
 												</div>
 												<div class="col-lg-6">
-													<a href="#"><img src="assets/img/signingoogle.webp" class="google" alt="Sign In With Google"></a>
+													<a href="/learner"><img src="assets/img/signingoogle.webp" class="google" alt="Sign In With Google"></a>
 												</div>
 											</div>
 										</div>
