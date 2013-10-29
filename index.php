@@ -28,7 +28,7 @@
 
         <div class="container">
             <div class="row signup">
-                <p><a class="btn btn-lg btn-success" href="/learner">Log in with Gmail</a></p>
+                <div class="col-md-2"><a href="/learner"><img src="assets/img/signingoogle.webp" class="google" alt="Sign In With Google"></a></div>
             </div>
         </div>
 
