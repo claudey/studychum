@@ -59,16 +59,6 @@ if (mysql_query($sql)){
 	echo "Current_Courses table not created" . mysql_error($con);
 }
 
-// Insert data into users table
-$sql="INSERT INTO Users (FirstName, LastName) VALUES(Osborn, Adu)";
-
-// Execute query
-
-if (mysql_query($sql)){
-	echo "New user inserted successfully";
-} else {
-	echo "New User not inserted" . mysql_error($con);
-}
 
 //closing database
 mysql_close($con);

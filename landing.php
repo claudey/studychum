@@ -1,13 +1,21 @@
 <?php
+/*
     include 'models/database.php';
     include 'classes/crud.php';
-/*
+
     $db = new Database();
     $db->connect();
+
+    $new_user = array('FirstName' => 'Osborn', 'LastName' => 'Adu');
+
+    $db->insert('Users', $new_user);
+
     $db->select('Users');
     $res = $db->getResult();
     print_r($res);
+
     */
+    
 ?>
 
 <!doctype html>
