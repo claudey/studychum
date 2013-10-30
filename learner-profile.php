@@ -102,7 +102,7 @@
 					<input type="file">
 				</div>
 				<div class="col-md-5">
-					<form class="form-horizontal" action="" method="POST">
+					<form class="form-horizontal" action="learner-profile.php" method="POST">
 						<fieldset>
 							<div class="form-group">
 								<p>Full Name<p>
