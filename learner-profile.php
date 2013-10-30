@@ -104,27 +104,32 @@
 				<div class="col-md-5">
 					<form class="form-horizontal" action="" method="POST">
 						<fieldset>
-							<div class="form-group">
-								<p>Full Name<p>
-								<input type="text" class="form-control" placeholder="Full Name">
+							<div class="row">
+								<div class="form-group col-md-6 fname">
+									<p>First Name<p>
+									<input type="text" class="form-control fname" placeholder="First Name" required>
+								</div>
+								<div class="form-group col-md-6">
+									<p>Last Name<p>
+									<input type="text" class="form-control" placeholder="First Name" required>
+								</div>
 							</div>
-		
 							<div class="form-group">
 								<p>Username<p>
-								<input type="text" class="form-control" placeholder="Username">
+								<input type="text" class="form-control" placeholder="Username" required>
 							</div>
 
 							<div class="form-group">
 								<p>Email Address<p>
-								<input type="email" class="form-control" placeholder="Email address">
+								<input type="email" class="form-control" placeholder="Email address" required>
 							</div>
 								
 							<div class="form-group">
 								<p>Date of birth<p>
-								<input type="date" class="form-control">
+								<input type="date" class="form-control" required>
 							</div>
 		
-							<div class="form-group">
+							<div class="form-group" required>
 								<p>Education level</p>
 								<select class="form-control">
 									<option>Other</option>
@@ -135,7 +140,7 @@
 									<option>College Graduate</option>
 								</select>
 							</div>
-							<div class="form-group">
+							<div class="form-group" required>
 								<p>Subject Interests<p>
 								<textarea class="form-control" rows="3" placeholder="Enter learning interestes, separated by spaces"></textarea>
 							</div>
@@ -144,7 +149,7 @@
 								<textarea class="form-control" rows="3" placeholder="Your current courses, separated by spaces"></textarea>
 							</div>
 							<br>
-							<div class="other">
+							<div class="form-group">
 								<p class="form-action"><a class="btn btn-lg btn-success" href="#">Save</a></p>
 							</div>
 						</fieldset>
