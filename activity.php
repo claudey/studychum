@@ -28,7 +28,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -94,7 +94,7 @@
 				<li class="list-group-item"><a href="#">Settings</a></li>
 			</ul>
 		</div>
-		<div class="col-sm-10">
+		<div class="col-sm-9 col-sm-offset-1">
 			<div class="row">
 				<h3 class="profile-heading">Activity Stream</h3>
 				<div class="col-md-7">
