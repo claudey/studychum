@@ -15,7 +15,7 @@
 
 <html>
 <head>
-	<title>StudyChum - Your Profile</title>
+	<title>StudyChum - Your Activity</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/chum.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/activity.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 </head>
 <body>
@@ -70,7 +70,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="../assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -87,7 +87,7 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="list-group">
-				<li class="list-group-item"><a href="#">Activity</a></li>
+				<li class="list-group-item active"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="#">Chums</a></li>
 				<li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
@@ -96,59 +96,63 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Complete your profile</h3>
-				<div class="col-md-3">
-					<img src="assets/img/profile.webp" alt="User profile image" class="profile">
-					<input type="file">
-				</div>
-				<div class="col-md-5">
-					<form class="form-horizontal" action="" method="POST">
-						<fieldset>
-							<div class="form-group">
-								<p>Full Name<p>
-								<input type="text" class="form-control" placeholder="Full Name">
-							</div>
-		
-							<div class="form-group">
-								<p>Username<p>
-								<input type="text" class="form-control" placeholder="Username">
-							</div>
-
-							<div class="form-group">
-								<p>Email Address<p>
-								<input type="email" class="form-control" placeholder="Email address">
-							</div>
-								
-							<div class="form-group">
-								<p>Date of birth<p>
-								<input type="date" class="form-control">
-							</div>
-		
-							<div class="form-group">
-								<p>Education level</p>
-								<select class="form-control">
-									<option>Other</option>
-									<option>High School</option>
-									<option>High School Graduate</option>
-									<option>Some College</option>
-									<option>College</option>
-									<option>College Graduate</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<p>Subject Interests<p>
-								<textarea class="form-control" rows="3" placeholder="Enter learning interestes, separated by spaces"></textarea>
-							</div>
-							<div class="form-group">
-								<p>Current Courses<p>
-								<textarea class="form-control" rows="3" placeholder="Your current courses, separated by spaces"></textarea>
-							</div>
-							<br>
-							<div class="other">
-								<p class="form-action"><a class="btn btn-lg btn-success" href="#">Save</a></p>
-							</div>
-						</fieldset>
-					</form>
+				<h3 class="profile-heading">Activity Stream</h3>
+				<div class="col-md-7">
+					<div class="media row">
+						<div class="col-md-2">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="assets/img/favicon.png" alt="...">
+							</a>
+						</div>
+						<div class="col-md-10 media-body">
+							<h4 class="media-heading">This is the title of the activity you performed</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nihil, assumenda, quo incidunt ab minus accusamus animi tempore cum iste magnam odit eligendi? Facilis labore perferendis asperiores nam fuga amet.
+						</div>
+					</div>
+					<div class="media row">
+						<div class="col-md-2">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="assets/img/favicon.png" alt="...">
+							</a>
+						</div>
+						<div class="col-md-10 media-body">
+							<h4 class="media-heading">This is the title of the activity you performed</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo non fugiat quidem tempore laboriosam nisi totam voluptatibus laudantium consequuntur fuga. Saepe, pariatur, non voluptatum quia quaerat ipsa et consequatur quasi.
+						</div>
+					</div>
+					<div class="media row">
+						<div class="col-md-2">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="assets/img/favicon.png" alt="...">
+							</a>
+						</div>
+						<div class="col-md-10 media-body">
+							<h4 class="media-heading">This is the title of the activity you performed</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, fugit, veniam impedit repellat quis quisquam tempora quae commodi eaque ratione dolorum ipsa consectetur assumenda nulla alias! Enim minus laudantium voluptas.
+						</div>
+					</div>
+					<div class="media row">
+						<div class="col-md-2">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="assets/img/favicon.png" alt="...">
+							</a>
+						</div>
+						<div class="col-md-10 media-body">
+							<h4 class="media-heading">This is the title of the activity you performed</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, esse, officiis, quasi, vero minima dignissimos pariatur placeat mollitia omnis ipsam minus beatae impedit possimus aperiam tempore nam non quisquam illo!
+						</div>
+					</div>
+					<div class="media row">
+						<div class="col-md-2">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="assets/img/favicon.png" alt="...">
+							</a>
+						</div>
+						<div class="col-md-10 media-body">
+							<h4 class="media-heading">This is the title of the activity you performed</h4>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, laborum velit magnam ex ad architecto expedita omnis aut incidunt illo repellat ipsam ullam explicabo ut impedit aperiam consequatur culpa commodi.
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
