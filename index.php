@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="assets/css/bs.css">
         <link rel="stylesheet" href="assets/css/chum.css">
         <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="shortcut icon" href="assets/img/favicon.png">
     </head>
     <body>
         <div class="container">

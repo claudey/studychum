@@ -15,3 +15,11 @@ body{
 .navbar-default{
 	border-radius: 0
 }
+.profile-pic{
+	width: 20px;
+	height: 20px
+}
+.list-group-item:hover{
+	background: #000;
+	cursor: pointer
+}
