@@ -19,7 +19,6 @@
                 <div class="col-md-6 headline">StudyChum</div>
                 <div class="col-md-6">
                     <div class="tagline">Connect with other students. Share content. Improve your learning experience</div> 
-                    <a href="/learner"><img src="assets/img/signin.webp" class="google-nav pull-right" alt="Sign In With Google"></a>
                 </div>
             </div>
         </div>
@@ -30,11 +29,7 @@
         </div>
 
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <a href="/learner"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
-                </div>
-            </div>
+            
             <div class="row features">
                 <div class="col-md-4 col-md-offset-4">
                     <a href="/create"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
