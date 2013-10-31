@@ -1,20 +1,6 @@
 <?php
-/*
     include 'models/database.php';
     include 'classes/crud.php';
-
-    $db = new Database();
-    $db->connect();
-
-    $new_user = array('FirstName' => 'Osborn', 'LastName' => 'Adu');
-
-    $db->insert('Users', $new_user);
-
-    $db->select('Users');
-    $res = $db->getResult();
-    print_r($res);
-
-    */
     
 ?>
 
@@ -33,7 +19,7 @@
     <body>
         <div class="main">
         	<div class="headline">StudyChum</div>
-        	<div class="tagline">Enhance your learning experience. Find students of like interests and study together. <!-- <br> --><!-- or  a tutor for one-on-one tutoring. --></div>
+        	<div class="tagline">Enhance your learning experience. Find students of like interests and study together.</div>
         	<div class="sign-up">
         		<input type="email" placeholder="Drop your email address." autofocus><br>
 				<button>I'm in!</button>

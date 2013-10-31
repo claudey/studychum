@@ -36,6 +36,11 @@
                 </div>
             </div>
             <div class="row features">
+                <div class="col-md-4 col-md-offset-4">
+                    <a href="/create"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quas ipsa similique perferendis deserunt doloremque quaerat vitae magnam nisi ipsum!</div>
                 <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, accusantium error odio aut ipsa enim.</div>
                 <div class="col-md-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, corporis, ex velit reiciendis id sed omnis soluta voluptatem non molestiae!</div>

@@ -23,13 +23,18 @@ if (mysql_query($sql)) {
 $sql = "USE studychum_db";
 mysql_query($sql);
 
-// creating Users table
-$sql="CREATE TABLE IF NOT EXISTS Users (User_Id INT(3) NOT NULL PRIMARY KEY, FirstName CHAR(30), LastName CHAR(30), DOB DATE, EducationLevel CHAR(50), EmailAddress CHAR(30))";
+// creating Users table 
+$sql = "DROP TABLE Users";
+if (mysql_query($sql)) {
+	echo "users dropped";
+} else {"users not dropped";}
+
+$sql="CREATE TABLE IF NOT EXISTS Chums (User_Id INT(3) NOT NULL AUTO_INCREMENT, FirstName CHAR(30), LastName CHAR(30), DOB DATE, EducationLevel CHAR(100), EmailAddress CHAR(50), PRIMARY KEY (User_Id))";
 
 // Execute query
 
 if (mysql_query($sql)){
-	echo "Table Users created successfully";
+	echo "Table Users created successfully AGAIN";
 } else {
 	echo "Users table not created" . mysql_error($con);
 }
