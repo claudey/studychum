@@ -12,6 +12,9 @@ body{
 	background-repeat: repeat;
 	font-size: 16px
 }
+.main-body{
+	padding-top: 80px
+}
 .navbar-default{
 	border-radius: 0
 }
