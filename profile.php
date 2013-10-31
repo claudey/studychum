@@ -1,4 +1,6 @@
 <?php
+	//include 'models/database.php';
+	include 'classes/crud.php';
 	require_once 'google/appengine/api/users/UserService.php';
 
 	use google\appengine\api\users\User;
@@ -6,11 +8,8 @@
 
     $user = UserService::getCurrentUser();
 
-    if (!$user){
-    	
-    	header('Location: ' .
-        UserService::createLoginURL($_SERVER['REQUEST_URI']));
-    }
+   
+
 ?>
 
 <html>
@@ -96,65 +95,48 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Complete your profile</h3>
-				<div class="col-md-3">
-					<img src="assets/img/profile.webp" alt="User profile image" class="profile">
-					<input type="file">
-				</div>
-				<div class="col-md-5">
-					<form class="form-horizontal" action="learner-profile.php" method="POST">
-						<fieldset>
-							<div class="row">
-								<div class="form-group col-md-6 fname">
-									<p>First Name<p>
-									<input type="text" class="form-control fname" placeholder="First Name" required>
-								</div>
-								<div class="form-group col-md-6">
-									<p>Last Name<p>
-									<input type="text" class="form-control" placeholder="First Name" required>
-								</div>
-							</div>
-							<div class="form-group">
-								<p>Username<p>
-								<input type="text" class="form-control" placeholder="Username" required>
-							</div>
+				<h3 class="profile-heading">Your profile</h3>
+				<?php
 
-							<div class="form-group">
-								<p>Email Address<p>
-								<input type="email" class="form-control" placeholder="Email address" required>
-							</div>
-								
-							<div class="form-group">
-								<p>Date of birth<p>
-								<input type="date" class="form-control" required>
-							</div>
-		
-							<div class="form-group" required>
-								<p>Education level</p>
-								<select class="form-control">
-									<option>Other</option>
-									<option>High School</option>
-									<option>High School Graduate</option>
-									<option>Some College</option>
-									<option>College</option>
-									<option>College Graduate</option>
-								</select>
-							</div>
-							<div class="form-group" required>
-								<p>Subject Interests<p>
-								<textarea class="form-control" rows="3" placeholder="Enter learning interestes, separated by spaces"></textarea>
-							</div>
-							<div class="form-group">
-								<p>Current Courses<p>
-								<textarea class="form-control" rows="3" placeholder="Your current courses, separated by spaces"></textarea>
-							</div>
-							<br>
-							<div class="form-group">
-								<p class="form-action"><a class="btn btn-lg btn-success" href="#">Save</a></p>
-							</div>
-						</fieldset>
-					</form>
-				</div>
+					//include 'classes/crud.php';
+
+					function test_input($data)
+					{
+					   $data = trim($data);
+					   $data = stripslashes($data);
+					   $data = htmlspecialchars($data);
+					   return $data;
+					}
+
+					// getting users profile details from form
+					$fname = test_input($_POST["fname"]);
+					$lname = test_input($_POST["lname"]);
+					$dob = test_input($_POST["dob"]);
+					$education = test_input($_POST["education"]);
+					$courses = test_input($_POST["courses"]);
+					$interests = test_input($_POST["interests"]);
+
+
+				    $email = $user->getNickname();
+
+					$db = new Database();
+				    $db->connect();
+
+				    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email);
+
+				    $db->insert('Chums', $new_user);
+
+				    $db->select('Chums', 'EmailAddress="' . $email . '"');
+				    $res = $db->getResult();
+
+				    echo "<h3>Name: " . $fname . " " . $lname . "</h3><br>";
+				    echo "<h3>Education: " . $education . "</h3><br>";
+					echo "<h3>Courses: " . $courses . "</h3><br>";
+					echo "<h3>Interests: " . $education . "</h3><br>";				    
+
+				    //print_r($res);
+				?>
+				
 			</div>
 		</div>
 	</div>

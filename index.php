@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-md-offset-4">
-                <a href="/learner"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a></div>
+                <a href="/create"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a></div>
             </div>
         </div>
 

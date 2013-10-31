@@ -13,11 +13,17 @@ handlers:
 - url: /landingpage
   script: landing.php
 
-- url: /learner
-  script: learner-profile.php
+- url: /create
+  script: create.php
 
 - url: /signup
   script: signup.php
 
-- url: /logout
-  script: logout.php
+- url: /profile
+  script: profile.php
+
+- url: /database
+  script: models/database.php
+
+- url: /learner
+  script: learner.php
