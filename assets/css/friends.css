@@ -1,0 +1,29 @@
+.nav-bar ul>li {
+	text-decoration: none;
+	display: inline;
+}
+.profile{
+	width: 210px;
+	padding-bottom: 20px
+}
+.profile-heading{
+	padding-bottom: 20px
+}
+.list-group-item.active{
+	font-color: white
+}
+.media{
+	border-bottom: 1px dashed gray;
+	padding-bottom: 10px;
+}
+.media:last-child{
+	border: none
+}
+img.media-object{
+	border-radius: 50%;
+	width: 100%;
+	height: auto
+}
+.chum-list{
+	border-bottom: 1px dashed grey;
+}

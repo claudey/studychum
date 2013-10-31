@@ -15,7 +15,7 @@
 
 <html>
 <head>
-	<title>StudyChum - Your Activity</title>
+	<title>StudyChum - Your Profile</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/activity.css">
+		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 </head>
 <body>
@@ -62,7 +62,7 @@
 						<div class="form-group">
 							<input type="text" class="form-control search-bar" placeholder="Search">
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" class="btn btn-default">Search</button>
 					</form>
     			</li>
 			</ul>
@@ -87,72 +87,73 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="list-group">
-				<li class="list-group-item active"><a href="#">Activity</a></li>
+				<li class="list-group-item"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="#">Chums</a></li>
 				<li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li>
 			</ul>
 		</div>
-		<div class="col-sm-9 col-sm-offset-1">
+		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Activity Stream</h3>
-				<div class="col-md-7">
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nihil, assumenda, quo incidunt ab minus accusamus animi tempore cum iste magnam odit eligendi? Facilis labore perferendis asperiores nam fuga amet.
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo non fugiat quidem tempore laboriosam nisi totam voluptatibus laudantium consequuntur fuga. Saepe, pariatur, non voluptatum quia quaerat ipsa et consequatur quasi.
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, fugit, veniam impedit repellat quis quisquam tempora quae commodi eaque ratione dolorum ipsa consectetur assumenda nulla alias! Enim minus laudantium voluptas.
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, esse, officiis, quasi, vero minima dignissimos pariatur placeat mollitia omnis ipsam minus beatae impedit possimus aperiam tempore nam non quisquam illo!
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, laborum velit magnam ex ad architecto expedita omnis aut incidunt illo repellat ipsam ullam explicabo ut impedit aperiam consequatur culpa commodi.
-						</div>
-					</div>
+				<h3 class="profile-heading">Complete your profile</h3>
+				<div class="col-md-3">
+					<img src="assets/img/profile.webp" alt="User profile image" class="profile">
+					<input type="file">
+				</div>
+				<div class="col-md-5">
+					<form class="form-horizontal" action="learner-profile.php" method="POST">
+						<fieldset>
+							<div class="row">
+								<div class="form-group col-md-6 fname">
+									<p>First Name<p>
+									<input type="text" class="form-control fname" placeholder="First Name" required>
+								</div>
+								<div class="form-group col-md-6">
+									<p>Last Name<p>
+									<input type="text" class="form-control" placeholder="First Name" required>
+								</div>
+							</div>
+							<div class="form-group">
+								<p>Username<p>
+								<input type="text" class="form-control" placeholder="Username" required>
+							</div>
+
+							<div class="form-group">
+								<p>Email Address<p>
+								<input type="email" class="form-control" placeholder="Email address" required>
+							</div>
+								
+							<div class="form-group">
+								<p>Date of birth<p>
+								<input type="date" class="form-control" required>
+							</div>
+		
+							<div class="form-group" required>
+								<p>Education level</p>
+								<select class="form-control">
+									<option>Other</option>
+									<option>High School</option>
+									<option>High School Graduate</option>
+									<option>Some College</option>
+									<option>College</option>
+									<option>College Graduate</option>
+								</select>
+							</div>
+							<div class="form-group" required>
+								<p>Subject Interests<p>
+								<textarea class="form-control" rows="3" placeholder="Enter learning interestes, separated by spaces"></textarea>
+							</div>
+							<div class="form-group">
+								<p>Current Courses<p>
+								<textarea class="form-control" rows="3" placeholder="Your current courses, separated by spaces"></textarea>
+							</div>
+							<br>
+							<div class="form-group">
+								<p class="form-action"><a class="btn btn-lg btn-success" href="#">Save</a></p>
+							</div>
+						</fieldset>
+					</form>
 				</div>
 			</div>
 		</div>
