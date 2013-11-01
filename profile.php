@@ -126,15 +126,12 @@
 
 				    $db->insert('Chums', $new_user);
 
-				    $db->select('Chums', 'EmailAddress="' . $email . '"');
-				    $res = $db->getResult();
-
 				    echo "<h3>Name: " . $fname . " " . $lname . "</h3><br>";
 				    echo "<h3>Education: " . $education . "</h3><br>";
 					echo "<h3>Courses: " . $courses . "</h3><br>";
 					echo "<h3>Interests: " . $education . "</h3><br>";				    
 
-				    //print_r($res);
+				    
 				?>
 				
 			</div>

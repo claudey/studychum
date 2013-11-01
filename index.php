@@ -17,8 +17,7 @@
         <div class="container">
         	<div class="row header">
                 <div class="headline">StudyChum</div>
-                <div class="">
-                    <div class="tagline">Connect with other students. Share content. Improve your learning experience</div>
+                <div class="tagline">Connect with other students. Share content. Improve your learning experience</div>
                 </div>
             </div>
         </div>
@@ -29,7 +28,7 @@
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row features">
                 <div class="col-md-4 col-md-offset-4">
                     <a href="/create"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
                 </div>
