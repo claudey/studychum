@@ -17,18 +17,18 @@
         <div class="container">
         	<div class="row header">
                 <div class="headline">StudyChum</div>
-                <div class="tagline">Connect with other students. Share content. Improve your learning experience</div>
+                <div class="tagline"><em>The ultimate collaborative learning tool</em></div>
                 </div>
             </div>
         </div>
         <div class="info">
-            <div class="mast">Find chums and tutors</div>
-            <div class="mast">Create a study group</div>
-            <div class="mast">Create content as a tutor</div>
+            <div class="mast">Connect with chums and tutors</div>
+            <div class="mast">Share resources across groups</div>
+            <div class="mast">Enjoy learning together</div>
         </div>
 
         <div class="container">
-            <div class="row features">
+            <div class="row">
                 <div class="col-md-4 col-md-offset-4">
                     <a href="/create"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
                 </div>
@@ -36,7 +36,7 @@
             <div class="row features">
                 <div class="col-md-3">
                 <span class="glyphicon glyphicon-user"></span><br>
-                StudyChum makes it easy for you to find students who have the same intersts as yours. This helps to build a learning community around courses you like.</div>
+                Find students who have the same interests as yours. Begin to build a learning community around courses you like.</div>
                 <div class="col-md-3">
                 <span class="glyphicon glyphicon-cloud-upload"></span><br>
                 Want to share files? It's just quick and easy. Share resources with chums in your study group. Have fun while learning, that's the way to go!</div>
@@ -51,5 +51,6 @@
 
         <script src="assets/js/jquery-2.0.3.min.js"></script>
         <script src="assets/js/chum.js"></script>
+        <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
     </body>
 </html>
