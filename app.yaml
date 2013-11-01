@@ -25,5 +25,5 @@ handlers:
 - url: /database
   script: models/database.php
 
-- url: /learner
-  script: learner.php
+- url: /chums
+  script: chums.php

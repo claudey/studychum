@@ -24,6 +24,8 @@
 		<link rel="stylesheet" href="assets/css/chum.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
+
+		<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
 </head>
 <body>
 
@@ -87,7 +89,7 @@
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="#">Chums</a></li>
+				<li class="list-group-item"><a href="/chums">Chums</a></li>
 				<li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li>

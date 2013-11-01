@@ -6,11 +6,6 @@
 
     $user = UserService::getCurrentUser();
 
-    if (!$user){
-    	
-    	header('Location: ' .
-        UserService::createLoginURL($_SERVER['REQUEST_URI']));
-    }
 ?>
 
 <html>
@@ -25,6 +20,8 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/friends.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
+
+		<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
 </head>
 <body>
 
@@ -37,7 +34,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">StudyChum</a>
+			<a class="navbar-brand" href="/profile">StudyChum</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -97,23 +94,37 @@
 		<div class="col-sm-9">
 			<div class="row">
 				<h3 class="profile-heading">Your chums</h3>
-				<div class="col-md-7">
-					<div class="media row chum-list">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/profile.webp" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading"><em>John Appleseed</em></h4>
-							<p>Mathematics</p>
-							<p>Ukraine</p>
-							<p>Speaks English, Spanish</p>
+				<?php
+					include 'classes/crud.php';
 
-						</div>
-					</div>
-					
-				</div>
+					$db = new Database();
+					$db->connect();
+					$db->select('Chums');
+					$res = $db->getResult();
+
+					foreach ($res as $chum) {
+						echo '<div class="col-md-7">
+								<div class="media row chum-list">
+									<div class="col-md-2">
+										<a class="pull-left" href="#">
+											<img class="media-object" src="assets/img/profile.webp" alt="...">
+										</a>
+									</div>
+									<div class="col-md-10 media-body">
+										<h4 class="media-heading"><em>' . $chum[1] . $chum[2] .'</em></h4>
+										<p>Mathematics</p>
+										<p>Ukraine</p>
+										<p>Speaks English, Spanish</p>
+
+									</div>
+								</div>
+								
+							</div>';
+					}
+
+				?>
+
+				
 			</div>
 		</div>
 	</div>
