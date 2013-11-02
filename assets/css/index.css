@@ -18,12 +18,32 @@
 	color: white;
 	text-align: center
 }
+
+/* Half Page Height Carousel Customization */
+.carousel {
+  height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+  height: 100%;
+}
+
+.fill {
+  width: 1366px;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/theback.png');
+}
+
 .mast{
 	display: inline-block;
 	vertical-align: middle;
-	width: 25%;
+	width: 55%;
 	text-align: center;
-	margin: 70px 30px 70px 30px;
+	margin: 10px 10px 10px 10px;
 	background-color: rgba(0, 0, 0, 0.40);
 	border-radius: 10px;
 	padding-left: 10px;
@@ -53,4 +73,11 @@
 .glyphicon{
 	font-size: 60px;
 	padding-bottom: 30px
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+	.carousel {
+	  height: 70%; /* increases the carousel height so it looks good on phones */
+	}
 }
