@@ -40,7 +40,8 @@ if (mysql_query($sql)){
 }
 
 // create Subject_Interests table
-$sql="CREATE TABLE IF NOT EXISTS Subject_Interests (User_Id INT(3), Subject_Id INT NOT NULL, Subject CHAR(50), PRIMARY KEY (Subject_Id), FOREIGN KEY (User_Id) REFERENCES Users (User_Id))";
+
+$sql="CREATE TABLE IF NOT EXISTS Subject_Interests (User_Id INT(3), Subject_Id INT NOT NULL AUTO_INCREMENT, Subject CHAR(50), PRIMARY KEY (Subject_Id), FOREIGN KEY (User_Id) REFERENCES Users (User_Id))";
 
 // Execute query
 

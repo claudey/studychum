@@ -102,7 +102,11 @@
 					$db->select('Chums');
 					$res = $db->getResult();
 
+					$db->select('Subject_Interests');
+					$interests = $db->getResult();
+
 					foreach ($res as $chum) {
+					
 						echo '<div class="col-md-7">
 								<div class="media row chum-list">
 									<div class="col-md-2">
@@ -111,7 +115,7 @@
 										</a>
 									</div>
 									<div class="col-md-10 media-body">
-										<h4 class="media-heading"><em>' . $chum[1] . $chum[2] .'</em></h4>
+										<h4 class="media-heading"><em>' . $chum['FirstName'] . " " . $chum['LastName'] .'</em></h4>
 										<p>Mathematics</p>
 										<p>Ukraine</p>
 										<p>Speaks English, Spanish</p>

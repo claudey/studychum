@@ -127,6 +127,10 @@
 				    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email);
 
 				    $db->insert('Chums', $new_user);
+				    $db->sql('SELECT LAST_INSERT_ID()');
+				    $id = $db->getResult();
+
+				    $user_interest = array('Subject' => $interests, 'User_Id' => $id['User_Id']);
 
 				    echo "<h3>Name: " . $fname . " " . $lname . "</h3><br>";
 				    echo "<h3>Education: " . $education . "</h3><br>";
