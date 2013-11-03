@@ -58,7 +58,7 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Courses</a></li>
+				<!-- <li class="active"><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
@@ -78,7 +78,7 @@
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-    			</li>
+    			</li> -->
 			</ul>
 
 
