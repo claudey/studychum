@@ -90,9 +90,9 @@
 			<ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="/chums">Chums</a></li>
-				<li class="list-group-item"><a href="#">Tutors</a></li>
+				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li>
+				<li class="list-group-item"><a href="#">Settings</a></li> -->
 			</ul>
 		</div>
 		<div class="col-sm-10">
