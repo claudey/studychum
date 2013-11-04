@@ -1,28 +1,22 @@
 <?php
 	//include 'models/database.php';
 	include 'classes/crud.php';
-	require_once 'google/appengine/api/users/UserService.php';
 
+	// Including Google's User Service
+	require_once 'google/appengine/api/users/UserService.php';
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
+    // new instance of user
     $user = UserService::getCurrentUser();
 
+    //redirecting user to logout page if user has not already signed up
     if (!$user){
     	
     	header('Location: ' .
         UserService::createLoginURL($_SERVER['REQUEST_URI']));
     }
-
-    // Get users email address
-    // run a database query
-    // if user is already in database
-    // redirect to profile
-    // else redirect to profile creation
-    
-
    
-
 ?>
 
 <html>
@@ -161,10 +155,14 @@
 							<div class="form-group" required>
 								<p>Interests</p>
 								<?php
+								// Creating a new instance of the database
 								$db = new Database();
 								$db->connect();
+
 								$db->select('Subject_Interests'); // Table name
 								$res = $db->getResult();
+
+								//displaying interests from the database
 								foreach ($res as $interest) {
 									
 										echo '<input type="checkbox" name="'. $interest["Interest"] .'" value="' . $interest["Interest"] . '"> ' . $interest["Interest"] . '<br>';

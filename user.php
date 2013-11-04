@@ -1,13 +1,16 @@
 <?php
 	//include 'models/database.php';
 	include 'classes/crud.php';
-	require_once 'google/appengine/api/users/UserService.php';
 
+	// Including Google's User Service
+	require_once 'google/appengine/api/users/UserService.php';
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
+    // creating a new instance of Google's user service
     $user = UserService::getCurrentUser();
 
+    // redirecting user to login page if user has not already logged in
     if (!$user){
     	
     	header('Location: ' .
@@ -28,7 +31,9 @@
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 
-		<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
+		<!-- start Dropifi --> 
+		<script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> 
+		<!-- end Dropifi -->
 </head>
 <body>
 

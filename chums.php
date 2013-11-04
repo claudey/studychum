@@ -1,25 +1,32 @@
 <?php
+
+	// adding Google's user service
 	require_once 'google/appengine/api/users/UserService.php';
+
+	// adding google's mail service
 	require_once 'google/appengine/api/mail/Message.php';
 
+	// adding file that conatains database class
 	include 'classes/crud.php';
 
 	use google\appengine\api\mail\Message;
-
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
+    // creating a new instance of user
     $user = UserService::getCurrentUser();
     $email = $user->getEmail();
 
-
+    // instantiating database object
 	$db = new Database();
     $db->connect();
+
+    // getting email address data of current user from the database
+    // this info will be used in the message to the user
     $db->select("SELECT * FROM USERS WHERE EmailAddress='".$email."'");
     $res = $db->getResult();
-    echo "print something now";
-    print_r($res);
-
+    
+    // processing studychum request form
     if (!empty($_POST['email'])) {
     	$message_body = "You have been sent a chum request.";
 
@@ -127,9 +134,13 @@
 				<h3 class="profile-heading">Your chums</h3>
 				<?php
 
+					// instantiating database
 					$db = new Database();
 					$db->connect();
+
+					//selecting all users
 					$db->select('Users');
+
 					$res = $db->getResult();
 
 					foreach ($res as $chum) {
