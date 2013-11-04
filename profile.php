@@ -45,7 +45,7 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Courses</a></li>
+				<!-- <li class="active"><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
@@ -65,12 +65,12 @@
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-    			</li>
+    			</li> -->
 			</ul>
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Notifications <span class="badge">42</span></a></li>
+				<li><a href="#">Notifications <span class="badge">0</span></a></li>
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
@@ -90,9 +90,9 @@
 			<ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="/chums">Chums</a></li>
-				<li class="list-group-item"><a href="#">Tutors</a></li>
+				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li>
+				<li class="list-group-item"><a href="#">Settings</a></li> -->
 			</ul>
 		</div>
 		<div class="col-sm-10">
@@ -172,7 +172,6 @@
 	</div>
 
 	 <script src="assets/js/jquery-2.0.3.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
 	 <script src="assets/js/bs.min.js"></script>
 </body>
 </html>
