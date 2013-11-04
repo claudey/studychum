@@ -27,8 +27,6 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
-
-		<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
 </head>
 <body>
 
@@ -111,8 +109,9 @@
 		</div>
 	</div>
 
-	 <script src="assets/js/jquery-2.0.3.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/bs.min.js"></script>
+    <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>
 </html>
