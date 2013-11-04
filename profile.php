@@ -1,8 +1,9 @@
 <?php
 	//include 'models/database.php';
 	include 'classes/crud.php';
-	require_once 'google/appengine/api/users/UserService.php';
 
+	// Google's user service
+	require_once 'google/appengine/api/users/UserService.php';
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
@@ -24,6 +25,8 @@
 		<link rel="stylesheet" href="assets/css/chum.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
+
+		<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
 </head>
 <body>
 
@@ -36,7 +39,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">StudyChum</a>
+			<a class="navbar-brand" href="/user">StudyChum</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -68,17 +71,25 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Notifications <span class="badge">0</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
+				<!--li><a href="#">Notifications <span class="badge">0</span></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
+				<!--li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
+						<li><a href="/profile">Profile</a></li>
 						<li><a href="#">Settings</a></li>
 						<li role="presentation" class="divider"></li>
 						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 					</ul>
-				</li>
+				</li-->
+
+				<li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="/profile">Profile</a></li>
+			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
+			        </ul>
+			      </li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -97,9 +108,7 @@
 			<div class="row">
 				<h3 class="profile-heading">Your profile</h3>
 				<?php
-
-					//include 'classes/crud.php';
-
+					// function to form input sanitise input
 					function test_input($data)
 					{
 					   $data = trim($data);
@@ -129,21 +138,25 @@
 					
 				    $email = $user->getEmail();
 
-
+				    // new instance of database
 					$db = new Database();
 				    $db->connect();
 
+				    //array to hold user details from form input
 				    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image);
 
+				    // inserting data into database
 				    $db->insert('Users', $new_user);
 
+				    // selecting last id from the database
 				    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
 				    $res = $db->getResult();
-
 				    $id = $res[User_Id];
 
+				    // creating an array of interests
 				    $interests = array('User_Id' => $id, 'Interest' => $Engineering);
 				    
+				    //inserting into database
 				    $db->insert('Users_Interests', $interests);
 
 				    $interests = array('User_Id' => $id, 'Interest' => $Programming);
@@ -158,7 +171,7 @@
 				    $interests = array('User_Id' => $id, 'Interest' => $Biology);
 				    $db->insert('Users_Interests', $interests);
 				    
-
+				    // displaying information about user 
 				    echo "<p>Name: ". $fname . " " . $lname . "</p>";
 				    echo "<p>Educational Level: ". $education . "</p>";
 				    echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
@@ -169,8 +182,7 @@
 		</div>
 	</div>
 
-	<script src="assets/js/jquery-2.0.3.min.js"></script>
-	<script src="assets/js/bs.min.js"></script>
-	<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
+	 <script src="assets/js/jquery-2.0.3.min.js"></script>
+	 <script src="assets/js/bs.min.js"></script>
 </body>
 </html>

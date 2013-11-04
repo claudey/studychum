@@ -30,13 +30,11 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
-<<<<<<< HEAD
 
 		<!-- start Dropifi --> 
 		<script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> 
 		<!-- end Dropifi -->
-=======
->>>>>>> 1272d950120206bab3b6315a5099eeb484bb6e27
+
 </head>
 <body>
 
@@ -49,7 +47,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">StudyChum</a>
+			<a class="navbar-brand" href="/user">StudyChum</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,7 +83,7 @@
 				<!--li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 				<!--dropdown not working so I'm putting logout and profile in the nav bar temporarily-->
 
-				<li class="dropdown">
+				<!--li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Profile</a></li>
@@ -93,10 +91,15 @@
 						<li role="presentation" class="divider"></li>
 						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 					</ul>
-				</li>
+				</li-->
+				<li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="/profile">Profile</a></li>
+			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
+			        </ul>
+			      </li>
 
-				<li><a href="/create">Profile</a></li>
-				<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -114,7 +117,7 @@
 		<div class="col-sm-10">
 			<div class="row">
 				<h3 class="profile-heading">Welcome to StudyChum.</h3>
-				<p>StudyChum is the best online collaborative too you can find.</p>
+				<p>StudyChum is the best online collaborative tool you can find.</p>
 				<p>Take a tour to see the awesome things you can do with study chum.</p>
 		</div>
 	</div>
