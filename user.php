@@ -8,8 +8,11 @@
 
     $user = UserService::getCurrentUser();
 
-   
-
+    if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
 ?>
 
 <html>
@@ -21,7 +24,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
-		<link rel="stylesheet" href="assets/css/chum.css">
+		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 
@@ -29,7 +32,7 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -45,7 +48,7 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Courses</a></li>
+				<li><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
@@ -70,10 +73,12 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+				<!--li><a href="#">Notifications <span class="badge">42</span></a></li-->
+				<!--li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
+				<!--dropdown not working so I'm putting logout and profile in the nav bar temporarily-->
+
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Profile</a></li>
 						<li><a href="#">Settings</a></li>
@@ -81,6 +86,9 @@
 						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 					</ul>
 				</li>
+
+				<li><a href="/create">Profile</a></li>
+				<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -97,77 +105,9 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Your profile</h3>
-				<?php
-
-					//include 'classes/crud.php';
-
-					function test_input($data)
-					{
-					   $data = trim($data);
-					   $data = stripslashes($data);
-					   $data = htmlspecialchars($data);
-					   return $data;
-					}
-
-					// getting users profile details from form
-					$fname = test_input($_POST["fname"]);
-					$lname = test_input($_POST["lname"]);
-					$dob = test_input($_POST["dob"]);
-					$education = test_input($_POST["education"]);
-
-					
-					$Engineering = test_input($_POST["Engineering"]);
-				
-					$Programming = test_input($_POST["Programming"]);
-
-					$Physics = test_input($_POST["Physics"]);
-
-					$Mathematics = test_input($_POST["Mathematics"]);			
-
-					$Biology = test_input($_POST["Biology"]);
-
-					$image = test_input($_POST["image"]);
-					
-				    $email = $user->getEmail();
-
-
-					$db = new Database();
-				    $db->connect();
-
-				    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image);
-
-				    $db->insert('Users', $new_user);
-
-				    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-				    $res = $db->getResult();
-
-				    $id = $res[User_Id];
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Engineering);
-				    
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Programming);
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Physics);
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Mathematics);
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Biology);
-				    $db->insert('Users_Interests', $interests);
-				    
-
-				    echo "<p>Name: ". $fname . " " . $lname . "</p>";
-				    echo "<p>Educational Level: ". $education . "</p>";
-				    echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    
-				?>
-				
-			</div>
+				<h3 class="profile-heading">Welcome to StudyChum.</h3>
+				<p>StudyChum is the best online collaborative too you can find.</p>
+				<p>Take a tour to see the awesome things you can do with study chum.</p>
 		</div>
 	</div>
 

@@ -85,8 +85,10 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Notifications <span class="badge">42</span></a></li>
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+				<!--dropdown not working so I'm putting logout and profile in the nav bar temporarily-->
+
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getNickname(); ?><b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="#">Profile</a></li>
 						<li><a href="#">Settings</a></li>
@@ -112,11 +114,12 @@
 			<div class="row">
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
+					<form class="form-horizontal" action="/profile" method="POST">
 					<img src="assets/img/profile.webp" alt="User profile image" class="profile">
-					<input type="file">
+					<input name="image" type="file">
 				</div>
 				<div class="col-md-5">
-					<form class="form-horizontal" action="/profile" method="POST">
+					
 						<fieldset>
 							<div class="row">
 								<div class="form-group col-md-6 fname">
@@ -156,13 +159,20 @@
 								</select>
 							</div>
 							<div class="form-group" required>
-								<p>Subject Interests<p>
-								<textarea class="form-control" rows="3" name="interests" placeholder="Enter learning interestes, separated by spaces"></textarea>
+								<p>Interests</p>
+								<?php
+								$db = new Database();
+								$db->connect();
+								$db->select('Subject_Interests'); // Table name
+								$res = $db->getResult();
+								foreach ($res as $interest) {
+									
+										echo '<input type="checkbox" name="'. $interest["Interest"] .'" value="' . $interest["Interest"] . '"> ' . $interest["Interest"] . '<br>';
+									}
+								
+								?>
 							</div>
-							<div class="form-group">
-								<p>Current Courses<p>
-								<textarea class="form-control" rows="3" name="courses" placeholder="Your current courses, separated by spaces"></textarea>
-							</div>
+							
 							<br>
 							<div class="form-group">
 								<p class="form-action"><input type="submit" class="btn btn-lg btn-success" value="Save"></p>

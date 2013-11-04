@@ -1,11 +1,42 @@
 <?php
 	require_once 'google/appengine/api/users/UserService.php';
+	require_once 'google/appengine/api/mail/Message.php';
+
+	include 'classes/crud.php';
+
+	use google\appengine\api\mail\Message;
 
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
     $user = UserService::getCurrentUser();
+    $email = $user->getEmail();
 
+
+	$db = new Database();
+    $db->connect();
+    $db->select("SELECT * FROM USERS WHERE EmailAddress='".$email."'");
+    $res = $db->getResult();
+    echo "print something now";
+    print_r($res);
+
+    if (!empty($_POST['email'])) {
+    	$message_body = "You have been sent a chum request.";
+
+		$mail_options = [
+			"sender" => "studychumgh@gmail.com",
+			"to" => $_POST['email'],
+			"subject" => "You have received a chum request",
+			"textBody" => $message_body
+	];
+
+	try {
+	    $message = new Message($mail_options);
+	    $message->send();
+	} catch (InvalidArgumentException $e) {
+	    echo $e;
+	}
+    }
 ?>
 
 <html>
@@ -95,18 +126,19 @@
 			<div class="row">
 				<h3 class="profile-heading">Your chums</h3>
 				<?php
-					include 'classes/crud.php';
 
 					$db = new Database();
 					$db->connect();
-					$db->select('Chums');
+					$db->select('Users');
 					$res = $db->getResult();
 
-					$db->select('Subject_Interests');
-					$interests = $db->getResult();
-
 					foreach ($res as $chum) {
-					
+
+						$id = $chum["User_Id"];
+
+						$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
+						$interests = $db->getResult();
+						
 						echo '<div class="col-md-7">
 								<div class="media row chum-list">
 									<div class="col-md-2">
@@ -114,16 +146,26 @@
 											<img class="media-object" src="assets/img/profile.webp" alt="...">
 										</a>
 									</div>
-									<div class="col-md-10 media-body">
-										<h4 class="media-heading"><em>' . $chum['FirstName'] . " " . $chum['LastName'] .'</em></h4>
-										<p>Mathematics</p>
-										<p>Ukraine</p>
-										<p>Speaks English, Spanish</p>
+									<div class="col-md-10 media-body">';
 
-									</div>
+						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
+										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>';
+
+						echo "<p><b>Interests:</b></p>";
+						foreach ($interests as $interest) {
+							echo "<p>" . $interest['Interest'] . "</p>";
+						}
+
+						echo '
+										<form action="/chums" method="POST">
+											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
+											<input type="submit" class="btn btn-primary" value="Send a Chum Request" id="chum_request">
+										</form>
+									</div>	
 								</div>
-								
 							</div>';
+
+						
 					}
 
 				?>
@@ -136,5 +178,12 @@
 	 <script src="assets/js/jquery-2.0.3.min.js"></script>
 	 <script src="assets/js/bs.min.js"></script>
 	 <script src="assets/js/bs.min.js"></script>
+	 <script>
+	 	$(document).ready(function(){
+		  $("#chum_request").click(function(){
+		    $(this).val("Requested submited");
+		  });
+		});
+	 </script>
 </body>
 </html>

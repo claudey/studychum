@@ -11,7 +11,7 @@ class Database{
         private $db_host = ":/cloudsql/studychumapp:studychump"; 
         private $db_user = "root"; 
         private $db_pass = ""; 
-        private $db_name = "studychum_db";
+        private $db_name = "studychum";
         
         /*
          * Extra variables that are required by other function such as boolean con variable

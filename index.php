@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <a href="/create"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
+                    <a href="/user"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
                 </div>
             </div>
         </div>
