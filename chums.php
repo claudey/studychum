@@ -58,8 +58,6 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/friends.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
-
-		<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> <!-- end Dropifi -->
 </head>
 <body>
 
@@ -115,6 +113,18 @@
 						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 					</ul>
 				</li>
+				<li class="dropdown">
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="#">Action</a></li>
+			          <li><a href="#">Another action</a></li>
+			          <li><a href="#">Something else here</a></li>
+			          <li class="divider"></li>
+			          <li><a href="#">Separated link</a></li>
+			          <li class="divider"></li>
+			          <li><a href="#">One more separated link</a></li>
+			        </ul>
+			      </li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -186,15 +196,16 @@
 		</div>
 	</div>
 
-	 <script src="assets/js/jquery-2.0.3.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
-	 <script>
+	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script>
 	 	$(document).ready(function(){
 		  $("#chum_request").click(function(){
 		    $(this).val("Requested submited");
 		  });
 		});
-	 </script>
+	</script>
+    <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>
 </html>

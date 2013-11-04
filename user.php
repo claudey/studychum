@@ -30,10 +30,13 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
+<<<<<<< HEAD
 
 		<!-- start Dropifi --> 
 		<script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('cf7264a283e336148e3ba979479b372e-1373448040847');</script> 
 		<!-- end Dropifi -->
+=======
+>>>>>>> 1272d950120206bab3b6315a5099eeb484bb6e27
 </head>
 <body>
 
@@ -53,7 +56,7 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<ul class="nav navbar-nav">
-				<li><a href="#">Courses</a></li>
+				<!-- <li><a href="#">Courses</a></li>
 				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
@@ -73,7 +76,7 @@
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-    			</li>
+    			</li> -->
 			</ul>
 
 
@@ -103,9 +106,9 @@
 			<ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="/chums">Chums</a></li>
-				<li class="list-group-item"><a href="#">Tutors</a></li>
+				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li>
+				<li class="list-group-item"><a href="#">Settings</a></li> -->
 			</ul>
 		</div>
 		<div class="col-sm-10">
@@ -116,8 +119,9 @@
 		</div>
 	</div>
 
-	 <script src="assets/js/jquery-2.0.3.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
-	 <script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/bs.min.js"></script>
+    <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>
 </html>
