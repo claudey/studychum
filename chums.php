@@ -61,7 +61,7 @@
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/friends.css">
+		<link rel="stylesheet" href="assets/css/chums.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 </head>
 <body>
@@ -141,7 +141,7 @@
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
-				<h3 class="profile-heading">Your chums</h3>
+				<h3 class="profile-heading">Who you can connect to</h3>
 				<?php
 
 					// instantiating database
@@ -166,7 +166,33 @@
 						$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
 						$interests = $db->getResult();
 						
-						echo '<div class="col-md-7">
+						echo '<div class="col-md-6">
+								<div class="media row chum-list">
+									<div class="col-md-2">
+										<a class="pull-left" href="#">
+											<img class="media-object" src="assets/img/profile.webp" alt="...">
+										</a>
+									</div>
+									<div class="col-md-10 media-body">';
+
+						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
+										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>';
+
+						echo "<p><b>Interests:</b></p>";
+						foreach ($interests as $interest) {
+							echo "<p>" . $interest['Interest'] . "</p>";
+						}
+
+						echo '
+										<form action="/chums" method="POST">
+											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
+											<input type="submit" class="btn btn-primary" value="Send a Chum Request" id="chum_request">
+										</form>
+									</div>	
+								</div>
+							</div>';
+
+						echo '<div class="col-md-6">
 								<div class="media row chum-list">
 									<div class="col-md-2">
 										<a class="pull-left" href="#">

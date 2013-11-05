@@ -121,9 +121,6 @@
 				<p>We appreciate your response.</p>
 				<br>
 				<p><b>The StudyChum team</b></p>
-				<!-- <p>Take a tour to see the awesome things you can do with study chum.</p> -->
-				<!--p>You can watch this video to get you started.</p>
-				<div class="youtubevideo">YouTube Video Tutorial</div-->
 		</div>
 	</div>
 
