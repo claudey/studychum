@@ -1,0 +1,13 @@
+.welcome{
+	text-align: center
+}
+.welcome-heading{
+	font-size: 3em
+}
+.youtubevideo{
+	height: 360px;
+	width: 480px;
+	background: limegreen;
+	margin: 0 auto;
+	padding-top: 30px
+}
