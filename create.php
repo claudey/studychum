@@ -29,7 +29,7 @@
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/create.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 </head>
 <body>
