@@ -25,16 +25,20 @@
     // this info will be used in the message to the user
     $db->select("SELECT * FROM USERS WHERE EmailAddress='".$email."'");
     $res = $db->getResult();
+
+    
     
     // processing studychum request form
     if (!empty($_POST['email'])) {
 
-    	$message_body = "You have been sent a chum request.";
+    	$message_body = "Hi, I used Studychum to send you a chum request.
+    					 They are still testing before they build on their final product.
+    					 Please do give them feedback.";
 
 		$mail_options = [
-			"sender" => "studychumgh@gmail.com",
+			"sender" => $email,
 			"to" => $_POST['email'],
-			"subject" => "You have received a chum request",
+			"subject" => "You have received a chum request.",
 			"textBody" => $message_body
 	];
 
@@ -145,17 +149,18 @@
 					$db->connect();
 
 					//selecting all users
-					$db->select('Users');
+					$db->sql('SELECT * FROM Users WHERE EmailAddress!="osborn.kwarteng.adu@meltwater.org" AND EmailAddress!="' . $email .'"');
 					$res = $db->getResult();
 
+
 					if (!empty($_POST['email'])) {
-    					$db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'"');
+    					$db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'" AND EmailAddress!="osborn.kwarteng.adu@meltwater.org"');
 						$res = $db->getResult();
 					    	
 					    }
 
 					foreach ($res as $chum) {
-
+						
 						$id = $chum["User_Id"];
 
 						$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');

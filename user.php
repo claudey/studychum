@@ -117,9 +117,15 @@
 			<div class="row welcome" data-intro="This is where the rest of the magic happens" data-position="top">
 				<h3 class="welcome-heading">Welcome to StudyChum.</h3>
 				<p>StudyChum is the best online collaborative tool you can find.</p>
+				<p>This product is still in it's early stages, so we want you to test us on what we have done and give us comments.</p>
+				<p>Add your complaints to the dropifi widget on your left</p>
+				<p>We will be improving it every other day.</p>
+				<p>Finally, we have just been workingon this for a week so don't expect much.</p>
+				<br>
+				<p><b>The StudyChum team</b></p>
 				<!-- <p>Take a tour to see the awesome things you can do with study chum.</p> -->
-				<p>You can watch this video to get you started.</p>
-				<div class="youtubevideo">YouTube Video Tutorial</div>
+				<!--p>You can watch this video to get you started.</p>
+				<div class="youtubevideo">YouTube Video Tutorial</div-->
 		</div>
 	</div>
 
