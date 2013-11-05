@@ -19,11 +19,12 @@
                 <div class="col-md-9">
                     <div class="headline">StudyChum</div>
                     <div class="tagline">
-                        <em>The ultimate collaborative learning tool</em>
+
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <a href="/user"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a>
+                <!-- <a href="/user"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a> -->
+                <a class="btn btn-lg btn-success google" href="/user">Sign in with Google</a>
                 </div>
             </div>
         </div>
