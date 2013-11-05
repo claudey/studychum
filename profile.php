@@ -123,18 +123,25 @@
 					$dob = test_input($_POST["dob"]);
 					$education = test_input($_POST["education"]);
 
+
+					function Interests($value)
+					{
+						if (isset($value)) {
+							return test_input($value);
+						} else {
+							return NULL;
+						}
+					}
 					
-					$Engineering = test_input($_POST["Engineering"]);
+					$Engineering = Interests($_POST["Engineering"]);
 				
-					$Programming = test_input($_POST["Programming"]);
+					$Programming = Interests($_POST["Programming"]);
 
-					$Physics = test_input($_POST["Physics"]);
+					$Physics = Interests($_POST["Physics"]);
 
-					$Mathematics = test_input($_POST["Mathematics"]);			
+					$Mathematics = Interests($_POST["Mathematics"]);			
 
-					$Biology = test_input($_POST["Biology"]);
-
-					$image = test_input($_POST["image"]);
+					$image = Interests($_POST["image"]);
 					
 				    $email = $user->getEmail();
 
@@ -168,8 +175,6 @@
 				    $interests = array('User_Id' => $id, 'Interest' => $Mathematics);
 				    $db->insert('Users_Interests', $interests);
 
-				    $interests = array('User_Id' => $id, 'Interest' => $Biology);
-				    $db->insert('Users_Interests', $interests);
 				    
 				    // displaying information about user 
 				    echo "<p>Name: ". $fname . " " . $lname . "</p>";

@@ -28,6 +28,7 @@
     
     // processing studychum request form
     if (!empty($_POST['email'])) {
+
     	$message_body = "You have been sent a chum request.";
 
 		$mail_options = [
@@ -37,12 +38,12 @@
 			"textBody" => $message_body
 	];
 
-	try {
-	    $message = new Message($mail_options);
-	    $message->send();
-	} catch (InvalidArgumentException $e) {
-	    echo $e;
-	}
+		try {
+		    $message = new Message($mail_options);
+		    $message->send();
+		} catch (InvalidArgumentException $e) {
+		    echo $e;
+		}
     }
 ?>
 
@@ -145,8 +146,13 @@
 
 					//selecting all users
 					$db->select('Users');
-
 					$res = $db->getResult();
+
+					if (!empty($_POST['email'])) {
+    					$db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'"');
+						$res = $db->getResult();
+					    	
+					    }
 
 					foreach ($res as $chum) {
 
