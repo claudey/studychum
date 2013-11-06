@@ -16,6 +16,9 @@
     	header('Location: ' .
         UserService::createLoginURL($_SERVER['REQUEST_URI']));
     }
+
+    
+    
 ?>
 
 <html>
@@ -28,7 +31,7 @@
 		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/chardinjs.css">
+		<!-- <link rel="stylesheet" href="assets/css/chardinjs.css"> -->
 		<link rel="stylesheet" href="assets/css/user.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 </head>
@@ -127,9 +130,9 @@
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
 	<script src="assets/js/app.js"></script>
-	<script src="assets/js/chardinjs.min.js"></script>
+	<!-- // <script src="assets/js/chardinjs.min.js"></script> -->
 	<script>
-		$('body').chardinJs('start');
+		// $('body').chardinJs('start');
 	</script>
     <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>

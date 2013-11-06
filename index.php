@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <a class="btn btn-lg btn-success google" href="/user">Sign in with Google</a>
+                <a class="btn btn-lg btn-success google" href="/create">Sign in with Google</a>
                 </div>
             </div>
         </div>

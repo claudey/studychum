@@ -173,13 +173,28 @@
 
 				    $interests = array('User_Id' => $id, 'Interest' => $Mathematics);
 				    $db->insert('Users_Interests', $interests);
+				    $db->disconnect();
 
 				    
 				    // displaying information about user 
-				    echo "<p>Name: ". $fname . " " . $lname . "</p>";
-				    echo "<p>Educational Level: ". $education . "</p>";
-				    echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    
+					$db = new Database();
+				    $db->connect();
+				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+				    $res = $db->getResult();
+
+				    echo "<p>Name: ". $res["FirstName"] . " " . $res["LastName"] . "</p>";
+				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
+				    echo "<p>Date of Birth: " . $res["DOB"];
+
+				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
+				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
+				    $res = $db->getResult();
+
+				    echo "<p><b>Interests:</b></p>";
+						foreach ($res as $interest) {
+							echo "<p>" . $interest['Interest'] . "</p>";
+						}
+
 				?>
 				
 			</div>

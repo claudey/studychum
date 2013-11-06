@@ -9,12 +9,25 @@
 
     // new instance of user
     $user = UserService::getCurrentUser();
+    
 
     //redirecting user to logout page if user has not already signed up
     if (!$user){
     	
     	header('Location: ' .
         UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+
+    
+    $db = new Database();
+    $db->connect();
+    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+    $res = $db->getResult();
+
+    
+
+    if (count($res)>0) {
+    	header('Location: /profile');
     }
    
 ?>

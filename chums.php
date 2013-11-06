@@ -191,33 +191,6 @@
 									</div>	
 								</div>
 							</div>';
-
-						echo '<div class="col-md-6">
-								<div class="media row chum-list">
-									<div class="col-md-2">
-										<a class="pull-left" href="#">
-											<img class="media-object" src="assets/img/profile.webp" alt="...">
-										</a>
-									</div>
-									<div class="col-md-10 media-body">';
-
-						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
-										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>';
-
-						echo "<p><b>Interests:</b></p>";
-						foreach ($interests as $interest) {
-							echo "<p>" . $interest['Interest'] . "</p>";
-						}
-
-						echo '
-										<form action="/chums" method="POST">
-											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<input type="submit" class="btn btn-primary" value="Send a Chum Request" id="chum_request">
-										</form>
-									</div>	
-								</div>
-							</div>';
-
 						
 					}
 
