@@ -23,7 +23,6 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <!-- <a href="/user"><img src="assets/img/signin.webp" class="google" alt="Sign In With Google"></a> -->
                 <a class="btn btn-lg btn-success google" href="/user">Sign in with Google</a>
                 </div>
             </div>
@@ -40,21 +39,40 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <div class="fill"></div>
+                    <div class="fill slide1"></div>
                     <div class="carousel-caption mast">
                         <h1>Connect with chums and tutors</h1>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="email address">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="button">I'm in.</button>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="fill"></div>
+                    <div class="fill slide2"></div>
                     <div class="carousel-caption mast">
                         <h1>Share resources across groups</h1>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="email address">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="button">I'm in.</button>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="fill"></div>
+                    <div class="fill slide3"></div>
                     <div class="carousel-caption mast">
                         <h1>Enjoy learning together</h1>
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="email address">
+                            <span class="input-group-btn">
+                                <button class="btn btn-success" type="button">I'm in.</button>
+                            </span>
+                        </div>
+
                     </div>
                 </div>
             </div>

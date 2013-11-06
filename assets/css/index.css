@@ -1,23 +1,22 @@
 .header{
-	height: 160px
+	height: 100px
 }
 .headline{
 	font-family: 'Fondamento', cursive;
-	font-size: 72px;
-	text-align: center;
+	font-size: 60px;
 	padding-bottom: 0px
 }
 .tagline{
 	font-size: 20px;
 	text-align: center
 }
-.info{
+/*.info{
 	background: url('../img/studygroup.webp');
 	background-size: cover;
 	font-size: 54px;
 	color: white;
 	text-align: center
-}
+}*/
 /* Half Page Height Carousel Customization */
 .carousel {
   height: 50%
@@ -28,31 +27,38 @@
 .carousel-inner {
 	height: 100%
 }
-
-.fill {
-	width: 1366px;
-	height: 400px;
-	background-position: center;
-	background-size: cover;
-	background-image: url('../img/theback.png')
+.carousel-caption{
+	text-align: center	
 }
 
+.fill {
+	height: 500px;
+	background-size: cover;
+}
+.slide1{
+	background-image: url('../img/connect.webp');
+}
+.slide2{
+	background-image: url('../img/share.webp');
+}
+.slide3{
+	background-image: url('../img/enjoy.webp');
+}
+.input-group{
+	width: 90%;
+	margin: 0 auto
+}
 .mast{
-	display: inline-block;
-	vertical-align: middle;
-	width: 55%;
-	text-align: center;
-	margin: 10px 10px 10px 10px;
+	width: 30%;
+	margin: 10px 10px;
 	background-color: rgba(0, 0, 0, 0.40);
-	border-radius: 10px;
-	padding-left: 10px;
-	padding-right: 10px
+	border-radius: 10px
 }
 .google{
 	margin: 0 auto;
 	display: block;
 	width: 100%;
-	padding-top: 20px
+	margin-top: 25px
 }
 .google-nav{
 	width: 200px;
