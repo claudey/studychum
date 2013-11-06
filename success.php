@@ -1,4 +1,25 @@
 
+                <?php
+    
+                    include 'classes/crud.php';
+
+                    function test_input($data)
+                    {
+                      $data = trim($data);
+                      $data = stripslashes($data);
+                      $data = htmlspecialchars($data);
+                      return $data;
+                    }
+
+                    if ($_SERVER["REQUEST_METHOD"]=="POST") {
+                        $email = test_input($_POST["email"]);
+
+                        $db = new Database();
+                        $db->connect();
+                        $db->insert('BetaSignup', array('EmailAddress' => $email));
+
+                    }  
+                ?>
 
 <!doctype html>
 <html>
@@ -16,16 +37,11 @@
     <body>
         <div class="main">
         	<div class="headline">StudyChum</div>
-        	<div class="tagline">Enhance your learning experience. Find students of like interests and study together.</div>
-        	<div class="sign-up">
-                
+        	<div class="tagline">You are our No. 1 fan. We'll let you know when we're ready. :)</div>
+        	
 
-                <form action="/success" method="POST">
-                    <input type="email" name="email" placeholder="Drop your email address." autofocus><br>
-                    <button>I'm in!</button>
-                </form>
-        		
-        	</div>
+                
+        	
             <!-- <div class="textLine">
             	<div class="headline"><strong>StudyChum</strong></div>
             	<div class="tagline">Find students and tutors with similar interests</div>

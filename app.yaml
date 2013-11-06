@@ -33,3 +33,6 @@ handlers:
 
 - url: /request
   script: chumrequest.php
+
+- url: /success
+  script: success.php
