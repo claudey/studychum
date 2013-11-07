@@ -19,3 +19,7 @@ $('.carousel').carousel({
 $('.tooltip-social').tooltip({
   selector: "a[data-toggle=tooltip]"
 })
+
+$('list-group-item').on('click', function(){
+	$(this).children("");
+})

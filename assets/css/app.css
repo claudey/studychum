@@ -1,4 +1,4 @@
-html{
+Ftml{
 	overflow-y: scroll;
 	padding: 0;
 	margin: 0;
@@ -8,9 +8,11 @@ html{
 body{
 	margin: 0 auto;
 	font-family: Source Sans Pro;
-	background-image: url('../img/sos.png');
-	background-repeat: repeat;
-	font-size: 16px
+	/*background-image: url('../img/sos.png');*/
+	background-color: #EDE8DF;
+	/*background-repeat: repeat;*/
+	font-size: 16px;
+	color: #30394F;
 }
 .main-body{
 	padding-top: 80px
@@ -23,9 +25,28 @@ body{
 	height: 20px
 }
 .list-group-item:hover{
-	background: #000;
+	background: #FF434C;
 	cursor: pointer
 }
+.btn{
+	-webkit-transition: color .25s ease-out;
+	   -moz-transition: color .25s ease-out;
+	    -ms-transition: color .25s ease-out;
+	     -o-transition: color .25s ease-out;
+	        transition: color .25s ease-out;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active{
+	/*color: #ffffff;*/
+	color: #30394F;
+	/*background-color: #3276b1;*/
+	background-color: #6ACEEB;
+	border-color: #5BC0C0;
+}
+
 h1, h2 ,h3 ,h4, h5, h6{
 	font-family: Source Sans Pro
 }
