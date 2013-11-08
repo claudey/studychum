@@ -31,8 +31,8 @@ handlers:
 - url: /user
   script: user.php
 
-- url: /request
-  script: chumrequest.php
+- url: /activity
+  script: activity.php
 
 - url: /success
   script: success.php

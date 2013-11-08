@@ -97,7 +97,7 @@
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="/chums">Chums</a></li>
+				<li class="list-group-item"><a href="/chums">Find a Chum</a></li>
 				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li> -->
@@ -117,64 +117,66 @@
 					}
 
 					// getting users profile details from form
-					$fname = test_input($_POST["fname"]);
-					$lname = test_input($_POST["lname"]);
-					$dob = test_input($_POST["dob"]);
-					$education = test_input($_POST["education"]);
-
-
-					function Interests($value)
+					if ($_SERVER["REQUEST_METHOD"] == "POST")
 					{
-						if (isset($value)) {
-							return test_input($value);
-						} else {
-							return NULL;
+						$fname = test_input($_POST["fname"]);
+						$lname = test_input($_POST["lname"]);
+						$dob = test_input($_POST["dob"]);
+						$education = test_input($_POST["education"]);
+
+						$Algorithms = test_input($_POST["Algorithms"]);
+
+						$Programming = test_input($_POST["Programming"]);
+
+						$Marketing = test_input($_POST["Marketing"]);
+
+						$FinancialModelling = test_input($_POST["Financial Modelling"]);
+
+						$SocialMediaMarketing = test_input($_POST["Social Media Marketing"]);			
+
+						$image = test_input($_POST["image"]);
+
+						$email = $user->getEmail();
+
+					    // new instance of database
+						$db = new Database();
+					    $db->connect();
+
+					    //array to hold user details from form input
+					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image);
+
+					    // inserting data into database
+					    $db->insert('Users', $new_user);
+
+					    // selecting last id from the database
+					    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
+					    $res = $db->getResult();
+					    $id = $res[User_Id];
+
+					    // creating an array of interests
+					    $interests = array('User_Id' => $id, 'Interest' => $Algorithms);
+					    
+					    //inserting into database
+					    $db->insert('Users_Interests', $interests);
+
+					    $interests = array('User_Id' => $id, 'Interest' => $Programming);
+					    $db->insert('Users_Interests', $interests);
+
+					    $interests = array('User_Id' => $id, 'Interest' => $Marketing);
+					    $db->insert('Users_Interests', $interests);
+
+					    $interests = array('User_Id' => $id, 'Interest' => $FinancialModelling);
+					    $db->insert('Users_Interests', $interests);
+
+					    $interests = array('User_Id' => $id, 'Interest' => $SocialMediaMarketing);
+					    $db->insert('Users_Interests', $interests);
+
+					    $db->disconnect();
+
 						}
-					}
-					
-					$Engineering = Interests($_POST["Engineering"]);
-				
-					$Programming = Interests($_POST["Programming"]);
 
-					$Physics = Interests($_POST["Physics"]);
-
-					$Mathematics = Interests($_POST["Mathematics"]);			
-
-					$image = Interests($_POST["image"]);
-					
-				    $email = $user->getEmail();
-
-				    // new instance of database
-					$db = new Database();
-				    $db->connect();
-
-				    //array to hold user details from form input
-				    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image);
-
-				    // inserting data into database
-				    $db->insert('Users', $new_user);
-
-				    // selecting last id from the database
-				    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-				    $res = $db->getResult();
-				    $id = $res[User_Id];
-
-				    // creating an array of interests
-				    $interests = array('User_Id' => $id, 'Interest' => $Engineering);
+										
 				    
-				    //inserting into database
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Programming);
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Physics);
-				    $db->insert('Users_Interests', $interests);
-
-				    $interests = array('User_Id' => $id, 'Interest' => $Mathematics);
-				    $db->insert('Users_Interests', $interests);
-				    $db->disconnect();
-
 				    
 				    // displaying information about user 
 					$db = new Database();

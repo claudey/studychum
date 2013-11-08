@@ -20,7 +20,7 @@ if (mysql_query($sql)) {
 $sql = "USE studychum";
 mysql_query($sql);
 
-$sql="CREATE TABLE IF NOT EXISTS Users (User_Id INT(3) NOT NULL AUTO_INCREMENT, FirstName CHAR(30), LastName CHAR(30), DOB DATE, EducationLevel CHAR(100), EmailAddress CHAR(50), Image LONGBLOB, PRIMARY KEY (User_Id))";
+$sql="CREATE TABLE IF NOT EXISTS Users (User_Id INT(3) NOT NULL AUTO_INCREMENT, FirstName CHAR(30), LastName CHAR(30), DOB DATE, EducationLevel CHAR(100), EmailAddress CHAR(50) UNIQUE, Image LONGBLOB, PRIMARY KEY (User_Id))";
 
 // Execute query
 
@@ -54,7 +54,7 @@ if (mysql_query($sql)){
 	echo "User_Interests table not created<br>" . mysql_error($con);
 }
 
-/*
+
 $sql = "INSERT INTO Subject_Interests (Interest) VALUES('Engineering')";
 mysql_query($sql);
 $sql = "INSERT INTO Subject_Interests (Interest) VALUES('Programming')";

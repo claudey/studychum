@@ -42,36 +42,36 @@
                     <div class="fill slide1"></div>
                     <div class="carousel-caption mast">
                         <h1>Connect with chums and tutors</h1>
-                        <div class="input-group input-group-lg">
+                        <!--div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="email address">
                             <span class="input-group-btn">
                                 <button class="btn btn-success" type="button">I'm in.</button>
                             </span>
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <div class="item">
                     <div class="fill slide2"></div>
                     <div class="carousel-caption mast">
                         <h1>Share resources across groups</h1>
-                        <div class="input-group input-group-lg">
+                        <!--div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="email address">
                             <span class="input-group-btn">
                                 <button class="btn btn-success" type="button">I'm in.</button>
                             </span>
-                        </div>
+                        </div-->
                     </div>
                 </div>
                 <div class="item">
                     <div class="fill slide3"></div>
                     <div class="carousel-caption mast">
                         <h1>Enjoy learning together</h1>
-                        <div class="input-group input-group-lg">
+                        <!--div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="email address">
                             <span class="input-group-btn">
                                 <button class="btn btn-success" type="button">I'm in.</button>
                             </span>
-                        </div>
+                        </div-->
 
                     </div>
                 </div>

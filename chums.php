@@ -6,9 +6,6 @@
 	// adding google's mail service
 	require_once 'google/appengine/api/mail/Message.php';
 
-	// adding file that conatains database class
-	include 'classes/crud.php';
-
 	use google\appengine\api\mail\Message;
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
@@ -17,26 +14,28 @@
     $user = UserService::getCurrentUser();
     $email = $user->getEmail();
 
+    // adding file that conatains database class
+	include 'classes/crud.php';
+
     // instantiating database object
 	$db = new Database();
     $db->connect();
 
+
     // getting email address data of current user from the database
     // this info will be used in the message to the user
-    $db->select("SELECT * FROM USERS WHERE EmailAddress='".$email."'");
+    $db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
     $res = $db->getResult();
-
     
     
     // processing studychum request form
     if (!empty($_POST['email'])) {
 
-    	$message_body = "Hi, I used Studychum to send you a chum request.
-    					 They are still testing before they build on their final product.
-    					 Please do give them feedback.";
+    	$message_body = $res["FirstName"] . " " . $res["LastName"] . " has sent you a chum request.
+    	Click on studychumapp.appspot.com/activity to accept";
 
 		$mail_options = [
-			"sender" => $email,
+			"sender" => 'studychumgh@gmail.com',
 			"to" => $_POST['email'],
 			"subject" => "You have received a chum request.",
 			"textBody" => $message_body
@@ -132,8 +131,8 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="list-group">
-				<li class="list-group-item active"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="#">Chums</a></li>
+				<li class="list-group-item active"><a href="/activity">Activity</a></li>
+				<li class="list-group-item"><a href="#">Find a Chum</a></li>
 				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li> -->
@@ -141,7 +140,7 @@
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
-				<h3 class="profile-heading">Who you can connect to</h3>
+				<h3 class="profile-heading">Find your Chums!</h3>
 				<?php
 
 					// instantiating database
@@ -193,6 +192,8 @@
 							</div>';
 						
 					}
+
+					$db->disconnect();
 
 				?>
 
