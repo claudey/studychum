@@ -16,11 +16,10 @@
 	$client->debug = false;
 	$client->debug_http = true;
 	$client->server = 'Facebook';
-	$client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'].
-		dirname(strtok($_SERVER['REQUEST_URI'],'?')).'/login_with_facebook.php';
+	$client->redirect_uri = 'http://54.200.162.229/libs/oauth/login_with_facebook.php';
 
-	$client->client_id = ''; $application_line = __LINE__;
-	$client->client_secret = '';
+	$client->client_id = '1451073811786138'; $application_line = __LINE__;
+	$client->client_secret = '49e585c15c6cd19fbaee6f8c2ee1d72d';
 
 	if(strlen($client->client_id) == 0
 	|| strlen($client->client_secret) == 0)

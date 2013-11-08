@@ -53,10 +53,16 @@
 					    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Sign up">
 					    	</fieldset>
 					    </form>
-					    <form method="post" action="libs/oauth/login_with_twitter.php">
+					    <form method="post" action="libs/oauth/login_with_linkedin.php">
 					    	<input name="login" id="login" class="btn btn-block col-md-5 soc_but" type="submit" value="Linkedin">
+					    </form>
+					    <form method="post" action="libs/oauth/login_with_twitter.php">
 					    	<input name="login" id="login" class="btn col-md-5 btn-block soc_but" type="submit" value="Twitter">
+					    </form>
+					    <form method="post" action="libs/oauth/login_with_google.php">
 					    	<input name="login" id="login" class="btn col-md-5 btn-block soc_but" type="submit" value="Google">
+					    </form>
+					    <form method="post" action="libs/oauth/login_with_facebook.php">
 					    	<input name="login" id="login" class="btn col-md-5 btn-block soc_but" type="submit" value="Facebook">
 					    </form>
 					    </div>

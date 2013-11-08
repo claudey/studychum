@@ -21,11 +21,10 @@
 
 	$client->debug = false;
 	$client->debug_http = true;
-	$client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'].
-		dirname(strtok($_SERVER['REQUEST_URI'],'?')).'/login_with_google.php';
+	$client->redirect_uri = 'http://example.com/libs/oauth/login_with_google.php';
 
-	$client->client_id = ''; $application_line = __LINE__;
-	$client->client_secret = '';
+	$client->client_id = '295733529043.apps.googleusercontent.com'; $application_line = __LINE__;
+	$client->client_secret = 'IaGEZqO1tIcy2vyYX8akWxiv';
 
 	if(strlen($client->client_id) == 0
 	|| strlen($client->client_secret) == 0)

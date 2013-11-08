@@ -16,9 +16,8 @@
 	$client->debug = 1;
 	$client->debug_http = 1;
 	$client->server = 'Twitter';
-	$client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'].
-		dirname(strtok($_SERVER['REQUEST_URI'],'?')).'/login_with_twitter.php';
-	$client->redirect_uri = 'oob';
+	$client->redirect_uri = 'http://54.200.162.229/libs/oauth/login_with_twitter.php';
+	// $client->redirect_uri = 'oob';
 
 	$client->client_id = 'gv7cwKya4PyfOvQZPAPscQ'; $application_line = __LINE__;
 	$client->client_secret = 'vZDqjzJfW7Zi5Zjn6N0jLQJRLN7DR7rlkdKHOk3vnE';
@@ -38,7 +37,7 @@
 			if(strlen($client->access_token))
 			{
 				$success = $client->CallAPI(
-					'https://api.twitter.com/2.1/account/verify_credentials.json', 
+					'https://api.twitter.com/1.1/account/verify_credentials.json', 
 					'GET', array(), array('FailOnAccessError'=>true), $user);
 
 /*

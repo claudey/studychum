@@ -16,11 +16,10 @@
 	$client->debug = 1;
 	$client->debug_http = 1;
 	$client->server = 'LinkedIn';
-	$client->redirect_uri = 'http://'.$_SERVER['HTTP_HOST'].
-		dirname(strtok($_SERVER['REQUEST_URI'],'?')).'/login_with_linkedin.php';
+	$client->redirect_uri = 'http://54.200.162.229/libs/oauth/login_with_linkedin.php';
 
-	$client->client_id = ''; $application_line = __LINE__;
-	$client->client_secret = '';
+	$client->client_id = 'ctrq5y0rvz9w'; $application_line = __LINE__;
+	$client->client_secret = '4oJE1RzLq51aSWei';
 
 	/*  API permission scopes
 	 *  Separate scopes with a space, not with +
