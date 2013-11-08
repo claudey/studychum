@@ -23,8 +23,10 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <a class="btn btn-lg btn-success google" href="login">Sign in </a> | 
-                <a class="btn btn-lg btn-success google" href="signup"> Sign up</a>
+                	<span class="btn btn-lg btn-success google" >
+		                <a href="login">Sign in </a> | 
+		                <a href="signup"> Sign up</a>
+                	</span>
                 </div>
             </div>
         </div>
