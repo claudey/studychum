@@ -23,7 +23,8 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <a onclick="alert('wow');" class="btn btn-lg btn-success google" href="#">Sign in</a>
+                <a class="btn btn-lg btn-success google" href="login">Sign in </a> | 
+                <a class="btn btn-lg btn-success google" href="signup"> Sign up</a>
                 </div>
             </div>
         </div>
