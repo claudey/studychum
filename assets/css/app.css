@@ -29,3 +29,19 @@ body{
 h1, h2 ,h3 ,h4, h5, h6{
 	font-family: Source Sans Pro
 }
+
+.soc span {
+	color: red;
+	/*display: inline-block;*/
+	/*width: 25px !important;
+	height: 25px !important;*/
+	/*z-index: 80;*/
+	font-size:18px;
+}
+
+.soc_but {
+	display:block !important;
+	float: left !important;
+	width: 130px !important;
+	margin: 10px 0 0 22px !important;
+}

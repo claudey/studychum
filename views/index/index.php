@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <a class="btn btn-lg btn-success google" href="user">Sign in</a>
+                <a onclick="alert('wow');" class="btn btn-lg btn-success google" href="#">Sign in</a>
                 </div>
             </div>
         </div>
@@ -110,6 +110,7 @@
         <script src="assets/js/jquery-2.0.3.min.js"></script>
         <script src="assets/js/bs.min.js"></script>
         <script src="assets/js/app.js"></script>
+        <!-- <script src="view/assets/js/bootbox.js" type="text/javascript"></script> -->
         <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
     </body>
 </html>
