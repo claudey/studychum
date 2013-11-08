@@ -108,13 +108,15 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
-			<ul class="list-group" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
-				<li class="list-group-item"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="/chums">Chums</a></li>
-				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
-				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li> -->
+		
+			<ul class="nav nav-pills nav-stacked" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
+				<li class="active"><a href="#">Activity</a></li>
+				<li><a href="/chums">Chums</a></li>
+				<!-- <li><a href="#">Tutors</a></li> -->
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
+
 		</div>
 		<div class="col-sm-10">
 			<div class="row welcome" data-intro="This is where the rest of the magic happens" data-position="top">

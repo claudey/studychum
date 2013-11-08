@@ -4,7 +4,10 @@
 .headline{
 	font-family: 'Oxygen';
 	font-weight: bold;
-	color: #C04405;
+	/*color: #C04405;*/
+	/*color: #E47707;*/
+	/*color: #2E2E2C;*/
+	color: #857F7B;
 	font-size: 60px;
 	padding-bottom: 0px
 }
@@ -24,7 +27,9 @@
 .carousel-caption{
 	text-align: center	
 }
-
+.mast > h1{
+	color: white
+}
 .fill {
 	height: 500px;
 	background-size: cover;
@@ -43,14 +48,13 @@
 	margin: 0 auto
 }
 .mast{
-	width: 30%;
 	margin: 10px 10px;
 	background-color: rgba(0, 0, 0, 0.40);
-	border-radius: 10px
+	border-radius: 10px;
 }
 .google{
-	margin: 0 auto;
 	display: block;
+	text-align: center;
 	width: 100%;
 	margin-top: 25px
 }
@@ -67,6 +71,9 @@
 .glyphicon{
 	font-size: 60px;
 	padding-bottom: 30px
+}
+.btn .btn-success{
+	background-color: #857F7B;
 }
 /* Responsive Styles */
 @media (max-width: 767px) {

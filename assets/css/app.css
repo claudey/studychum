@@ -32,7 +32,8 @@ body{
 }
 h1, h2 ,h3 ,h4, h5, h6{
 	font-family: Oxygen;
-	color: #C04405;
+	/*color: #C04405;*/
+	color: #FF6B34;
 }
 .nav-pills > li {
   float: left
@@ -60,10 +61,10 @@ h1, h2 ,h3 ,h4, h5, h6{
 }
 a.press {
 	text-decoration: none;
-	color: black;
+	color: #FFF;
 	padding: 10px;
 	position: relative;
-	margin: 10px 15px 10px 0;
+	/*margin: 10px 15px 10px 0;*/
 	-webkit-border-radius: 5px;
 	   -moz-border-radius: 5px;
 			border-radius: 5px;
