@@ -58,7 +58,7 @@
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/chums.css">
@@ -141,7 +141,7 @@
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
-				<h3 class="profile-heading">Who you can connect to</h3>
+				<h3 class="profile-heading">Recommended chums</h3>
 				<?php
 
 					// instantiating database

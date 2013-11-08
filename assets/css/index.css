@@ -2,7 +2,9 @@
 	height: 100px
 }
 .headline{
-	font-family: 'Fondamento', cursive;
+	font-family: 'Oxygen';
+	font-weight: bold;
+	color: #C04405;
 	font-size: 60px;
 	padding-bottom: 0px
 }
@@ -10,18 +12,10 @@
 	font-size: 20px;
 	text-align: center
 }
-/*.info{
-	background: url('../img/studygroup.webp');
-	background-size: cover;
-	font-size: 54px;
-	color: white;
-	text-align: center
-}*/
 /* Half Page Height Carousel Customization */
 .carousel {
   height: 50%
 }
-
 .item,
 .active,
 .carousel-inner {
