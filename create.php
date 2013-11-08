@@ -39,7 +39,7 @@
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/create.css">
@@ -118,6 +118,7 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
+<<<<<<< HEAD
 			<!--ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="/chums">Find a Chum</a></li>
@@ -125,6 +126,17 @@
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li> >
 			</ul-->
+=======
+			
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#">Activity</a></li>
+				<li><a href="/chums">Chums</a></li>
+				<!-- <li><a href="#">Tutors</a></li> -->
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
+			</ul>
+
+>>>>>>> 13f48d831316996b17e8d95501106b87d580811e
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
@@ -144,7 +156,7 @@
 								</div>
 								<div class="form-group col-md-6">
 									<p>Last Name<p>
-									<input type="text" name="lname" class="form-control" placeholder="First Name" required>
+									<input type="text" name="lname" class="form-control" placeholder="Last Name" required>
 								</div>
 							</div>
 
@@ -195,7 +207,7 @@
 							
 							<br>
 							<div class="form-group">
-								<p class="form-action"><input type="submit" class="btn btn-lg btn-success" value="Save"></p>
+								<p class="form-action"><input type="submit" class="btn btn-lg btn-primary" value="Save"></p>
 							</div>
 						</fieldset>
 					</form>

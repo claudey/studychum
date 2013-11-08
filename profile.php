@@ -20,16 +20,16 @@
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/temp.css">
 		<link rel="shortcut icon" href="assets/img/favicon.png">
 
 </head>
 <body>
 
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -95,13 +95,24 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
+<<<<<<< HEAD
 			<ul class="list-group">
 				<li class="list-group-item"><a href="#">Activity</a></li>
 				<li class="list-group-item"><a href="/chums">Find a Chum</a></li>
 				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li> -->
+=======
+			
+			<ul class="nav nav-pills nav-stacked">
+				<li class="active"><a href="#">Activity</a></li>
+				<li><a href="/chums">Chums</a></li>
+				<!-- <li><a href="#">Tutors</a></li> -->
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
+>>>>>>> 13f48d831316996b17e8d95501106b87d580811e
 			</ul>
+
 		</div>
 		<div class="col-sm-10">
 			<div class="row">

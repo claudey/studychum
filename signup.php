@@ -6,7 +6,7 @@
 	<meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Sign up for StudyChum</title>
-	<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+	<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 	<link rel="stylesheet" href="assets/css/bs.min.css">
 	<link rel="stylesheet" href="assets/css/chum.css">
 	<link rel="stylesheet" href="assets/css/signup.css">

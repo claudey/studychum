@@ -57,7 +57,7 @@
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/chums.css">
@@ -130,17 +130,32 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
+<<<<<<< HEAD
 			<ul class="list-group">
 				<li class="list-group-item active"><a href="/activity">Activity</a></li>
 				<li class="list-group-item"><a href="#">Find a Chum</a></li>
 				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
 				<li class="list-group-item"><a href="#">Calendar</a></li>
 				<li class="list-group-item"><a href="#">Settings</a></li> -->
+=======
+			
+			<ul class="nav nav-pills nav-stacked">
+				<li><a href="#">Activity</a></li>
+				<li class="active"><a href="#">Chums</a></li>
+				<!-- <li><a href="#">Tutors</a></li> -->
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
+>>>>>>> 13f48d831316996b17e8d95501106b87d580811e
 			</ul>
+
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
+<<<<<<< HEAD
 				<h3 class="profile-heading">Find your Chums!</h3>
+=======
+				<h3 class="profile-heading">Recommended chums</h3>
+>>>>>>> 13f48d831316996b17e8d95501106b87d580811e
 				<?php
 
 					// instantiating database
