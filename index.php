@@ -100,10 +100,10 @@
                 Easily share files, resources and experiences.</div>
                 <div class="col-md-3">
                 <span class="glyphicon glyphicon-pencil"></span><br>
-                Are you a tutor? Register and start teaching now. Teach groups of chums, and establish your authorship.</div>
+                Create small groups to study together or collaborate on a project</div>
                 <div class="col-md-3">
                 <span class="glyphicon glyphicon-globe"></span><br>
-                Learn languages, meet new people, teach your chums, build a network of excellent minds across the globe.</div>
+                <!-- Learn languages, meet new people, share your knowledge with your chum,  -->Build a network of excellent minds across the globe.</div>
             </div>
         </div>
 
