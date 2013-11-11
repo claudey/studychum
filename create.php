@@ -118,15 +118,6 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
-<<<<<<< HEAD
-			<!--ul class="list-group">
-				<li class="list-group-item"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="/chums">Find a Chum</a></li>
-				<li class="list-group-item"><a href="#">Tutors</a></li>
-				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li> >
-			</ul-->
-=======
 			
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="#">Activity</a></li>
@@ -136,7 +127,7 @@
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
 
->>>>>>> 13f48d831316996b17e8d95501106b87d580811e
+
 		</div>
 		<div class="col-sm-10">
 			<div class="row">

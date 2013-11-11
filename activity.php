@@ -106,6 +106,11 @@
 								<img class="media-object" src="assets/img/favicon.png" alt="...">
 							</a>
 						</div>
+						<?php
+							if (!empty($_GET['email'])) {
+								echo "You have accepted the chum connection with " . $_GET['email'] . "<br>";
+							}
+						?>
 						<div class="col-md-10 media-body">
 							<h4 class="media-heading">This is the title of the activity you performed</h4>
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nihil, assumenda, quo incidunt ab minus accusamus animi tempore cum iste magnam odit eligendi? Facilis labore perferendis asperiores nam fuga amet.
