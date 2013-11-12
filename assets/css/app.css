@@ -21,14 +21,39 @@ body{
          url('..fonts/AxureHandwriting.svg') + "#AxureHandwriting") format('svg');
     font-style: normal;
 }
+
+@font-face {
+  font-family: 'Graublau Web';
+  src: url('GraublauWeb.eot');
+  src: local('Graublau Web Regular'), local('Graublau Web'),
+         url('GraublauWeb.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Graublau Web';
+  src: url('GraublauWeb.eot');
+  src: local('?'),
+         url('GraublauWeb.otf') format('opentype');
+}
+
 .main-body{
 	padding-top: 50px
+}
+.header-logo{
+    width: 60px;
+    height: auto;
+    margin-left: 15px;
+    /* margin-bottom: -13px; */
 }
 .navbar-default{
 	border-radius: 0
 }
 .navbar-brand{
-	font-family: 'Axure Handwriting'
+	font-family: 'Axure Handwriting';
+	float: none
+;
+	margin-left: -10px;
+	font-size: 24px;
 }
 .profile-pic{
 	width: 20px;
@@ -122,4 +147,7 @@ a.press:active {
 }
 .gray {
 	background: #898989;
+}
+.media-heading{
+	color: #CFCAC6
 }
