@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="assets/css/bs.min.css">
         <link rel="stylesheet" href="assets/css/app.css">
         <link rel="stylesheet" href="assets/css/landing.css">
-        <link rel="shortcut icon" href="assets/img/favicon.png">
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
     </head>
     <body>
         <div class="main">

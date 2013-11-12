@@ -23,9 +23,8 @@
         <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
-		<link rel="stylesheet" href="assets/css/temp.css">
-		<link rel="shortcut icon" href="assets/img/favicon.png">
-
+		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -38,7 +37,9 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
+			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -96,8 +97,10 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
+
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/mychums">My Chums</a></li>
+
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
@@ -184,7 +187,7 @@
 				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
 				    $res = $db->getResult();
 
-				    echo "<p>Name: ". $res["FirstName"] . " " . $res["LastName"] . "</p>";
+				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
 				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
 				    echo "<p>Date of Birth: " . $res["DOB"];
 
@@ -194,7 +197,7 @@
 
 				    echo "<p><b>Interests:</b></p>";
 						foreach ($res as $interest) {
-							echo "<p>" . $interest['Interest'] . "</p>";
+							echo "<span>" . $interest['Interest'] . "</span>";
 						}
 
 				?>

@@ -75,7 +75,7 @@
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/chums.css">
-		<link rel="shortcut icon" href="assets/img/favicon.png">
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
@@ -88,6 +88,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
 		</div>
 
@@ -231,27 +232,28 @@
 						$db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
 						$interests = $db->getResult();
 						
-						echo '<div class="col-md-6">
+						echo '<div class="col-md-6 col-lg-6 col-sm-6">
 								<div class="media row chum-list">
-									<div class="col-md-2">
+									<div class="col-md-3 col-lg-3 col-sm-3">
 										<a class="pull-left" href="#">
 											<img class="media-object" src="assets/img/profile.webp" alt="...">
 										</a>
 									</div>
-									<div class="col-md-10 media-body">';
+									<div class="col-md-9 col-lg-9 media-body">';
 
 						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
 										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>';
 
 						echo "<p><b>Interests:</b></p>";
 						foreach ($interests as $interest) {
-							echo "<p>" . $interest['Interest'] . "</p>";
+							echo "<span>" . $interest['Interest'] . "</span>";
 						}
 
 						echo '
 										<form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<input type="submit" class="btn btn-primary" value="Send a Chum Request" id="chum_request">
+											<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="/create">Send a chum request</a>
+											<!-- <a class="press orange" href="/create">Send a chum Request</a> -->
 										</form>
 									</div>	
 								</div>
@@ -274,9 +276,11 @@
 	<script>
 	 	$(document).ready(function(){
 		  $("#chum_request").click(function(){
-		    $(this).val("Requested submited");
+		    $(this).html("Requested submited");
 		  });
 		});
+
+
 	</script>
     <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>

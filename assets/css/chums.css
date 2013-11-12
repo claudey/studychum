@@ -32,3 +32,14 @@ img.media-object{
 .chum-list{
 	border-bottom: 1px dashed grey;
 }
+#chum_request{
+	-webkit-transition: background-color .25s ease-out;
+	   -moz-transition: background-color .25s ease-out;
+	    -ms-transition: background-color .25s ease-out;
+	     -o-transition: background-color .25s ease-out;
+	        transition: background-color .25s ease-out;
+	display: inline-block;
+}
+#chum_request:hover{
+	background-color: #B86A07;
+}
