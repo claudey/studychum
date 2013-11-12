@@ -26,7 +26,7 @@ $config['dbConnection']['user'] = 'elikem';
 // Database password:
 $config['dbConnection']['pass'] = 'james417';
 // Database name:
-$config['dbConnection']['name'] = 'chat';
+$config['dbConnection']['name'] = 'studychum';
 // Database type:
 $config['dbConnection']['type'] = null;
 // Database link:
