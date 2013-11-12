@@ -16,8 +16,6 @@
     	header('Location: ' .
         UserService::createLoginURL($_SERVER['REQUEST_URI']));
     }
-
-    
     
 ?>
 
@@ -33,7 +31,7 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<!-- <link rel="stylesheet" href="assets/css/chardinjs.css"> -->
 		<link rel="stylesheet" href="assets/css/user.css">
-		<link rel="shortcut icon" href="assets/img/favicon.png">
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
 
