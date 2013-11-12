@@ -56,6 +56,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
 		</div>
 
