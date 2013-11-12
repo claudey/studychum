@@ -9,16 +9,26 @@ body{
 	margin: 0 auto;
 	font-family: Source Sans Pro;
 	background-image: url('../img/sos.png');
-	background-color: #EDE8DF;
 	background-repeat: repeat;
 	font-size: 16px;
 	color: #2E2E2C
+}
+@font-face {
+    font-family: 'Axure Handwriting';
+    src: url('..fonts/AxureHandwriting.eot') + "?#iefix") format('embedded-opentype'),
+         url('..fonts/AxureHandwriting.woff') format('woff'), 
+         url('..fonts/AxureHandwriting.ttf') format('truetype'),
+         url('..fonts/AxureHandwriting.svg') + "#AxureHandwriting") format('svg');
+    font-style: normal;
 }
 .main-body{
 	padding-top: 50px
 }
 .navbar-default{
-	border-radius: 0;
+	border-radius: 0
+}
+.navbar-brand{
+	font-family: 'Axure Handwriting'
 }
 .profile-pic{
 	width: 20px;
