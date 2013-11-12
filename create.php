@@ -119,13 +119,13 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			
-			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="#">Activity</a></li>
-				<li><a href="/chums">Chums</a></li>
+			<!--<ul class="nav nav-pills nav-stacked">
+				<!--<li class="active"><a href="#">Activity</a></li>-->
+				<!--<li><a href="/chums">Chums</a></li>-->
 				<!-- <li><a href="#">Tutors</a></li> -->
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
-			</ul>
+			<!--</ul>-->
 
 
 		</div>

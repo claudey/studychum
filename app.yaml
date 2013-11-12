@@ -30,3 +30,6 @@ handlers:
 
 - url: /success
   script: success.php
+
+- url: /mychums
+  script: userchums.php

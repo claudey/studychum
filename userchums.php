@@ -88,8 +88,8 @@
 		<div class="side-nav well-lg col-sm-2">
 			
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="#">Activity</a></li>
-				<li><a href="/chums">Chums</a></li>
+				<li><a href="/chums">Find Chums</a></li>
+				<li class="active"><a href="#">My Chums</a></li>
 				<!-- <li><a href="#">Tutors</a></li> -->
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
@@ -98,70 +98,57 @@
 		</div>
 		<div class="col-sm-9 col-sm-offset-1">
 			<div class="row">
-				<h3 class="profile-heading">Activity Stream</h3>
-				<div class="col-md-7">
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
+				<h3 class="profile-heading">Your Chums</h3>
+				
 						<?php
-							if (!empty($_GET['email'])) {
-								echo "You have accepted the chum connection with " . $_GET['email'] . "<br>";
-							}
+							include 'classes/crud.php';
+
+							$db = new Database();
+							$db->connect();
+							$db->sql("SELECT Chum_Id FROM Chums WHERE User_Id=(SELECT User_Id FROM Users WHERE EmailAddress = '".$user->getEmail()."')");
+							$res = $db->getResult();
+
+							//print_r($res);
+
+							if (count($res)==0) {
+						    	echo "<p>You have no Chums currently.</p>";;
+						    }
+							else {
+								foreach ($res as $chum) {
+							
+									$db->sql("SELECT * FROM Users WHERE User_Id=".$chum['Chum_Id']."");
+									$chums = $db->getResult();
+										echo '<div class="col-md-6">
+										<div class="media row chum-list">
+											<div class="col-md-2">
+												<a class="pull-left" href="#">
+													<img class="media-object" src="assets/img/profile.webp" alt="...">
+												</a>
+											</div>
+											<div class="col-md-10 media-body">';
+
+											echo '<h4 class="media-heading"><em>' . $chums['FirstName'] . ' ' . $chums['LastName'] .'</em></h4>
+															<p> <b>Educational Level:</b> '.$chums['EducationLevel'].'</p>';
+
+											echo "<p><b>Interests:</b></p>";
+											/*
+											echo "<p><b>Interests:</b></p>";
+											foreach ($interests as $interest) {
+												echo "<p>" . $interest['Interest'] . "</p>";
+											}
+											*/
+
+											echo '
+														</div>	
+													</div>
+												</div>';
+										
+												}
+
+								}
+					
+							
 						?>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nihil, assumenda, quo incidunt ab minus accusamus animi tempore cum iste magnam odit eligendi? Facilis labore perferendis asperiores nam fuga amet.
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo non fugiat quidem tempore laboriosam nisi totam voluptatibus laudantium consequuntur fuga. Saepe, pariatur, non voluptatum quia quaerat ipsa et consequatur quasi.
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, fugit, veniam impedit repellat quis quisquam tempora quae commodi eaque ratione dolorum ipsa consectetur assumenda nulla alias! Enim minus laudantium voluptas.
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, esse, officiis, quasi, vero minima dignissimos pariatur placeat mollitia omnis ipsam minus beatae impedit possimus aperiam tempore nam non quisquam illo!
-						</div>
-					</div>
-					<div class="media row">
-						<div class="col-md-2">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/favicon.png" alt="...">
-							</a>
-						</div>
-						<div class="col-md-10 media-body">
-							<h4 class="media-heading">This is the title of the activity you performed</h4>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, laborum velit magnam ex ad architecto expedita omnis aut incidunt illo repellat ipsam ullam explicabo ut impedit aperiam consequatur culpa commodi.
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 
