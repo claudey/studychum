@@ -24,8 +24,7 @@
                 </div>
                 <div class="col-md-3">
                 	<span class="btn btn-lg btn-success google" >
-		                <a href="login">Sign in </a> | 
-		                <a href="signup"> Sign up</a>
+		                <a href="login">Sign in </a> | <a href="signup"> Sign up</a>
                 	</span>
                 </div>
             </div>
