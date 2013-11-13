@@ -103,26 +103,14 @@
 	</nav>
 
 	<div class="main-body">
-<<<<<<< HEAD
 		<div class="side-nav well-lg col-sm-2">		
 			<ul class="nav nav-pills nav-stacked" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
 				<li><a href="/activity">Activity</a></li>
 				<li><a href="/chums">Chums</a></li>
-				<!-- <li><a href="#">Tutors</a></li> -->
+				<li><a href="mychums">My Chums</a></li>
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
-=======
-		<div class="side-nav well-lg col-sm-2">
-			<ul class="list-group" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
-				<li class="list-group-item"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="/chums">Find a Chum</a></li>
-				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
-				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li> -->
-
->>>>>>> 625891e305b9ba381b16b8a9dd46a39edcc487e6
 			</ul>
-
 		</div>
 		<div class="col-sm-10">
 			<div class="row welcome" data-intro="This is where the rest of the magic happens" data-position="top">

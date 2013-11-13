@@ -161,18 +161,18 @@
 								<p>Email Address<p>
 								<input type="email" name="email" class="form-control" placeholder="Email address" required>
 							</div-->
-								<!-- 
+								
 							<div class="row">
 								<div class="form-group col-md-5">
 									<p>Date of birth<p>
 									<input type="date" name="dob" class="form-control" required>
 								</div>
 
-								<div class="form-group">
+								<div class="form-group col-md-7">
 									<p>Location<p>
-									<input type="email" name="email" class="form-control" required>
+									<input type="text" name="country" class="form-control countries" required>
 								</div>
-							</div> -->
+							</div>
 		
 							<div class="form-group" required>
 								<p>Education level</p>
@@ -206,7 +206,9 @@
 							
 							<br>
 							<div class="form-group">
-								<p class="form-action"><input type="submit" class="btn btn-lg btn-primary" value="Save"></p>
+								<p class="form-action">
+									<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="/create">Save</a>
+								</p>
 							</div>
 						</fieldset>
 					</form>
@@ -218,6 +220,12 @@
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
+	<script>
+		$('input.countries').typeahead({
+			name: 'countries',
+			remote: '../countries.json'
+		});
+	</script>
     <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>
 </html>
