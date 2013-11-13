@@ -15,6 +15,13 @@
 
     // creating a new instance of user
     $user = UserService::getCurrentUser();
+
+     if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+
     $email = $user->getEmail();
 
     // adding file that conatains database class
@@ -38,7 +45,7 @@
 
     	$message_body = $res["FirstName"] . " " . $res["LastName"] . " has sent you a chum request.\n";
     	$message_body .= "Click the link below to accept request.\n";
-    	$message_body .= "studychumapp.appspot.com/activity?email=".$email."";
+    	$message_body .= "studychumapp.appspot.com/chums?sender=".$email."";
 
 		$mail_options = [
 			"sender" => 'studychumgh@gmail.com',
@@ -46,7 +53,6 @@
 			"subject" => "You have received a chum request.",
 			"textBody" => $message_body
 	];
-	
 
 		try {
 		    $message = new Message($mail_options);
@@ -142,8 +148,8 @@
 
 			<ul class="nav nav-pills nav-stacked">
 				<li><a href="#">Activity</a></li>
-				<li class="active"><a href="#">Find Chums</a></li>
-				<li><a href="#">Chums</a></li>
+				<li class="active"><a href="/chums">Find Chums</a></li>
+				<li><a href="/mychums">My Chums</a></li>
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
@@ -151,6 +157,56 @@
 		</div>
 		<div class="col-sm-9">
 			<div class="row">
+
+				<h3></h3>
+				<?php
+					// users are directed here when they accept the invitation
+					if (!empty($_GET['sender'])) {
+						
+
+						// creating a database instance
+						$db = new Database();
+						$db->connect();
+						$db->sql("SELECT * FROM Users WHERE EmailAddress='".$_GET['sender']."'");
+    					$res = $db->getResult();
+
+    					echo "You are now connected to " . $res['FirstName'] . " " . $res['LastName'] . ".<br>";
+    					echo "Find and connect with people of like interests below.<br>";
+
+    					$Chum_Id = $res['User_Id'];
+    					$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
+    					$res = $db->getResult();
+    					$User_Id = $res['User_Id'];
+
+    					//inserting chum partnership into database
+    					$db->insert('Chums', array('User_Id' => $User_Id, 'chum_Id' => $Chum_Id));
+    					$db->insert('Chums', array('User_Id' => $Chum_Id, 'chum_Id' => $User_Id));
+
+    					//getting current users details from the database
+    					$db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
+    					$res = $db->getResult();
+
+				    	$message_body = $res["FirstName"] . " " . $res["LastName"] . " has accepted your chum request.\n";
+				    	$message_body .= "Click the link below to see your chums.\n";
+				    	$message_body .= "studychumapp.appspot.com/mychums";
+
+						$mail_options = [
+							"sender" => 'studychumgh@gmail.com',
+							"to" => $_GET['sender'],
+							"subject" => "Your chum request has been accepted",
+							"textBody" => $message_body
+					];
+
+						try {
+						    $message = new Message($mail_options);
+						    $message->send();
+						} catch (InvalidArgumentException $e) {
+						    echo $e;
+						}
+    					
+    					
+					}
+				?>
 
 				<h3 class="profile-heading">Recommended chums</h3>
 				<?php
