@@ -16,7 +16,7 @@
     <body>
         <div class="container">
             <div class="row header">
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <img class="logo" src="assets/img/header_logo.webp" alt="studychum logo">
                     <div class="headline">StudyChum</div>
                     <div class="tagline">
@@ -24,7 +24,10 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                <a class="press orange google" href="/create">Sign in with Google</a>
+                    <a class="press orange google" href="/create">Sign in with Google</a>
+                </div>
+                <div class="col-md-2">
+                    <a class="press gray google" href="/create">Sign up</a>
                 </div>
             </div>
         </div>
