@@ -57,7 +57,7 @@
                 <div class="item">
                     <div class="fill slide2"></div>
                     <div class="carousel-caption mast">
-                        <h1>Unlimited access to resources for every firld of study</h1>
+                        <h1>Unlimited access to resources for every field of study</h1>
                         <!--div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="email address">
                             <span class="input-group-btn">
@@ -69,7 +69,7 @@
                 <div class="item">
                     <div class="fill slide3"></div>
                     <div class="carousel-caption mast">
-                        <h1>Create your own small group, stu with really cool tools.</h1>
+                        <h1>Create your small groups, study with really cool tools.</h1>
                         <!--div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="email address">
                             <span class="input-group-btn">
