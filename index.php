@@ -69,7 +69,7 @@
                 <div class="item">
                     <div class="fill slide3"></div>
                     <div class="carousel-caption mast">
-                        <h1>Create your own small group, study with really cool tools.</h1>
+                        <h1>Create your own small group, stu with really cool tools.</h1>
                         <!--div class="input-group input-group-lg">
                             <input type="text" class="form-control" placeholder="email address">
                             <span class="input-group-btn">

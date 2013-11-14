@@ -96,7 +96,7 @@ h1, h2 ,h3 ,h4, h5, h6{
 a.press {
 	text-decoration: none;
 	color: #FFF;
-	padding: auto;
+	padding: 10px;
 	position: relative;
 	/*margin: 10px 15px 10px 0;*/
 	-webkit-border-radius: 5px;
