@@ -122,20 +122,15 @@
 					// getting users profile details from form
 					if ($_SERVER["REQUEST_METHOD"] == "POST")
 					{
+
+						$gender = test_input($_POST["gender"]);
+
+						$country = test_input($_POST["country"]);
+
 						$fname = test_input($_POST["fname"]);
 						$lname = test_input($_POST["lname"]);
 						$dob = test_input($_POST["dob"]);
-						$education = test_input($_POST["education"]);
-
-						$Algorithms = test_input($_POST["Algorithms"]);
-
-						$Programming = test_input($_POST["Programming"]);
-
-						$Marketing = test_input($_POST["Marketing"]);
-
-						$FinancialModelling = test_input($_POST["Financial Modelling"]);
-
-						$SocialMediaMarketing = test_input($_POST["Social Media Marketing"]);			
+						$education = test_input($_POST["education"]);		
 
 						$image = test_input($_POST["image"]);
 
@@ -146,7 +141,7 @@
 					    $db->connect();
 
 					    //array to hold user details from form input
-					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image);
+					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
 
 					    // inserting data into database
 					    $db->insert('Users', $new_user);
@@ -156,23 +151,16 @@
 					    $res = $db->getResult();
 					    $id = $res[User_Id];
 
-					    // creating an array of interests
-					    $interests = array('User_Id' => $id, 'Interest' => $Algorithms);
-					    
-					    //inserting into database
-					    $db->insert('Users_Interests', $interests);
+					    // using the tags
 
-					    $interests = array('User_Id' => $id, 'Interest' => $Programming);
-					    $db->insert('Users_Interests', $interests);
+					    $tags = $_POST["tags"];
+						$interests = explode(",", $tags);
 
-					    $interests = array('User_Id' => $id, 'Interest' => $Marketing);
-					    $db->insert('Users_Interests', $interests);
-
-					    $interests = array('User_Id' => $id, 'Interest' => $FinancialModelling);
-					    $db->insert('Users_Interests', $interests);
-
-					    $interests = array('User_Id' => $id, 'Interest' => $SocialMediaMarketing);
-					    $db->insert('Users_Interests', $interests);
+						foreach ($interests as $interest) {
+							//making first letter of interest capitl
+							$formatted_interest = ucfirst(strtolower($interest));
+							$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
+						}
 
 					    $db->disconnect();
 
@@ -187,9 +175,14 @@
 				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
 				    $res = $db->getResult();
 
+				    header('Content-Type: image/jpg');
+				    echo $res["Image"];
+
 				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
 				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
 				    echo "<p>Date of Birth: " . $res["DOB"];
+				    echo "<p>Country: " . $res["Country"];
+				    echo "<p>Gender: " . $res["Gender"];
 
 				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
 				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
@@ -197,7 +190,7 @@
 
 				    echo "<p><b>Interests:</b></p>";
 						foreach ($res as $interest) {
-							echo "<span>" . $interest['Interest'] . "</span>";
+							echo "<span>" . $interest['Interest'] . "</span><br>";
 						}
 
 				?>
