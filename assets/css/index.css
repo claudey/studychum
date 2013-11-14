@@ -1,6 +1,12 @@
 .header{
 	height: 100px
 }
+.logo{
+	/* background-color: red
+; */
+	height: 80px;
+	margin-top: -25px;
+}
 .headline{
 	font-family: 'Oxygen';
 	font-weight: bold;
@@ -9,7 +15,8 @@
 	/*color: #2E2E2C;*/
 	color: #857F7B;
 	font-size: 60px;
-	padding-bottom: 0px
+	margin-left: 5px;
+	display: inline;
 }
 .tagline{
 	font-size: 20px;
