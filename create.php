@@ -43,6 +43,8 @@
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/create.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-tagsinput.css">
+		<link rel="stylesheet" href="assets/css/jasny-bootstrap.css">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
@@ -117,9 +119,15 @@
 				<h3 class="profile-heading">Complete your profile</h3>
 				<div class="col-md-3">
 					<form class="form-horizontal" action="/profile" method="POST">
-					<img src="assets/img/profile.webp" alt="User profile image" class="profile">
-					<input name="image" type="file">
+					<div class="fileinput fileinput-new" data-provides="fileinput">
+					  <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="width: 200px; height: 150px;"></div>
+					  <div>
+					    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="image"></span>
+					    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+					  </div>
+					</div>
 				</div>
+
 				<div class="col-md-5">
 					
 						<fieldset>
@@ -157,24 +165,44 @@
 									<option value="College Graduate">College Graduate</option>
 								</select>
 							</div>
+
 							<div class="form-group" required>
-								<p>Interests</p>
+								<p>Gender</p>
+								<select class="form-control" name="gender">
+									<option value="Male">Male</option>
+									<option value="Female">Female</option>
+								</select>
+							</div>
+
+
+							<div class="form-group" required>
+								<p>Country</p>
+								<select class="form-control" name="country">
 								<?php
 								// Creating a new instance of the database
 								$db = new Database();
 								$db->connect();
 
-								$db->select('Subject_Interests'); // Table name
+								$db->select('Countries'); // Table name
 								$res = $db->getResult();
 
 								//displaying interests from the database
-								foreach ($res as $interest) {
+								foreach ($res as $country) {
 									
-										echo '<input type="checkbox" name="'. $interest["Interest"] .'" value="' . $interest["Interest"] . '"> ' . $interest["Interest"] . '<br>';
+										echo '<option value="' . $country["Name"] . '"> ' . $country["Name"] . '</option>';
 									}
 								
 								?>
+								</select>
 							</div>
+
+							<div class="form-group" required>
+								<p>Interests</p>
+								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add tags" />
+							</div>
+							
+
+							
 							
 							<br>
 							<div class="form-group">
@@ -191,7 +219,15 @@
 
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
+<<<<<<< HEAD
 	<script src="assets/js/app.min.js"></script>
+=======
+	<script src="assets/js/bs.min.js"></script>
+
+	<script src="assets/js/bootstrap-tagsinput.js"></script>
+	<script src="assets/js/jasny-bootstrap.js"></script>
+
+>>>>>>> 6c7ffdd7bc6a71710f3ce3e02aafc2ce792db11d
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -202,6 +238,7 @@
 	  ga('send', 'pageview');
 
 	</script>
+
     <!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>
 </html>
