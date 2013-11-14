@@ -96,7 +96,7 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-9 col-sm-offset-1">
+		<div class="col-sm-9">
 			<div class="row">
 				<h3 class="profile-heading">Your Chums</h3>
 				
@@ -111,7 +111,7 @@
 							//print_r($res);
 
 							if (count($res)==0) {
-						    	echo "<p>You have no chums currently.</p>";;
+						    	echo "<p>You have no chums currently :(.</p>";;
 						    }
 							else {
 								foreach ($res as $chum) {
