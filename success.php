@@ -40,17 +40,6 @@
         	<div class="headline">StudyChum</div>
         	<div class="tagline">You are our No. 1 fan. We'll let you know when we're ready. :)</div>
         	
-
-                
-        	
-            <!-- <div class="textLine">
-            	<div class="headline"><strong>StudyChum</strong></div>
-            	<div class="tagline">Find students and tutors with similar interests</div>
-            	<div class="sign-up">
-            		<input type="text" col="12" row="2"placeholder="Your email address, we'll notify you."><br>
-    				<button>Sign me up!</button>
-            	</div>
-            </div> -->
         </div>
 
         <script src="assets/js/jquery-2.0.3.min.js"></script>

@@ -92,18 +92,8 @@
 				<!--li><a href="#">Notifications <span class="badge">42</span></a></li>
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 				<!--dropdown not working so I'm putting logout and profile in the nav bar temporarily-->
-				<li><a href="#">Profile</a></li>
-				<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-
-				<!--li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Settings</a></li>
-						<li role="presentation" class="divider"></li>
-						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-					</ul>
-				</li-->
+				<!-- <li><a href="#">Profile</a></li> -->
+				<!-- <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li> -->
 
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
@@ -120,15 +110,7 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			
-			<!--<ul class="nav nav-pills nav-stacked">
-				<!<li class="active"><a href="#">Activity</a></li>-->
-				<!--<li><a href="/chums">Chums</a></li>-->
-				<!-- <li><a href="#">Tutors</a></li> -->
-				<!-- <li><a href="#">Calendar</a></li> -->
-				<!-- <li><a href="#">Settings</a></li> -->
-			<!--</ul>-->
-
-
+		
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
@@ -152,28 +134,18 @@
 								</div>
 							</div>
 
-							<!--div class="form-group">
-								<p>Username<p>
-								<input type="text" class="form-control" placeholder="Username" required>
-							</div-->
-
-							<!--div class="form-group">
-								<p>Email Address<p>
-								<input type="email" name="email" class="form-control" placeholder="Email address" required>
-							</div-->
-								<!-- 
 							<div class="row">
 								<div class="form-group col-md-5">
 									<p>Date of birth<p>
 									<input type="date" name="dob" class="form-control" required>
 								</div>
 
-								<div class="form-group">
+								<div class="form-group col-md-7">
 									<p>Location<p>
-									<input type="email" name="email" class="form-control" required>
+									<input type="text" name="country" class="form-control countries" required>
 								</div>
-							</div> -->
-		
+							</div>
+
 							<div class="form-group" required>
 								<p>Education level</p>
 								<select class="form-control" name="education">
@@ -206,7 +178,9 @@
 							
 							<br>
 							<div class="form-group">
-								<p class="form-action"><input type="submit" class="btn btn-lg btn-primary" value="Save"></p>
+								<p class="form-action">
+									<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="/create">Save</a>
+								</p>
 							</div>
 						</fieldset>
 					</form>
@@ -217,7 +191,7 @@
 
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
-	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/app.min.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
