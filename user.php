@@ -91,31 +91,26 @@
 					</ul>
 				</li-->
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <!--b class="caret"></b--></a>
+			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
 			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 			        </ul>
 			      </li>
 
-			      <li><a href="/create">Profile</a></li>
-			      <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
 
 	<div class="main-body">
-		<div class="side-nav well-lg col-sm-2">
-			<ul class="list-group" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
-				<li class="list-group-item"><a href="#">Activity</a></li>
-				<li class="list-group-item"><a href="/chums">Find a Chum</a></li>
-				<!-- <li class="list-group-item"><a href="#">Tutors</a></li>
-				<li class="list-group-item"><a href="#">Calendar</a></li>
-				<li class="list-group-item"><a href="#">Settings</a></li> -->
-
+		<div class="side-nav well-lg col-sm-2">		
+			<ul class="nav nav-pills nav-stacked" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
+				<li><a href="/activity">Activity</a></li>
+				<li><a href="/chums">Chums</a></li>
+				<li><a href="mychums">My Chums</a></li>
+				<!-- <li><a href="#">Calendar</a></li> -->
+				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
-
 		</div>
 		<div class="col-sm-10">
 			<div class="row welcome" data-intro="This is where the rest of the magic happens" data-position="top">
@@ -131,6 +126,16 @@
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
 	<script src="assets/js/app.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-45749635-1', 'studychumapp.appspot.com');
+	  ga('send', 'pageview');
+
+	</script>
 	<!-- // <script src="assets/js/chardinjs.min.js"></script> -->
 	<script>
 		// $('body').chardinJs('start');
