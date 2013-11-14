@@ -69,6 +69,9 @@ h1, h2 ,h3 ,h4, h5, h6{
 	/*color: #C04405;*/
 	color: #FF6B34;
 }
+.side-nav{
+	/*position: fixed*/
+}
 .nav-pills > li {
   float: left
 }
@@ -108,15 +111,14 @@ a.press {
 	   -moz-box-shadow: inset 0 -3px 0 rgba(0,0,0,0.3);
 			box-shadow: inset 0 -3px 0 rgba(0,0,0,0.3); 
 
-	-webkit-transition: all 1s ease-out;
-	   -moz-transition: all 1s ease-out;
-	    -ms-transition: all 1s ease-out;
-	     -o-transition: all 1s ease-out;
-	        
-	transition: all 1s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	   -moz-transition: all 0.5s ease-out;
+	    -ms-transition: all 0.5s ease-out;
+	     -o-transition: all 0.5s ease-out;
+			transition: all 0.5s ease-out
 }
 a.press:hover{
-
+	cursor: pointer
 }
 a.press:active {
 	top: 3px;
@@ -126,31 +128,31 @@ a.press:active {
 			box-shadow: inset 0 0px 0 rgba(0,0,0,0.3);
 }
 .blue {
-	background: #2797E8;
+	background: #2797E8
 }
 .orange {
-	background: #E47707;
+	background: #E47707
 }
 .green {
-	background: #006113;
+	background: #006113
 }
 .pink {
-	background: #D107C9;
+	background: #D107C9
 }
 .red {
-	background: #D1070A;
+	background: #D1070A
 }
 .violet {
-	background: #8702B8;
+	background: #8702B8
 }
 .seagreen {
-	background: #02B8B3;
+	background: #02B8B3
 }
 .yellow {
-	background: #D6B806;
+	background: #D6B806
 }
 .gray {
-	background: #898989;
+	background: #898989
 }
 .media-heading{
 	color: #2E2E2C

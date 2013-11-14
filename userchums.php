@@ -73,7 +73,7 @@
 				<!-- <li><a href="#">Notifications <span class="badge">42</span></a></li> -->
 				<!-- <li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="/profile">Profile</a></li>
 						<!-- <li role="presentation" class="divider"></li> -->
@@ -150,15 +150,17 @@
 							
 						?>
 
-						<ul class="pagination">
-						  <li><a href="#">&laquo;</a></li>
-						  <li><a href="#">1</a></li>
-						  <li><a href="#">2</a></li>
-						  <li><a href="#">3</a></li>
-						  <li><a href="#">4</a></li>
-						  <li><a href="#">5</a></li>
-						  <li><a href="#">&raquo;</a></li>
-						</ul>
+			<div class="row pages">
+				<ul class="pagination">
+					<li><a href="#">&laquo;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
