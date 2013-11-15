@@ -122,23 +122,15 @@
 
 			<ul class="nav navbar-nav navbar-right">
 				<!--li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="/profile">Profile</a></li>
-						<li><a href="#">Settings</a></li>
-						<li role="presentation" class="divider"></li>
-						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-					</ul>
-				</li-->
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
+				
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
 			          <li><a href="/profile">Profile</a></li>
 			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 			        </ul>
-			      </li>
+		      	</li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -147,7 +139,6 @@
 		<div class="side-nav well-lg col-sm-2">
 
 			<ul class="nav nav-pills nav-stacked">
-				<li><a href="#">Activity</a></li>
 				<li class="active"><a href="/chums">Find Chums</a></li>
 				<li><a href="/mychums">My Chums</a></li>
 				<!-- <li><a href="#">Calendar</a></li> -->
@@ -234,7 +225,7 @@
 						$interests = $db->getResult();
 						
 						echo '<div class="col-md-6 col-lg-6 col-sm-6">
-								<div class="media row chum-list">
+								<div class="row media chum-list">
 									<div class="col-md-3 col-lg-3 col-sm-3">
 										<a class="pull-left" href="#">
 											<img class="media-object" src="assets/img/profile.webp" alt="...">
@@ -262,7 +253,7 @@
 						echo '			<br>
 										<form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<input type="submit" class="press orange" value="Send a Chum Request" id="chum_request">
+											<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
 										</form>
 									</div>	
 								</div>
@@ -273,9 +264,21 @@
 					$db->disconnect();
 
 				?>
+			</div>
+
+			<div class="row pages">
+				<ul class="pagination">
+					<li><a href="#">&laquo;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
 
 				
-			</div>
 		</div>
 	</div>
 

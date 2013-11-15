@@ -79,17 +79,7 @@
 			<ul class="nav navbar-nav navbar-right" data-intro="Your personal settings and profile can be managed from here." data-position="bottom">
 				<!--li><a href="#">Notifications <span class="badge">42</span></a></li-->
 				<!--li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
-				<!--dropdown not working so I'm putting logout and profile in the nav bar temporarily-->
 
-				<!--li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Settings</a></li>
-						<li role="presentation" class="divider"></li>
-						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-					</ul>
-				</li-->
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 			        <ul class="dropdown-menu">

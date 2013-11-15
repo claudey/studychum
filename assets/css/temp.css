@@ -1,1 +1,37 @@
 /* Empty file for testing other pages of the application*/
+
+.chum-chat{
+	margin: 0;
+	padding: 10px;
+	border-bottom: gray 1px dashed;
+	-webkit-transition: all .25s linear;
+	   -moz-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	     -o-transition: all .25s linear;
+	        transition: all .25s linear
+}
+.chum-chat:hover{
+	padding-left: 15px;
+	cursor: pointer;
+	background-color: #CFCAC6;
+	border-left: 3px solid #2E2E2C
+}
+.sender{
+	float: left
+}
+.sender-image{
+	width: inherit
+}
+.sender-text{
+
+}
+.receiver{
+	/*float: right*/
+	text-align: right
+}
+.receiver-image{
+	width: inherit
+}
+.receiver-text{
+	
+}

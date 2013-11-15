@@ -43,10 +43,11 @@
 	background-image: url('../img/connect.webp');
 }
 .slide2{
-	background-image: url('../img/share.webp');
+	background-image: url('../img/student.webp');
 }
 .slide3{
-	background-image: url('../img/enjoy.webp');
+	background-image: url('../img/group.webp');
+	/*background-size: cover;*/
 }
 .input-group{
 	width: 90%;
@@ -54,7 +55,7 @@
 }
 .mast{
 	margin: 10px 10px;
-	background-color: rgba(0, 0, 0, 0.40);
+	background-color: rgba(0, 0, 0, 0.70);
 	border-radius: 10px;
 }
 .google{

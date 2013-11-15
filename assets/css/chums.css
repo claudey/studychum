@@ -1,8 +1,7 @@
 .nav-bar ul>li {
 	text-decoration: none;
-	display: inline;
+	display: inline
 }
-
 .profile-pic{
 	width: 20px;
 	height: 20px
@@ -38,8 +37,15 @@ img.media-object{
 	    -ms-transition: background-color .25s ease-out;
 	     -o-transition: background-color .25s ease-out;
 	        transition: background-color .25s ease-out;
-	display: inline-block;
+	display: inline-block
 }
 #chum_request:hover{
 	background-color: #B86A07;
+}
+.pages{
+	margin: 0 auto;
+	text-align: center
+}
+.pagination > li > a {
+	color: #2E2E2C
 }

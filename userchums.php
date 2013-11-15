@@ -70,14 +70,13 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+				<!-- <li><a href="#">Notifications <span class="badge">42</span></a></li> -->
+				<!-- <li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
-						<li><a href="#">Settings</a></li>
-						<li role="presentation" class="divider"></li>
+						<li><a href="/profile">Profile</a></li>
+						<!-- <li role="presentation" class="divider"></li> -->
 						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 					</ul>
 				</li>
@@ -97,7 +96,7 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-9 col-sm-offset-1">
+		<div class="col-sm-9">
 			<div class="row">
 				<h3 class="profile-heading">Your Chums</h3>
 				
@@ -112,7 +111,7 @@
 							//print_r($res);
 
 							if (count($res)==0) {
-						    	echo "<p>You have no Chums currently.</p>";;
+						    	echo "<p>You have no chums currently :(.</p>";;
 						    }
 							else {
 								foreach ($res as $chum) {
@@ -150,6 +149,18 @@
 					
 							
 						?>
+
+			<div class="row pages">
+				<ul class="pagination">
+					<li><a href="#">&laquo;</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
