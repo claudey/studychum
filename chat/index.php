@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat test ~ StudyChum</title>
+	</head>
+	<style type="text/css" media="screen">
+			#chatwindow {
+				border: 1px solid blue;
+				/*height: 300px;*/
+				width: 240px;
+			}
+			
+			#title {
+				/*border: 1px solid blue;*/
+				height: 30px;
+				width: *;
+				color: white;
+				background-color: blue;
+			}
+			
+			#chatsarea {
+				margin: 5px auto;
+				border: 1px solid blue;
+				height: 300px;
+				width: *;
+			}
+	</style>
+	<body>
+		<div id="chatwindow">
+			<div id="title">
+				conversation on test
+			</div>
+			<div id="chatsarea">
+				
+			</div>
+			<div id="newmessage">
+				<form method="post" id="newmessageform">
+					<input type="text" id="newmessageinput" placeholder="message" />
+					<input type="submit" id="sendmessagebutton" value="send message" />
+				</form>
+			</div>
+			<input type="text" id="userid" placeholder="user ID" />
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../assets/js/jquery-2.0.3.min.js"></script>
+		<script src="custom.js"></script>
+		<script type="text/javascript">
+			load_chat();
+			for( var i = 0; i < 10; i++){
+				i = 1;
+				;
+				setTimeout(function(){update_chat()},1000);
+			}
+		</script>
+	</body>
+</html>
+
+
 <?php
 /*
  * @package AJAX_Chat
@@ -6,19 +64,4 @@
  * @license Modified MIT License
  * @link https://blueimp.net/ajax/
  */
-
-// Suppress errors.
-error_reporting(0);
-
-// Path to the chat directory:
-define('AJAX_CHAT_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
-
-// Include custom libraries and initialization code:
-require(AJAX_CHAT_PATH.'lib/custom.php');
-
-// Include Class libraries:
-require(AJAX_CHAT_PATH.'lib/classes.php');
-
-// Initialize the chat:
-$ajaxChat = new CustomAJAXChat();
 ?>
