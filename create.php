@@ -226,7 +226,7 @@
 
 							<div class="form-group" required>
 								<p>Interests</p>
-								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add tags" />
+								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add Interests" required>
 							</div>
 							
 

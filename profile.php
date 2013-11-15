@@ -175,9 +175,6 @@
 				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
 				    $res = $db->getResult();
 
-				    header('Content-Type: image/jpg');
-				    echo $res["Image"];
-
 				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
 				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
 				    echo "<p>Date of Birth: " . $res["DOB"];

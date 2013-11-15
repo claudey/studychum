@@ -243,17 +243,23 @@
 									<div class="col-md-9 col-lg-9 media-body">';
 
 						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
-										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>';
+										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>
+										<p><b>Gender:<b> '.$chum['Gender'].'</p>
+										<p><b>Country:<b> '.$chum['Country'].'</p>';
 
-						if (count($interests>0)) {
+
+							// Displaying User's Interests
 							echo "<p><b>Interests:</b></p>";
+
 							foreach ($interests as $interest) {
-								echo "<span>" . $interest['Interest'] . "</span><br>";
+								echo "<span>" . $interest['Interest'] . " </span>";
 							}
-						}
+								
+							
+						
 						
 
-						echo '
+						echo '			<br>
 										<form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
 											<input type="submit" class="press orange" value="Send a Chum Request" id="chum_request">
