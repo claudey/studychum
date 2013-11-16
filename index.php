@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>StudyChum, find people with similar learning interests and study together</title>
@@ -33,14 +32,12 @@
         </div>
 
         <div id="myCarousel" class="carousel slide">
-            <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
 
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
                     <div class="fill slide1"></div>
@@ -58,25 +55,12 @@
                     <div class="fill slide2"></div>
                     <div class="carousel-caption mast">
                         <h1>Unlimited access to resources for every field of study</h1>
-                        <!--div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="email address">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" type="button">I'm in.</button>
-                            </span>
-                        </div-->
                     </div>
                 </div>
                 <div class="item">
                     <div class="fill slide3"></div>
                     <div class="carousel-caption mast">
                         <h1>Create your small groups, study with really cool tools.</h1>
-                        <!--div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="email address">
-                            <span class="input-group-btn">
-                                <button class="btn btn-success" type="button">I'm in.</button>
-                            </span>
-                        </div-->
-
                     </div>
                 </div>
             </div>
@@ -107,7 +91,7 @@
                 Create small groups to study together or collaborate on a project</div>
                 <div class="col-md-3">
                 <span class="glyphicon glyphicon-globe"></span><br>
-                <!-- Learn languages, meet new people, share your knowledge with your chum,  -->Build a network of excellent minds across the globe.</div>
+                Build a network of excellent minds across the globe.</div>
             </div>
         </div>
 
