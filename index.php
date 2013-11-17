@@ -18,9 +18,6 @@
                 <div class="col-md-7">
                     <img class="logo" src="assets/img/header_logo.webp" alt="studychum logo">
                     <div class="headline">StudyChum</div>
-                    <div class="tagline">
-
-                    </div>
                 </div>
                 <div class="col-md-3">
                     <a class="press orange google" href="/create">Sign in with Google</a>
@@ -65,7 +62,6 @@
                 </div>
             </div>
 
-            <!-- Controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev">
                 <span class="icon-prev"></span>
             </a>

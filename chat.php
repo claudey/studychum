@@ -14,7 +14,6 @@
 <body>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -25,7 +24,6 @@
             <a class="navbar-brand" href="/user">StudyChum</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
 
             <ul class="nav navbar-nav">
@@ -36,7 +34,6 @@
         <ul class="dropdown-menu">
         <li><a href="#">School chums</a></li>
         <li><a href="#">Bffs</a></li>
-        <li><a href="#">Algebra chums</a></li>
         <li role="presentation" class="divider"></li>
         <li><a href="#">New Language chums</a></li>
         </ul>
@@ -60,7 +57,6 @@
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?><b class="caret"></b></a>
         <ul class="dropdown-menu">
         <li><a href="/profile">Profile</a></li>
-        <li><a href="#">Settings</a></li>
         <li role="presentation" class="divider"></li>
         <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
         </ul>
@@ -83,8 +79,6 @@
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="#">Activity</a></li>
                     <li><a href="/chums">Chums</a></li>
-                    <!-- <li><a href="#">Tutors</a></li> -->
-                    <!-- <li><a href="#">Calendar</a></li> -->
                     <!-- <li><a href="#">Settings</a></li> -->
                 </ul>
 
