@@ -33,3 +33,14 @@ handlers:
 
 - url: /mychums
   script: userchums.php
+
+- url: /forum
+  script: forum.php
+
+- url: /create_discussion
+  script: create_discussion.php
+
+- url: /discussions
+  script: discussions.php
+
+

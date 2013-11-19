@@ -8,8 +8,24 @@
     use google\appengine\api\users\UserService;
 
     $user = UserService::getCurrentUser();
+    $email = $user->getEmail();
 
-   
+    // adding users' contribution to a post to the database
+    if (isset($_POST["submit"])) {
+    	$post_content = $_POST['contribution'];
+    	$post_date = date('Y-m-d H:i:s');
+    	$post_topic = $_GET['topic_id'];
+
+   		$db = new Database();
+   		$db->connect();
+   		$db->sql("SELECT User_Id FROM Users WHERE EmailAddress='".$email."'");
+   		$res = $db->getResult();
+   		$post_by = $res['User_Id'];
+
+   		$post = array('post_content' => $post_content, 'post_date' => $post_date, 'post_topic' => $post_topic, 'post_by' => $post_by);
+
+   		$db->insert('posts', $post);
+   	}
 
 ?>
 
@@ -99,87 +115,75 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Your profile</h3>
 				<?php
-					// function to form input sanitise input
-					function test_input($data)
-					{
-					   $data = trim($data);
-					   $data = stripslashes($data);
-					   $data = htmlspecialchars($data);
-					   return $data;
+					if (isset($_GET['topic_cat'])) {
+						$topic_cat = $_GET['topic_cat'];
+						$db = new Database();
+						$db->connect();
+						$db->sql("SELECT * FROM categories WHERE cat_id='".$topic_cat."'");
+						$res = $db->getResult();
+						$category = $res["cat_name"];
+
+						$db->sql("SELECT * FROM topics WHERE topic_cat='".$topic_cat."'");
+						$res = $db->getResult();
 					}
 
-					// getting users profile details from form
-					if ($_SERVER["REQUEST_METHOD"] == "POST")
-					{
+					echo "<h3 class='profile-heading'>".$category."</h3>";
+					echo "<p>".$res['topic_subject']."<p>";
+					echo "<p>".$res['topic_date']."<p>";
 
-						$gender = test_input($_POST["gender"]);
+					$topic_id = $res['topic_id'];
+					$user_id = $res['topic_by'];
+					$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
+					$res = $db->getResult();
+					echo "<p>".$res['FirstName']." ".$res["LastName"]."<p>";
+					echo "<hr>";
 
-						$country = test_input($_POST["country"]);
+					$topic_cat = $_GET['topic_cat'];
+					$topic_id = $_GET['topic_id'];
 
-						$fname = test_input($_POST["fname"]);
-						$lname = test_input($_POST["lname"]);
-						$dob = test_input($_POST["dob"]);
-						$education = test_input($_POST["education"]);		
-
-						$image = test_input($_POST["image"]);
-
-						$email = $user->getEmail();
-
-					    // new instance of database
-						$db = new Database();
-					    $db->connect();
-
-					    //array to hold user details from form input
-					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
-
-					    // inserting data into database
-					    $db->insert('Users', $new_user);
-
-					    // selecting last id from the database
-					    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-					    $res = $db->getResult();
-					    $id = $res[User_Id];
-
-					    // using the tags
-
-					    $tags = $_POST["tags"];
-						$interests = explode(",", $tags);
-
-						foreach ($interests as $interest) {
-							//making first letter of interest capitl
-							$formatted_interest = ucfirst(strtolower($interest));
-							$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
+					// displaying other users comments
+					$db->sql("SELECT * FROM posts WHERE post_topic='".$topic_id."'");
+					$res = $db->getResult();
+					// checking if there are no contributions
+					if (count($res)==0) {
+						echo "<p>Be the first to contribute</p>";
+					}
+					elseif (array_key_exists('post_id', $res)) {
+						echo "<p>".$res['post_content']."</p>";
+						echo "<p>".$res['post_date']."</p>";
+						$user_id = $res['post_by'];
+						$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
+						$res = $db->getResult();
+						echo "<p>Contribution by:".$res['FirstName']." ".$res["LastName"]."<p>";
+					} else {
+						foreach ($res as $contribution) {
+							echo "<p>".$contribution['post_content']."</p>";
+							echo "<p>".$contribution['post_date']."</p>";
+							$user_id = $contribution['post_by'];
+							$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
+							$res = $db->getResult();
+							echo "<p>Contribution by:".$res['FirstName']." ".$res["LastName"]."<p>";
 						}
+					}
 
-					    $db->disconnect();
 
-						}
-
-										
-				    
-				    
-				    // displaying information about user 
-					$db = new Database();
-				    $db->connect();
-				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
-				    $res = $db->getResult();
-
-				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
-				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
-				    echo "<p>Date of Birth: " . $res["DOB"];
-				    echo "<p>Country: " . $res["Country"];
-				    echo "<p>Gender: " . $res["Gender"];
-
-				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
-				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    $res = $db->getResult();
-
-				    echo "<p><b>Interests:</b></p>";
-						foreach ($res as $interest) {
-							echo "<span>" . $interest['Interest'] . "</span>" . ",";
-						}
+					echo '
+					<form class="form-horizontal" action="/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'" method="POST">
+						<fieldset>
+							<div class="row">
+								<div class="form-group col-md-7">
+									<p>Contribute to Discussion<p>
+									<textarea rows="4" cols="50" name="contribution" class="form-control" required></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<p class="form-action">
+									<input type="submit" value="Submit" name="submit">
+								</p>
+							</div>
+						</fieldset>
+					</form>';
 
 				?>
 				
