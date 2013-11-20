@@ -115,22 +115,22 @@
 
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/mychums">My Chums</a></li>
-
-				<li><a href="/forum">Forum</a></li>
+				<li class="active "><a href="#">Forum</a></li>
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
 
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">StudyChum Forum</h3>
-				<p><a href="/create_discussion">Start a Discussion</a></p>
+				<h3 class="profile-heading">StudyChum Forums</h3>
+				<p><a class="press orange" href="/create_discussion">Start a Discussion</a></p>
 				<br>
-				<table>
+				<table class="table">
 					<thead>
 						<tr>
-							<td>Category</td>
-							<td>Discussions</td>
+							<th>Category</th>
+							<th>Discussions</th>
+							<th>Author</th>
 						</tr>
 					</thead>
 					<tbody>

@@ -95,9 +95,8 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">		
 			<ul class="nav nav-pills nav-stacked" data-intro="Quickly access your settings and personal interactions from this bar" data-position="right">
-				<li><a href="/activity">Activity</a></li>
 				<li><a href="/chums">Chums</a></li>
-				<li><a href="mychums">My Chums</a></li>
+				<li><a href="/mychums">My Chums</a></li>
 				<!-- <li><a href="#">Calendar</a></li> -->
 				<!-- <li><a href="#">Settings</a></li> -->
 			</ul>
