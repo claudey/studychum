@@ -7,6 +7,10 @@
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
+    require_once 'google/appengine/api/mail/Message.php';
+
+	use google\appengine\api\mail\Message;
+
     $user = UserService::getCurrentUser();
     $email = $user->getEmail();
 
@@ -18,13 +22,46 @@
 
    		$db = new Database();
    		$db->connect();
-   		$db->sql("SELECT User_Id FROM Users WHERE EmailAddress='".$email."'");
+   		$db->sql("SELECT User_Id,FirstName,LastName FROM Users WHERE EmailAddress='".$email."'");
    		$res = $db->getResult();
    		$post_by = $res['User_Id'];
+   		$FirstName = $res['FirstName'];
+   		$LastName = $res['LastName'];
 
    		$post = array('post_content' => $post_content, 'post_date' => $post_date, 'post_topic' => $post_topic, 'post_by' => $post_by);
 
    		$db->insert('posts', $post);
+
+   		$topic_cat = $_GET['topic_cat'];
+		$topic_id = $_GET['topic_id'];
+
+		$db->sql("SELECT topic_by FROM topics WHERE topic_id='".$topic_id."'");
+		$res = $db->getResult();
+		$db->sql("SELECT EmailAddress FROM Users WHERE User_Id='".$res['topic_by']."'");
+		$res=$db->getResult();
+
+   		//sending mail notification to creater of discussion
+
+    	$subject = $FirstName . " " . $LastName . " has contributed to your discussion.";
+    	$message_body .= $post_content;
+    	$message_body .= "Click the link below to view.\n";
+    	$message_body .= 'studychumapp.appspot.com/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'';
+
+		$mail_options = [
+			"sender" => 'studychumgh@gmail.com',
+			"to" => $res['EmailAddress'],
+			"subject" => $subject,
+			"textBody" => $message_body
+	];
+
+		try {
+		    $message = new Message($mail_options);
+		    $message->send();
+		} catch (InvalidArgumentException $e) {
+		    echo $e;
+		}
+
+
    	}
 
 ?>
