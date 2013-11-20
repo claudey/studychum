@@ -9,6 +9,30 @@
 
     $user = UserService::getCurrentUser();
 
+    $email = $user->getEmail();
+
+   
+	if (isset($_POST["submit"])) {
+   		$db = new Database();
+   		$db->connect();
+   		$db->insert('categories', array('cat_name' => $_POST['category']));
+
+   		$db->sql("SELECT cat_id FROM categories ORDER BY cat_id DESC LIMIT 1");
+   		$res = $db->getResult();
+   		$topic_cat = $res['cat_id'];
+   		$topic_subject = $_POST["discussion"];
+   		$topic_date = date('Y-m-d H:i:s');
+
+   		$db->sql("SELECT User_Id FROM Users WHERE EmailAddress='".$email."'");
+   		$res = $db->getResult();
+   		$topic_by = $res['User_Id'];
+
+   		$topic = array('topic_subject' => $topic_subject, 'topic_date' => $topic_date, 'topic_cat' => $topic_cat, 'topic_by' => $topic_by);
+
+   		$db->insert('topics', $topic);
+   	}
+
+
    
 
 ?>
@@ -99,89 +123,49 @@
 		</div>
 		<div class="col-sm-10">
 			<div class="row">
-				<h3 class="profile-heading">Your profile</h3>
-				<?php
-					// function to form input sanitise input
-					function test_input($data)
-					{
-					   $data = trim($data);
-					   $data = stripslashes($data);
-					   $data = htmlspecialchars($data);
-					   return $data;
-					}
+				<h3 class="profile-heading">StudyChum Forum</h3>
+				<p><a href="/create_discussion">Start a Discussion</a></p>
+				<br>
+				<table>
+					<thead>
+						<tr>
+							<td>Category</td>
+							<td>Discussions</td>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+							$db = new Database();
+							$db->connect();
+							$db->sql("SELECT * FROM categories");
+							$res = $db->getResult();
 
-					// getting users profile details from form
-					if ($_SERVER["REQUEST_METHOD"] == "POST")
-					{
+							foreach ($res as $categories) {
+								$category = $categories["cat_name"];
+								$cat_id = $categories["cat_id"];
 
-						$gender = test_input($_POST["gender"]);
+								$db->sql("SELECT * FROM topics WHERE topic_cat='".$cat_id."'");
+								$res = $db->getResult();
+								$user_id = $res['topic_by'];
+								$topic_id = $res['topic_id'];
+								$subject = $res['topic_subject'];
+								$date = $res['topic_date'];
 
-						$country = test_input($_POST["country"]);
+								$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
+								$res = $db->getResult();
 
-						$fname = test_input($_POST["fname"]);
-						$lname = test_input($_POST["lname"]);
-						$dob = test_input($_POST["dob"]);
-						$education = test_input($_POST["education"]);		
-
-						$image = test_input($_POST["image"]);
-
-						$email = $user->getEmail();
-
-					    // new instance of database
-						$db = new Database();
-					    $db->connect();
-
-					    //array to hold user details from form input
-					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
-
-					    // inserting data into database
-					    $db->insert('Users', $new_user);
-
-					    // selecting last id from the database
-					    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-					    $res = $db->getResult();
-					    $id = $res[User_Id];
-
-					    // using the tags
-
-					    $tags = $_POST["tags"];
-						$interests = explode(",", $tags);
-
-						foreach ($interests as $interest) {
-							//making first letter of interest capitl
-							$formatted_interest = ucfirst(strtolower($interest));
-							$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
-						}
-
-					    $db->disconnect();
-
-						}
-
-										
-				    
-				    
-				    // displaying information about user 
-					$db = new Database();
-				    $db->connect();
-				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
-				    $res = $db->getResult();
-
-				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
-				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
-				    echo "<p>Date of Birth: " . $res["DOB"];
-				    echo "<p>Country: " . $res["Country"];
-				    echo "<p>Gender: " . $res["Gender"];
-
-				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
-				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    $res = $db->getResult();
-
-				    echo "<p><b>Interests:</b></p>";
-						foreach ($res as $interest) {
-							echo "<span>" . $interest['Interest'] . "</span>" . ",";
-						}
-
-				?>
+								echo "<tr>
+										<td> ".$category." </td>
+										<td><a href='/discussions?topic_cat=".$cat_id."&topic_id=".$topic_id."'> ".$subject." </a></td>
+										<td> Started By:".$res["FirstName"]. " ". $res["LastName"]." </td>
+										<td> ".$date."</td>
+										<td> 0 Contributions </td>
+									</tr>";
+							}
+						?>
+						
+					</tbody>
+				</table>
 				
 			</div>
 		</div>

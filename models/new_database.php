@@ -44,7 +44,7 @@ if (mysql_query($sql)){
 	echo "Interests table not created<br>" . mysql_error($con);
 }
 
-$sql="CREATE TABLE IF NOT EXISTS Users_Interests (User_Id INT NOT NULL, Interest CHAR(100), FOREIGN KEY (User_Id) REFERENCES Users(User_Id))";
+$sql="CREATE TABLE IF NOT EXISTS Users_Interests (User_Id INT NOT NULL, Interest CHAR(100), FOREIGN KEY (User_Id) REFERENCES Users(User_Id))"; //country, gender and password
 
 // Execute query
 
