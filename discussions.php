@@ -148,59 +148,42 @@
 						echo "<p>Be the first to contribute.</p>";
 					}
 					elseif (array_key_exists('post_id', $res)) {
-						echo "<p>".$res['post_content']."</p>";
+						echo "<div class=\"well well-sm comment\"><p>".$res['post_content']."</p>";
 						echo "<p>".$res['post_date']."</p>";
 						$user_id = $res['post_by'];
 						$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
 						$res = $db->getResult();
-						echo "<p>Contribution by: ".$res['FirstName']." ".$res["LastName"]."<p>";
+						echo "<p>Contribution by: ".$res['FirstName']." ".$res["LastName"]."<p></div>";
 					} else {
 						foreach ($res as $contribution) {
-							echo "<p>".$contribution['post_content']."</p>";
+							echo "<div class=\"well well-sm comment\"><p>".$contribution['post_content']."</p>";
 							echo "<p>".$contribution['post_date']."</p>";
 							$user_id = $contribution['post_by'];
 							$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
 							$res = $db->getResult();
-							echo "<p>Contribution by: ".$res['FirstName']." ".$res["LastName"]."<p>";
+							echo "<p>Contribution by: ".$res['FirstName']." ".$res["LastName"]."<p></div>";
 						}
 					}
 
-
-					// echo '
-					// <form class="form-horizontal" action="/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'" method="POST">
-					// 	<fieldset>
-					// 		<div class="row">
-					// 			<div class="form-group col-md-7">
-					// 				<p>Contribute to Discussion<p>
-					// 				<textarea rows="4" cols="50" name="contribution" class="form-control rich-text" required></textarea>
-					// 			</div>
-					// 		</div>
-					// 		<div class="form-group">
-					// 			<p class="form-action">
-					// 				<input type="submit" value="Submit" name="submit">
-					// 			</p>
-					// 		</div>
-					// 	</fieldset>
-					// </form>';
+					echo '
+					<form class="form-horizontal" action="/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'" method="POST">
+						<fieldset>
+							<div class="row">
+								<div class="form-group col-md-7">
+									<p>Contribute to Discussion<p>
+									<textarea rows="4" cols="50" name="contribution" class="form-control rich-text" required></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<p class="form-action">
+									<input type="submit" value="Submit" name="submit">
+								</p>
+							</div>
+						</fieldset>
+					</form>';
 
 				?>
 				
-				<form class="form-horizontal" action="/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'" method="POST">
-					<fieldset>
-						<div class="row">
-							<div class="form-group col-md-7">
-								<p>Contribute to Discussion<p>
-								<textarea rows="4" cols="50" name="contribution" class="form-control rich-text" required></textarea>
-							</div>
-						</div>
-						<div class="form-group">
-							<p class="form-action">
-								<input type="submit" value="Submit" name="submit">
-							</p>
-						</div>
-					</fieldset>
-				</form>'
-
 			</div>
 		</div>
 	</div>
