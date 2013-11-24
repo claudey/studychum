@@ -76,9 +76,6 @@
 									<div class="other">
 										<div class-"row">
 											<div class="col-lg-6">
-												<a href="#">Sign in with LinkedIn</a>
-											</div>
-											<div class="col-lg-6">
 												<a href="#">Sign in with Google</a>
 											</div>
 										</div>
@@ -110,6 +107,5 @@
 	  ga('send', 'pageview');
 
 	</script>
-	<!-- start Dropifi --> <script type='text/javascript' src='https://s3.amazonaws.com/dropifi/js/widget/dropifi_widget.min.js'></script><script type='text/javascript'>document.renderDropifiWidget('70c2f0e75aaee02b1cfef8e927e010c1-1383283917314');</script> <!-- end Dropifi -->
 </body>
 </html>
