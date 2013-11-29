@@ -44,7 +44,7 @@
 
     	$subject = $FirstName . " " . $LastName . " has contributed to your discussion.";
     	$message_body .= $post_content;
-    	$message_body .= "Click the link below to view.\n";
+    	$message_body .= "\nClick the link below to view.\n";
     	$message_body .= 'studychumapp.appspot.com/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'';
 
 		$mail_options = [

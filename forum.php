@@ -151,6 +151,18 @@
 								$subject = $res['topic_subject'];
 								$date = $res['topic_date'];
 
+								$db->sql("SELECT * FROM posts WHERE post_topic='".$topic_id."'");
+								$res = $db->getResult();
+
+								if (count($res)==0) {
+									$contributions = 0;
+								}
+								elseif (array_key_exists('post_id', $res)) {
+									$contributions=1;
+								} else {
+									$contributions = count($res);
+									}
+
 								$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
 								$res = $db->getResult();
 
@@ -159,7 +171,7 @@
 										<td><a href='/discussions?topic_cat=".$cat_id."&topic_id=".$topic_id."'> ".$subject." </a></td>
 										<td> Started By:".$res["FirstName"]. " ". $res["LastName"]." </td>
 										<td> ".$date."</td>
-										<td> 0 Contributions </td>
+										<td> ".$contributions." Contributions </td>
 									</tr>";
 							}
 						?>

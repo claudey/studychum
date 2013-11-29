@@ -172,6 +172,9 @@
 				    echo "<p>Country: " . $res["Country"];
 				    echo "<p>Gender: " . $res["Gender"];
 
+				    //header("Content-type: image/jpeg");
+				    echo "<img src='".$res['Image']."'/>";
+
 				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
 				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
 				    $res = $db->getResult();
