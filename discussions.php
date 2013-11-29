@@ -77,6 +77,8 @@
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
+		<link rel="stylesheet" href="assets/css/wysihtml5.css">
+		<link rel="stylesheet" href="assets/css/prettify.css">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
@@ -104,8 +106,6 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">School chums</a></li>
-						<li><a href="#">Bffs</a></li>
 						<li><a href="#">Algebra chums</a></li>
 						<li role="presentation" class="divider"></li>
 						<li><a href="#">New Language chums</a></li>
@@ -141,12 +141,9 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
-
 				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/mychums">My Chums</a></li>
-
-				<li><a href="/forum">Forum</a></li>
-				<!-- <li><a href="#">Settings</a></li> -->
+				<li class="active"><a href="/forum">Forums</a></li>
 			</ul>
 
 		</div>
@@ -166,8 +163,7 @@
 					}
 
 					echo "<h3 class='profile-heading'>".$category."</h3>";
-					echo "<p>".$res['topic_subject']."<p>";
-					echo "<p>".$res['topic_date']."<p>";
+					echo "<p>".$res['topic_subject']."<p>" . "posted on " . "<small>".$res['topic_date']."<small>";
 
 					$topic_id = $res['topic_id'];
 					$user_id = $res['topic_by'];
@@ -184,26 +180,25 @@
 					$res = $db->getResult();
 					// checking if there are no contributions
 					if (count($res)==0) {
-						echo "<p>Be the first to contribute</p>";
+						echo "<p>Be the first to contribute.</p>";
 					}
 					elseif (array_key_exists('post_id', $res)) {
-						echo "<p>".$res['post_content']."</p>";
+						echo "<div class=\"well well-sm comment\"><p>".$res['post_content']."</p>";
 						echo "<p>".$res['post_date']."</p>";
 						$user_id = $res['post_by'];
 						$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
 						$res = $db->getResult();
-						echo "<p>Contribution by:".$res['FirstName']." ".$res["LastName"]."<p>";
+						echo "<p>Contribution by: ".$res['FirstName']." ".$res["LastName"]."<p></div>";
 					} else {
 						foreach ($res as $contribution) {
-							echo "<p>".$contribution['post_content']."</p>";
+							echo "<div class=\"well well-sm comment\"><p>".$contribution['post_content']."</p>";
 							echo "<p>".$contribution['post_date']."</p>";
 							$user_id = $contribution['post_by'];
 							$db->sql("SELECT FirstName, LastName FROM Users WHERE User_Id='".$user_id."'");
 							$res = $db->getResult();
-							echo "<p>Contribution by:".$res['FirstName']." ".$res["LastName"]."<p>";
+							echo "<p>Contribution by: ".$res['FirstName']." ".$res["LastName"]."<p></div>";
 						}
 					}
-
 
 					echo '
 					<form class="form-horizontal" action="/discussions?topic_cat='.$topic_cat.'&topic_id='.$topic_id.'" method="POST">
@@ -211,7 +206,7 @@
 							<div class="row">
 								<div class="form-group col-md-7">
 									<p>Contribute to Discussion<p>
-									<textarea rows="4" cols="50" name="contribution" class="form-control" required></textarea>
+									<textarea rows="4" cols="50" name="contribution" class="form-control rich-text" required></textarea>
 								</div>
 							</div>
 							<div class="form-group">
@@ -230,6 +225,14 @@
 
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/wysihtml5-0.3.0.min.js"></script>
+	<script src="assets/js/wysihtml5.js"></script>
+	<script src="assets/js/prettify.js"></script>
+
+	<script type="text/javascript">
+		$('.rich-text').wysihtml5();
+	</script>
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

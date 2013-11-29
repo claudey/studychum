@@ -71,8 +71,6 @@
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
 					<ul class="dropdown-menu">
-						<li><a href="#">School chums</a></li>
-						<li><a href="#">Bffs</a></li>
 						<li><a href="#">Algebra chums</a></li>
 						<li role="presentation" class="divider"></li>
 						<li><a href="#">New Language chums</a></li>
