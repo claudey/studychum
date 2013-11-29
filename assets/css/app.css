@@ -54,6 +54,17 @@ body{
 	margin-left: -10px;
 	font-size: 24px;
 }
+.search-bar{
+	width: 200px;
+	-webkit-transition: all .25s ease-out;
+	   -moz-transition: all .25s ease-out;
+	    -ms-transition: all .25s ease-out;
+	     -o-transition: all .25s ease-out;
+	        transition: all .25s ease-out;
+}
+.search-bar:focus{
+	width: 250px
+}
 .profile-pic{
 	width: 20px;
 	height: 20px
@@ -70,8 +81,7 @@ h1, h2 ,h3 ,h4, h5, h6{
 	color: #FF6B34;
 }
 .side-nav{
-	/*position: fixed*/
-}
+	margin-top: 80px;}
 .nav-pills > li {
   float: left
 }
@@ -95,6 +105,9 @@ h1, h2 ,h3 ,h4, h5, h6{
 .nav-stacked > li + li {
   margin-top: 2px;
   margin-left: 0
+}
+.pages{
+	text-align: center
 }
 a.press {
 	text-decoration: none;

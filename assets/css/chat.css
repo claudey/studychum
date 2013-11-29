@@ -1,0 +1,64 @@
+/* Empty file for testing other pages of the application*/
+.chat{
+	-webkit-transition: all 1s ease;
+/*		   -moz-transition: all 1s ease;
+		    -ms-transition: all 1s ease;
+		     -o-transition: all 1s ease;
+		        transition: all 1s ease;	*/
+}
+.chum-chat{
+	margin: 0;
+	padding: 10px;
+	border-bottom: gray 1px dashed;
+/*	-webkit-transition: all 1s linear;
+	   -moz-transition: all 1s linear;
+	    -ms-transition: all 1s linear;
+	     -o-transition: all 1s linear;
+	        transition: all 1s linear*/
+}
+.chum-chat:hover{
+	padding-left: 15px;
+	cursor: pointer;
+	background-color: #CFCAC6;
+	border-left: 3px solid #2E2E2C
+}
+.prof-img{
+	width: 80px;
+	margin-bottom: 10px
+}
+.sender, .receiver{
+	border-bottom: 1px solid gray;
+	margin: 10px 0 20px 0;
+}
+.sender{
+	float: left
+}
+.sender-text{
+
+}
+.receiver{
+	/*float: right*/
+	text-align: right;
+/*	-webkit-transition: all 3s linear;
+	   -moz-transition: all 3s linear;
+	    -ms-transition: all 3s linear;
+	     -o-transition: all 3s linear;
+	        transition: all 3s linear*/	
+}
+.receiver-image{
+	width: inherit
+}
+.receiver-text{
+	
+}
+.chat-area{
+	margin: 10px 0 20px 0;
+/*	-webkit-transition: all .25s linear;
+	   -moz-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	     -o-transition: all .25s linear;
+	        transition: all .25s linear	*/
+}
+.chat-reset{
+	float: right
+}
