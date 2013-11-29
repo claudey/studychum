@@ -8,7 +8,7 @@
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
     <link rel="stylesheet" href="assets/css/bs.min.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <link rel="stylesheet" href="assets/css/temp.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
     <link rel="shortcut icon" href="assets/img/favicon.ico">
 </head>
 <body>
@@ -88,28 +88,34 @@
                             <p class="chum-chat">MEST 2015</p>
                         </div>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-7">
                         <div class="chat">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <!-- <img src="assets/img/profile.webp" alt=""> -->
-                                    <p>receiver image is here.</p>
+                            <div class="row sender">
+                                <div class="col-md-3">
+                                    <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
                                 </div>
-                                <div class="col-md-7">
+                                <div class="message col-md-9">
                                     <p>This is the sender's message. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, odio, debitis sequi quam facere libero vel. Exercitationem, ullam totam repellat.
                                     </p>
                                 </div>
                             </div>
                             <div class="row receiver">
-                                <div class="message col-md-7">
+                                <div class="message col-md-9">
                                     <p>This is the receiver's message</p>
                                 </div>
-                                <div class="col-md-2">
-                                    <!-- <img src="assets/img/profile.webp" alt=""> -->
-                                    <p>sender image is here</p>
+                                <div class="col-md-3">
+                                    <img src="assets/img/profile.webp" alt="Your profile picture" class="prof-img">
                                 </div>
                             </div>
-
+                        </div>
+                        <div class="row chat-area">
+                            <div class="col-md-3">
+                                <img src="assets/img/profile.webp" class="prof-img" class="pull-right">
+                            </div>
+                            <div class="col-md-9">
+                                <textarea rows="4" cols="20" class="form-control chat-box" required></textarea><br>
+                                <a href="#" class="press seagreen chat-reset">Send</a>
+                            </div>
                         </div>
 
                     </div>
@@ -138,6 +144,8 @@
 
         <script src="assets/js/jquery-2.0.3.min.js"></script>
         <script src="assets/js/bs.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

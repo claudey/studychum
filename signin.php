@@ -60,16 +60,6 @@
 							<div class="tab-pane fade" id="create">
 								<form id="tab">
 									<div class="input-group">
-									  <span class="input-group-addon">@</span>
-									  <input type="text" class="form-control" placeholder="Username">
-									</div>
-
-									<div class="input-group">
-									  <input type="text" class="form-control">
-									  <span class="input-group-addon">.00</span>
-									</div>
-
-									<div class="input-group">
 										<span class="input-group-addon glyphicon glyphicon-search"></span>
 									  	<input type="text" class="form-control">
 									</div>

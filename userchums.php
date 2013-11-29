@@ -1,18 +1,3 @@
-<?php
-	require_once 'google/appengine/api/users/UserService.php';
-
-	use google\appengine\api\users\User;
-    use google\appengine\api\users\UserService;
-
-    $user = UserService::getCurrentUser();
-
-    if (!$user){
-    	
-    	header('Location: ' .
-        UserService::createLoginURL($_SERVER['REQUEST_URI']));
-    }
-?>
-
 <html>
 <head>
 	<title>StudyChum - Your Activity</title>
@@ -45,8 +30,7 @@
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
 			<ul class="nav navbar-nav">
-				<!-- <li class="active"><a href="#">Courses</a></li>
-				<li><a href="#">Tutors</a></li>
+				<li class="active"><a href="#">Courses</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -54,7 +38,7 @@
 						<li><a href="#">Bffs</a></li>
 						<li><a href="#">Algebra chums</a></li>
 						<li role="presentation" class="divider"></li>
-						<li><a href="#">New Language chums</a></li>
+						<li><a href="#">More...</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Resources</a></li>
@@ -65,19 +49,19 @@
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
-    			</li> -->
+    			</li>
 			</ul>
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<!-- <li><a href="#">Notifications <span class="badge">42</span></a></li> -->
-				<!-- <li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
+				<li><a href="#">Notifications <span class="badge">42</span></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">user@studychum.com <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="/profile">Profile</a></li>
-						<!-- <li role="presentation" class="divider"></li> -->
-						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
+						<li role="presentation" class="divider"></li>
+						<li><a href="index.html">Log out</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -86,69 +70,40 @@
 
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
-			
 			<ul class="nav nav-pills nav-stacked">
-				<li><a href="/chums">Find Chums</a></li>
 				<li class="active"><a href="#">My Chums</a></li>
-				<!-- <li><a href="#">Tutors</a></li> -->
-				<!-- <li><a href="#">Calendar</a></li> -->
-				<!-- <li><a href="#">Settings</a></li> -->
+				<li><a href="#">Forums</a></li>
+				<li><a href="#">Chat</a></li>
+				<li><a href="#">Schedule</a></li>
+				<li><a href="#">Settings</a></li>
 			</ul>
-
 		</div>
+
 		<div class="col-sm-9">
 			<div class="row">
-				<h3 class="profile-heading">Your Chums</h3>
-				
-						<?php
-							include 'classes/crud.php';
-
-							$db = new Database();
-							$db->connect();
-							$db->sql("SELECT Chum_Id FROM Chums WHERE User_Id=(SELECT User_Id FROM Users WHERE EmailAddress = '".$user->getEmail()."')");
-							$res = $db->getResult();
-
-							//print_r($res);
-
-							if (count($res)==0) {
-						    	echo "<p>You have no chums currently :(.</p>";;
-						    }
-							else {
-								foreach ($res as $chum) {
-							
-									$db->sql("SELECT * FROM Users WHERE User_Id=".$chum['Chum_Id']."");
-									$chums = $db->getResult();
-										echo '<div class="col-md-6">
-										<div class="media row chum-list">
-											<div class="col-md-2">
-												<a class="pull-left" href="#">
-													<img class="media-object" src="assets/img/profile.webp" alt="...">
-												</a>
-											</div>
-											<div class="col-md-10 media-body">';
-
-											echo '<h4 class="media-heading"><em>' . $chums['FirstName'] . ' ' . $chums['LastName'] .'</em></h4>
-															<p> <b>Educational Level:</b> '.$chums['EducationLevel'].'</p>';
-
-											echo "<p><b>Interests:</b></p>";
-											/*
-											echo "<p><b>Interests:</b></p>";
-											foreach ($interests as $interest) {
-												echo "<p>" . $interest['Interest'] . "</p>";
-											}
-											*/
-
-											echo '
-														</div>	
-													</div>
-												</div>';
-										
-												}
-
-								}
-					
-							
-						?>
+				<h3 class="profile-heading">My Chums</h3>
+				<div class="col-md-6">
+					<div class="media row chum-list">
+						<div class="col-md-3">
+							<a class="pull-left" href="#">
+								<img class="media-object" src="assets/img/profile.webp" alt="...">
+							</a>
+						</div>
+						<div class="col-md-9 media-body">
+							<h4 class="media-heading">
+								<em>Isaac Newton</em>
+							</h4>
+							<p><strong>Educational Level: </strong>College Graduate</p>
+							<p><strong>Interests: </strong>Analytics, Geometry, Geodetics</p>
+							<p class="row">
+								<span class="col-md-8"><strong>Country: </strong>United Arab Emirates</span>
+								<span class="col-md-4"><strong>Age: </strong>27</span>
+							</p>
+						</div>	
+					</div>
+				</div>
+			</div>
+			
 
 			<div class="row pages">
 				<ul class="pagination">
@@ -156,8 +111,6 @@
 					<li><a href="#">1</a></li>
 					<li><a href="#">2</a></li>
 					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
 					<li><a href="#">&raquo;</a></li>
 				</ul>
 			</div>
