@@ -1,16 +1,3 @@
-/*$('button').on('click', function(){
-    $('.sign-up').html("You are our No. 1 fan. We'll let you know when we're ready. :)");
-    $('.sign-up').addClass("success");        
-});
-*/
-
-$('.search-bar').focus(function() {
-	$(this).attr('colspan', '3');
-	$(this).attr('value', 'Something here');
-	console.log('free');
-});
-
-// Activates the Carousel
 $('.carousel').carousel({
   interval: 5000
 })
@@ -19,3 +6,18 @@ $('.carousel').carousel({
 $('.tooltip-social').tooltip({
   selector: "a[data-toggle=tooltip]"
 })
+
+$(".chat-reset").click(function(e) {
+	// console.log("This works");
+    e.preventDefault();
+    var textAreaInput = $(".chat-box").val();
+    console.log(textAreaInput);
+    $(".chat-box").val('');
+    if (textAreaInput !== ""){
+    	$(".chat").append("<div class=\"row receiver\"><div class=\"message col-md-9\"><p>" + textAreaInput + "</p></div><div class=\"col-md-3\"><img src=\"assets/img/profile.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div></div>").show(3000);
+    }
+    else {
+    	$("chat-box").val("Please enter some text.");
+    }
+    console.log(document);
+});

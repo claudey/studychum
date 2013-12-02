@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title>StudyChum - Your Profile</title>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign up for StudyChum</title>
+	<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
+	<link rel="stylesheet" href="assets/css/bs.min.css">
+	<link rel="stylesheet" href="assets/css/chum.css">
+	<link rel="stylesheet" href="assets/css/signup.css">
+		<link rel="shortcut icon" href="assets/img/favicon.ico">
+</head>
+<body>
+	<div class="container">
+		<div class="row main">
+			<div class="space"></div>
+			<div class="col-sm-6 col-lg-6">
+				<div class="logo">StudyChum</div>
+				<div class="tagline">Find people with similar learning interests and study together</div>
+			</div>
+			<div class="col-sm-6 col-lg-6`">
+				<div class="modal-header">
+					<h3>Have an Account?</h3>
+				</div>
+				<div class="modal-body">
+					<div class="well">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#login" data-toggle="tab">Login</a></li>
+							<li><a href="#create" data-toggle="tab">Create Account</a></li>
+						</ul>
+						<div id="myTabContent" class="tab-content">
+							<div class="tab-pane active in" id="login">
+								<form class="form-horizontal" action="" method="POST">
+									<fieldset>
+										<div class="input-group">
+											<p>Username<p>
+											<input type="text" class="form-control" placeholder="Username">
+										</div>
+
+										<div class="input-group">
+											<span class="input-group-addon">@</span>
+											<input type="password" class="form-control" placeholder="Password">
+										</div>
+										<div class="other">
+											<div class-"row">
+												<div class="col-lg-6">
+													<a href="#">Sign in with LinkedIn</a>
+												</div>
+												<div class="col-lg-6">
+													<a href="/learner"><img src="assets/img/signingoogle.webp" class="google" alt="Sign In With Google"></a>
+												</div>
+											</div>
+										</div>
+										<p class="form-action"><a class="btn btn-lg btn-success" href="#">Login</a></p>
+									</fieldset>
+								</form>                
+							</div>
+							<div class="tab-pane fade" id="create">
+								<form id="tab">
+									<div class="input-group">
+										<span class="input-group-addon glyphicon glyphicon-search"></span>
+									  	<input type="text" class="form-control">
+									</div>
+									<div class="other">
+										<div class-"row">
+											<div class="col-lg-6">
+												<a href="#">Sign in with Google</a>
+											</div>
+										</div>
+									</div>
+									<div>
+										<p class="form-action">
+											<a class="btn btn-lg btn-success" href="#">Create Account</a>
+										</p>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery-2.0.3.min.js"></script>
+	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/app.min.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-45749635-1', 'studychumapp.appspot.com');
+	  ga('send', 'pageview');
+
+	</script>
+</body>
+</html>
