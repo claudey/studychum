@@ -103,7 +103,7 @@
 						</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 					</form>
-    			</li> -->
+    			</li> 
 			</ul>
 
 
@@ -240,7 +240,7 @@
 						echo '			<br>
 										<form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request">Send a chum request</a>
+											<input type="submit" class="press orange" id="chum_request" value="Send a Chum Request">
 										</form>
 									</div>	
 								</div>

@@ -155,9 +155,7 @@
 
 						}
 
-										
-				    
-				    
+		    
 				    // displaying information about user 
 					$db = new Database();
 				    $db->connect();
@@ -170,8 +168,11 @@
 				    echo "<p>Country: " . $res["Country"];
 				    echo "<p>Gender: " . $res["Gender"];
 
-				    //header("Content-type: image/jpeg");
-				    echo "<img src='".$res['Image']."'/>";
+				    // echo "<br>Image:";
+				    // $destination = "assets/images/";
+				    // $img = $res['Image'];
+				    // imagejpeg($img, $destination);
+				    
 
 				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
 				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
@@ -179,7 +180,7 @@
 
 				    echo "<p><b>Interests:</b></p>";
 						foreach ($res as $interest) {
-							echo "<span>" . $interest['Interest'] . "</span>" . ",";
+							echo "<p>" . $interest['Interest'] . "</p>";
 						}
 
 				?>
