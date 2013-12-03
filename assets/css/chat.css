@@ -10,11 +10,11 @@
 	margin: 0;
 	padding: 10px;
 	border-bottom: gray 1px dashed;
-/*	-webkit-transition: all 1s linear;
-	   -moz-transition: all 1s linear;
-	    -ms-transition: all 1s linear;
-	     -o-transition: all 1s linear;
-	        transition: all 1s linear*/
+	-webkit-transition: all .25s linear;
+	   -moz-transition: all .25s linear;
+	    -ms-transition: all .25s linear;
+	     -o-transition: all .25s linear;
+	        transition: all .25s linear
 }
 .chum-chat:hover{
 	padding-left: 15px;

@@ -21,3 +21,21 @@ $(".chat-reset").click(function(e) {
     }
     console.log(document);
 });
+
+$(".delete-file").on("click", function(){
+	$("#item-1").css("display", "none");
+});
+
+$(".groups").click(function(){
+    var sharedWith = $(".shared-with").html();
+    var mainText = "";
+    if (sharedWith == "Chums <span class=\"caret\"></span>"){
+        mainText = "Groups";
+        $(this).text("Chums ");
+    } else {
+        mainText = "Chums";
+        $(this).text("Groups ");
+    }
+    $(".shared-with").html(mainText + " <span class=\"caret\"></span>");
+    // console.log(sharedWith);
+});

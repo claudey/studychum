@@ -1,0 +1,37 @@
+.nav-bar ul>li {
+	text-decoration: none;
+	display: inline;
+}
+.profile{
+	width: 210px;
+	padding-bottom: 20px
+}
+.profile-heading{
+	padding-bottom: 20px
+}
+.media{
+	border-bottom: 1px dashed gray;
+	padding-bottom: 10px;
+}
+.media:last-child{
+	border: none
+}
+img.media-object{
+	/*border-radius: 50%;*/
+	width: 100%;
+	height: auto
+}
+.items{
+	-webkit-transition: all 2s ease-in;
+	   -moz-transition: all 2s ease-in;
+	    -ms-transition: all 2s ease-in;
+	     -o-transition: all 2s ease-in;
+	        transition: all 2s ease-in;
+}
+.item-list{
+	-webkit-transition: all 2s ease-in;
+	   -moz-transition: all 2s ease-in;
+	    -ms-transition: all 2s ease-in;
+	     -o-transition: all 2s ease-in;
+	        transition: all 2s ease-in;
+}
