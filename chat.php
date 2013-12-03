@@ -1,3 +1,14 @@
+<?php
+    //include 'models/database.php';
+    include 'classes/crud.php';
+
+    // Google's user service
+    require_once 'google/appengine/api/users/UserService.php';
+    use google\appengine\api\users\User;
+    use google\appengine\api\users\UserService;
+
+    $user = UserService::getCurrentUser();
+?>
 <html>
 <head>
     <title>StudyChum - Your Profile</title>

@@ -10,6 +10,9 @@
 	use google\appengine\api\users\User;
     use google\appengine\api\users\UserService;
 
+    // adding file that conatains database class
+	include 'classes/crud.php';
+
     //require_once 'google/appengine/api/mail/MailService.php';
     //use google\appengine\api\mail\MailService;
 
@@ -57,33 +60,8 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Courses</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">School chums</a></li>
-						<li><a href="#">Bffs</a></li>
-						<li><a href="#">Algebra chums</a></li>
-						<li role="presentation" class="divider"></li>
-						<li><a href="#">More...</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Resources</a></li>
-				<li>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control search-bar" placeholder="Search">
-						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
-					</form>
-    			</li>
-			</ul>
-
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $email; ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -99,8 +77,8 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="#">My Chums</a></li>
-				<li><a href="#">Forums</a></li>
+				<li class="active"><a href="/mychums">My Chums</a></li>
+				<li><a href="/forum">Forums</a></li>
 				<li><a href="/chat">Chat</a></li>
 				<li><a href="#">Schedule</a></li>
 				<li><a href="#">Settings</a></li>
@@ -119,14 +97,48 @@
 						</div>
 						<div class="col-md-9 media-body">
 							<h4 class="media-heading">
-								<em>Isaac Newton</em>
-							</h4>
-							<p><strong>Educational Level: </strong>College Graduate</p>
-							<p><strong>Interests: </strong>Analytics, Geometry, Geodetics</p>
-							<p class="row">
-								<span class="col-md-8"><strong>Country: </strong>United Arab Emirates</span>
-								<span class="col-md-4"><strong>Age: </strong>27</span>
-							</p>
+								<?php
+									// instantiating database
+									$db = new Database();
+									$db->connect();
+
+									$db->sql("SELECT User_Id FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
+				    				$id = $db->getResult();
+
+									//selecting user's chums
+									$db->sql('SELECT * FROM Chums WHERE User_Id="'.$id['User_Id'].'" AND Chum_Id!="'.$id['User_Id'].'"');
+									$res = $db->getResult();
+									
+									foreach ($res as $chums) {
+										$db->sql("SELECT * FROM Users WHERE User_Id='" .$chums['Chum_Id']."'");
+										$res = $db->getResult();
+
+										echo '
+										<em>'.$res['FirstName'].' '. $res['LastName'].'</em>
+											</h4>
+											<p><strong>Educational Level: </strong>'.$res['EducationLevel'].'</p>
+											<p><strong>Interests: </strong>Analytics, Geometry, Geodetics</p>
+											<p class="row">
+												<span class="col-md-8"><strong>Country: </strong>'.$res['Country'].'</span>
+												<span class="col-md-4"><strong>Gender: </strong>'.$res['Gender'].'</span>
+											</p>
+											
+											';
+
+										$db->sql("SELECT * FROM Users_Interests WHERE User_Id = '" .$chums['Chum_Id']."'");
+									    
+									    $res = $db->getResult();
+
+									    echo "<p><b>Interests:</b></p>";
+											foreach ($res as $interest) {
+												echo "<p>" . $interest['Interest'] . "</p>";
+											}
+
+										echo '<br>';
+									}
+
+								?>
+								
 						</div>	
 					</div>
 				</div>
