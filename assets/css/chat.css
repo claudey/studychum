@@ -17,7 +17,7 @@
 	        transition: all .25s linear
 }
 .chum-chat:hover{
-	padding-left: 15px;
+	padding: 10px;
 	cursor: pointer;
 	background-color: #CFCAC6;
 	border-left: 3px solid #2E2E2C

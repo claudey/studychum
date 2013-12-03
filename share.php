@@ -52,7 +52,6 @@
     			</li>
 			</ul>
 
-
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Notifications <span class="badge">42</span></a></li>
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
@@ -71,10 +70,10 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="#">My Chums</a></li>
-				<li><a href="#">Forums</a></li>
-				<li><a href="#">Chat</a></li>
-				<li><a href="#">Schedule</a></li>
+				<li><a href="#">My Chums</a></li>
+				<li><a href="/forum">Forums</a></li>
+				<li><a href="/chat">Chat</a></li>
+				<li class="active"><a href="#">Share</a></li>
 				<li><a href="#">Settings</a></li>
 			</ul>
 		</div>
@@ -91,7 +90,7 @@
 						</div>
 						<div class="col-md-9 media-body">
 							<h4 class="row media-heading item-title">
-								<em>Introduction to System Analysis</em>
+								<em>French for Beginners</em>
 							</h4>
 							<div class="row">
 								<div class="col-md-8">
@@ -116,7 +115,7 @@
 						</div>
 						<div class="col-md-9 media-body">
 							<h4 class="row media-heading item-title">
-								<em>Thinking in Java, 3rd Edition</em>
+								<em>Learn French in a Month</em>
 							</h4>
 							<div class="row">
 								<div class="col-md-8">

@@ -18,7 +18,6 @@
 }
 .media{
 	border-bottom: 1px dashed gray;
-	padding-bottom: 10px;
 }
 .media:last-child{
 	border: none
@@ -29,7 +28,7 @@ img.media-object{
 	height: auto
 }
 .chum-list{
-	border-bottom: 1px dashed grey;
+	padding: 10px 0 10px 0;
 }
 #chum_request{
 	-webkit-transition: background-color .25s ease-out;

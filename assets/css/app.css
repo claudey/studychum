@@ -81,7 +81,10 @@ h1, h2 ,h3 ,h4, h5, h6{
 	color: #FF6B34;
 }
 .side-nav{
-	margin-top: 80px;}
+	margin-top: 80px;
+	border-right: 1px solid yellowgreen;
+	border-radius: 0;
+}
 .nav-pills > li {
   float: left
 }
