@@ -108,8 +108,8 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<!--li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
+				li><a href="#">Notifications <span class="badge">0</span></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> 
 				
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
