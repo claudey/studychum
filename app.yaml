@@ -43,4 +43,7 @@ handlers:
 - url: /discussions
   script: discussions.php
 
+- url: /chat
+  script: chat.php
+
 

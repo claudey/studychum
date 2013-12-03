@@ -196,7 +196,7 @@
 
 							<div class="form-group" required>
 								<p>Interests</p>
-								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics,Philosophy" data-role="tagsinput" placeholder="Add Interests" required>
+								<input type="text" name="tags" value="Accounting,Politics,Geography,Economics" data-role="tagsinput" placeholder="Add Interests" required>
 							</div>
 							
 
@@ -205,7 +205,7 @@
 							<br>
 							<div class="form-group">
 								<p class="form-action">
-									<a type="submit" class="press orange" value="Send a Chum Request" id="chum_request" href="/create">Save</a>
+									<input type="submit" value="Save" class="press orange">
 								</p>
 							</div>
 						</fieldset>

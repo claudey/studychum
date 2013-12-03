@@ -1,3 +1,31 @@
+<?php
+
+	// adding Google's user service
+	require_once 'google/appengine/api/users/UserService.php';
+
+	// adding google's mail service
+	require_once 'google/appengine/api/mail/Message.php';
+
+	use google\appengine\api\mail\Message;
+	use google\appengine\api\users\User;
+    use google\appengine\api\users\UserService;
+
+    //require_once 'google/appengine/api/mail/MailService.php';
+    //use google\appengine\api\mail\MailService;
+
+    // creating a new instance of user
+    $user = UserService::getCurrentUser();
+
+     if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+
+    $email = $user->getEmail();
+
+    
+?>
 <html>
 <head>
 	<title>StudyChum - Your Activity</title>
@@ -57,11 +85,11 @@
 				<li><a href="#">Notifications <span class="badge">42</span></a></li>
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">user@studychum.com <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $email; ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="/profile">Profile</a></li>
 						<li role="presentation" class="divider"></li>
-						<li><a href="index.html">Log out</a></li>
+						<li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -73,7 +101,7 @@
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="#">My Chums</a></li>
 				<li><a href="#">Forums</a></li>
-				<li><a href="#">Chat</a></li>
+				<li><a href="/chat">Chat</a></li>
 				<li><a href="#">Schedule</a></li>
 				<li><a href="#">Settings</a></li>
 			</ul>
