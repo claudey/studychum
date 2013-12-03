@@ -187,6 +187,8 @@
 				?>
 
 				<h3 class="profile-heading">Recommended chums</h3>
+
+
 				<?php
 
 					// instantiating database
@@ -240,7 +242,7 @@
 						echo '			<br>
 										<form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<input type="submit" class="press orange" id="chum_request" value="Send a Chum Request">
+											<input type="submit" class="btn btn-default orange" id="chum_request" value="Send a Chum Request">
 										</form>
 									</div>	
 								</div>
