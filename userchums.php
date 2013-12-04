@@ -108,7 +108,7 @@
 			</ul>
 		</div>
 
-		<div class="col-sm-9">
+		<div class="col-sm-9 content">
 			<div class="row">
 				<h3 class="profile-heading">My Chums</h3>
 				<div class="col-md-6">

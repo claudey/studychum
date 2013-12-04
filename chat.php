@@ -14,53 +14,57 @@
 <body>
 
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/user">StudyChum</a>
-        </div>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+                <a class="navbar-brand" href="#">StudyChum</a>
+            </div>
 
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-            <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Courses</a></li>
-        <li><a href="#">Tutors</a></li>
-        <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        <li><a href="#">School chums</a></li>
-        <li><a href="#">Bffs</a></li>
-        <li role="presentation" class="divider"></li>
-        <li><a href="#">New Language chums</a></li>
-        </ul>
-        </li>
-        <li><a href="#">Resources</a></li>
-        <li>
-        <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-        <input type="text" class="form-control search-bar" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
-        </form>
-        </li> -->
-        </ul>
+                <ul class="nav navbar-nav">
+                    <!-- <li class="active"><a href="#">Courses</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">School chums</a></li>
+                            <li><a href="#">Bffs</a></li>
+                            <li><a href="#">Algebra chums</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Resources</a></li> -->
+                    <li>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control search-bar" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+                    </li>
+                </ul>
 
-
-        <ul class="nav navbar-nav navbar-right">
-        
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li><a href="/profile">Profile</a></li>
-                <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-            </ul>
-        </li>
-        </ul>
-        </div><!-- /.navbar-collapse -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Notifications <span class="badge">0</span></a></li>
+                    <li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile">Profile</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li><a href="index.html">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
         </nav>
 
         <div class="main-body">
@@ -76,14 +80,14 @@
                 </ul>
 
             </div>
-            <div class="col-sm-10">
+            <div class="col-sm-9 content">
                 <div class="row">
-                    <h3 class="profile-heading">All your chums</h3>
+                    <h3 class="profile-heading">Recent chats</h3>
         
                     <div class="col-md-3">
                         <div>
                             <p class="chum-chat">Osborn Kwarteng</p>
-                            <p class="chum-chat">MEST Alum</p>
+                            <p class="chum-chat active">Akua Baning</p>
                             <p class="chum-chat">MEST 2014</p>
                             <p class="chum-chat">Elisha Senoo</p>
                             <p class="chum-chat">Godwin Adjaho</p>
@@ -91,23 +95,32 @@
                             <p class="chum-chat">MEST 2015</p>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-8">
                         <div class="chat">
                             <div class="row sender">
                                 <div class="col-md-3">
                                     <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
                                 </div>
                                 <div class="message col-md-9">
-                                    <p>This is the sender's message. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, odio, debitis sequi quam facere libero vel. Exercitationem, ullam totam repellat.
+                                    <p>Hi Akua, I'm Amma. I'm looking to learn conversational French. I have tried some apps but they haven't helped much. Since you are a pro, I'm sure I'll be able to learn so much from you.
                                     </p>
                                 </div>
                             </div>
                             <div class="row receiver">
                                 <div class="message col-md-9">
-                                    <p>This is the receiver's message</p>
+                                    <p>Sure, how can I help?</p>
                                 </div>
                                 <div class="col-md-3">
                                     <img src="assets/img/profile.webp" alt="Your profile picture" class="prof-img">
+                                </div>
+                            </div>
+                            <div class="row sender">
+                                <div class="col-md-3">
+                                    <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
+                                </div>
+                                <div class="message col-md-9">
+                                    <p>If you have some materials, you can send them over. I can learn them in the mean time so we have a live chat later.
+                                    </p>
                                 </div>
                             </div>
                         </div>

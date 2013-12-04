@@ -119,7 +119,7 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-10">
+		<div class="col-sm-10 content">
 			<div class="row">
 				<h3 class="profile-heading">StudyChum Forums</h3>
 				<p><a class="press orange" href="/create_discussion">Start a Discussion</a></p>

@@ -150,7 +150,7 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-10">
+		<div class="col-sm-10 content">
 			<div class="row">
 				<?php
 					if (isset($_GET['topic_cat'])) {

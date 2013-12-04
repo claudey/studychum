@@ -11,15 +11,15 @@ $(".chat-reset").click(function(e) {
 	// console.log("This works");
     e.preventDefault();
     var textAreaInput = $(".chat-box").val();
-    console.log(textAreaInput);
-    $(".chat-box").val('');
-    if (textAreaInput !== ""){
-    	$(".chat").append("<div class=\"row receiver\"><div class=\"message col-md-9\"><p>" + textAreaInput + "</p></div><div class=\"col-md-3\"><img src=\"assets/img/profile.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div></div>").show(3000);
+    if (textAreaInput != ""){
+        $(".chat").append("<div class=\"row receiver\"><div class=\"message col-md-9\"><p>" + textAreaInput + "</p></div><div class=\"col-md-3\"><img src=\"assets/img/profile.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div></div>").slideUp(1000).fadeIn(3000);
+        $(".badge").delay(1000).text("1");
+        $(".chat-box").val("");
+        checkBadgeNumber();
     }
     else {
-    	$("chat-box").val("Please enter some text.");
+        $(".chat-box").attr("placeholder", "Please enter some text.");
     }
-    console.log(document);
 });
 
 $(".delete-file").on("click", function(){
@@ -37,5 +37,11 @@ $(".groups").click(function(){
         $(this).text("Groups ");
     }
     $(".shared-with").html(mainText + " <span class=\"caret\"></span>");
-    // console.log(sharedWith);
 });
+
+function checkBadgeNumber(){
+    var badgeNumber = $(".badge").text();
+    if (badgeNumber != "0"){
+        $(".badge").css("background", "rgb(33, 148, 47)");    
+    }
+}

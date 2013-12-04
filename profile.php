@@ -95,7 +95,7 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-10">
+		<div class="col-sm-10 content">
 			<div class="row">
 				<h3 class="profile-heading">Your profile</h3>
 				<?php

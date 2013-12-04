@@ -56,7 +56,7 @@
 				<li><a href="#">Notifications <span class="badge">0</span></a></li>
 				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">user@studychum.com <b class="caret"></b></a>
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 					<ul class="dropdown-menu">
 						<li><a href="/profile">Profile</a></li>
 						<li role="presentation" class="divider"></li>
@@ -78,9 +78,9 @@
 			</ul>
 		</div>
 
-		<div class="col-sm-9">
+		<div class="col-sm-9 content">
 			<div class="row">
-				<h3 class="profile-heading">My Chums</h3>
+				<h3 class="profile-heading">My Files</h3>
 				<div class="col-md-8 items">
 					<div class="media row item-list" id="item-1">
 						<div class="col-md-2">

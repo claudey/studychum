@@ -103,7 +103,7 @@
 			    <li><a href="#">Settings</a></li>
 			</ul>
 		</div>
-		<div class="col-sm-10">
+		<div class="col-sm-10 content">
 			<div class="row welcome" data-intro="This is where the rest of the magic happens" data-position="top">
 				<h3 class="welcome-heading">Welcome to StudyChum.</h3>
 				<p>StudyChum is the best online collaborative tool you can find.</p>
