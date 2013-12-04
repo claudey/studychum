@@ -53,7 +53,13 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Notifications <span class="badge">0</span></a></li>
+                    <!-- <li><a href="#">Notifications <span class="badge">0</span></a></li> -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">0</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
@@ -98,39 +104,39 @@
                     <div class="col-md-8">
                         <div class="chat">
                             <div class="row sender">
-                                <div class="col-md-3">
-                                    <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
-                                </div>
                                 <div class="message col-md-9">
                                     <p>Hi Akua, I'm Amma. I'm looking to learn conversational French. I have tried some apps but they haven't helped much. Since you are a pro, I'm sure I'll be able to learn so much from you.
                                     </p>
                                 </div>
-                            </div>
-                            <div class="row receiver">
-                                <div class="message col-md-9">
-                                    <p>Sure, how can I help?</p>
-                                </div>
-                                <div class="col-md-3">
-                                    <img src="assets/img/profile.webp" alt="Your profile picture" class="prof-img">
-                                </div>
-                            </div>
-                            <div class="row sender">
                                 <div class="col-md-3">
                                     <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
                                 </div>
+                            </div>
+                            <div class="row receiver">
+                                <div class="col-md-3">
+                                    <img src="assets/img/profile.webp" alt="Your profile picture" class="prof-img">
+                                </div>
+                                <div class="message col-md-9">
+                                    <p>Sure, how can I help?</p>
+                                </div>
+                            </div>
+                            <div class="row sender">
                                 <div class="message col-md-9">
                                     <p>If you have some materials, you can send them over. I can learn them in the mean time so we have a live chat later.
                                     </p>
                                 </div>
+                                <div class="col-md-3">
+                                    <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
+                                </div>
                             </div>
                         </div>
                         <div class="row chat-area">
-                            <div class="col-md-3">
-                                <img src="assets/img/profile.webp" class="prof-img" class="pull-right">
-                            </div>
                             <div class="col-md-9">
                                 <textarea rows="4" cols="20" class="form-control chat-box" required></textarea><br>
                                 <a href="#" class="press seagreen chat-reset">Send</a>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="assets/img/profile.webp" class="prof-img" class="pull-right">
                             </div>
                         </div>
 

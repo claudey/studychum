@@ -124,9 +124,15 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<!--li><a href="#">Notifications <span class="badge">0</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
-
+				<!-- <li><a href="#">Notifications <span class="badge">0</span></a></li> -->
+		
+				<li class="dropdown">
+				    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">1</span></a>
+				    <ul class="dropdown-menu">
+				        <li><a href="/chat">Akua sent you a message. "No worries, I can share ..." </a></li>
+				    </ul>
+				</li>		
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
 			        <ul class="dropdown-menu">
