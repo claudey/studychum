@@ -46,4 +46,6 @@ handlers:
 - url: /chat
   script: chat.php
 
+- url: /share
+  script: share.php
 

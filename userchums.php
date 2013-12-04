@@ -62,6 +62,8 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Notifications <span class="badge">0</span></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $email; ?><b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -77,10 +79,11 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="/mychums">My Chums</a></li>
-				<li><a href="/forum">Forums</a></li>
+				<li class="active"><a href="#">My Chums</a></li>
+				<li><a href="/chums">Find Chums</a></li>
 				<li><a href="/chat">Chat</a></li>
-				<li><a href="#">Schedule</a></li>
+				<li><a href="/forum">Forums</a></li>
+				<li><a href="/share">Share</a></li>
 				<li><a href="#">Settings</a></li>
 			</ul>
 		</div>

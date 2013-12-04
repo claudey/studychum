@@ -81,7 +81,10 @@ h1, h2 ,h3 ,h4, h5, h6{
 	color: #FF6B34;
 }
 .side-nav{
-	margin-top: 80px;}
+	margin-top: 80px;
+	border-right: 1px solid yellowgreen;
+	border-radius: 0;
+}
 .nav-pills > li {
   float: left
 }
@@ -109,7 +112,7 @@ h1, h2 ,h3 ,h4, h5, h6{
 .pages{
 	text-align: center
 }
-a.press {
+.press {
 	text-decoration: none;
 	color: #FFF;
 	padding: 10px;
@@ -130,10 +133,10 @@ a.press {
 	     -o-transition: all 0.5s ease-out;
 			transition: all 0.5s ease-out
 }
-a.press:hover{
+.press:hover{
 	cursor: pointer
 }
-a.press:active {
+.press:active {
 	top: 3px;
 	padding-bottom: 7px;
 	-webkit-box-shadow: inset 0 0px 0 rgba(0,0,0,0.3);
@@ -169,4 +172,8 @@ a.press:active {
 }
 .media-heading{
 	color: #2E2E2C
+}
+input.btn,
+input.btn:hover{
+	color: white
 }

@@ -108,8 +108,8 @@
 
 
 			<ul class="nav navbar-nav navbar-right">
-				<!--li><a href="#">Notifications <span class="badge">42</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> -->
+				li><a href="#">Notifications <span class="badge">0</span></a></li>
+				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li> 
 				
 				<li class="dropdown">
 			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
@@ -126,10 +126,12 @@
 		<div class="side-nav well-lg col-sm-2">
 
 			<ul class="nav nav-pills nav-stacked">
-				<li class="active"><a href="/chums">Find Chums</a></li>
-				<li><a href="/mychums">My Chums</a></li>
-				<!-- <li><a href="#">Calendar</a></li> -->
-				<!-- <li><a href="#">Settings</a></li> -->
+			    <li><a href="/mychums">My Chums</a></li>
+			    <li class="acitve"><a href="#">Find Chums</a></li>
+			    <li><a href="/chat">Chat</a></li>
+			    <li><a href="/forum">Forums</a></li>
+			    <li><a href="/share">Share</a></li>
+			    <li><a href="#">Settings</a></li>
 			</ul>
 
 		</div>
@@ -187,6 +189,8 @@
 				?>
 
 				<h3 class="profile-heading">Recommended chums</h3>
+
+
 				<?php
 
 					// instantiating database
@@ -221,13 +225,13 @@
 									<div class="col-md-9 col-lg-9 media-body">';
 
 						echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
-										<p> <b>Educational Level:</b> '.$chum['EducationLevel'].'</p>
-										<p><b>Gender:<b> '.$chum['Gender'].'</p>
-										<p><b>Country:<b> '.$chum['Country'].'</p>';
+								<p><strong>Educational Level:</strong> '.$chum['EducationLevel'].'</p>
+								<p><strong>Gender:</strong> '.$chum['Gender'].'</p>
+								<p><strong>Country:</strong> '.$chum['Country'].'</p>';
 
 
 							// Displaying User's Interests
-							echo "<p><b>Interests:</b></p>";
+							echo "<span><strong>Interests:</strong></span>";
 
 							foreach ($interests as $interest) {
 								echo "<span>" . $interest['Interest'] . " </span>";
@@ -240,7 +244,7 @@
 						echo '			<br>
 										<form action="/chums" method="POST">
 											<input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
-											<input type="submit" class="press orange" id="chum_request" value="Send a Chum Request">
+											<input type="submit" class="btn btn-default orange" id="chum_request" value="Send a Chum Request">
 										</form>
 									</div>	
 								</div>
