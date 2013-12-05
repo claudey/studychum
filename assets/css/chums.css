@@ -27,6 +27,9 @@ img.media-object{
 	width: 100%;
 	height: auto
 }
+.chum-well{
+	background-color: rgb(219, 215, 215);
+}
 .chum-list{
 	padding: 10px 0 10px 0;
 }

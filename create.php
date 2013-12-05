@@ -34,7 +34,7 @@
 
 <html>
 <head>
-	<title>StudyChum - Your Profile</title>
+	<title>StudyChum - Complete your profile</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -126,7 +126,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-5">
+				<div class="col-md-6">
 					
 						<fieldset>
 							<div class="row">
@@ -141,12 +141,12 @@
 							</div>
 
 							<div class="row">
-								<div class="form-group col-md-5">
+								<div class="form-group col-md-6">
 									<p>Date of birth<p>
 									<input type="date" name="dob" class="form-control" required>
 								</div>
 
-								<div class="form-group col-md-7">
+								<div class="form-group col-md-6">
 									<p>Location<p>
 									<input type="text" name="country" class="form-control countries" required>
 								</div>
