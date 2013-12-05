@@ -212,11 +212,11 @@
 							<div class="row">
 								<div class="form-group col-md-7">
 									<p>Contribute to Discussion<p>
-									<textarea rows="4" cols="50" name="contribution" class="form-control rich-text" required></textarea>
+									<textarea rows="5" name="contribution" class="form-control rich-text disc" required></textarea>
 								</div>
 							</div>
 							<div class="form-group">
-								<p class="form-action">
+								<p class="form-action col-md-4">
 									<input type="submit" value="Submit" name="submit">
 								</p>
 							</div>

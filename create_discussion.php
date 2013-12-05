@@ -24,6 +24,12 @@
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/profile.css">
 		<link rel="shortcut icon" href="assets/img/favicon.ico">
+
+		<style>
+			.disc{
+				width: 500px
+			}
+		</style>
 </head>
 <body>
 
@@ -116,11 +122,11 @@
 							<div class="row">
 								<div class="form-group col-md-7">
 									<p>Discussion<p>
-									<textarea rows="4" cols="50" name="discussion" class="form-control" required></textarea>
+									<textarea name="discussion" rows="5" class="form-control disc" required></textarea>
 								</div>
 							</div>
 							<div class="row form-group">
-								<p class="form-action">
+								<p class="form-action col-md-4">
 									<input class="btn btn-success" type="submit" value="Submit" name="submit">
 								</p>
 							</div>
