@@ -122,7 +122,7 @@
                             </div>
                             <div class="row receiver">
                                 <div class="col-md-3">
-                                    <img src="assets/img/akua.webp" alt="Your profile picture" class="prof-img">
+                                    <img src="assets/img/maud.webp" alt="Your profile picture" class="prof-img">
                                 </div>
                                 <div class="message col-md-9">
                                     <p class="well bubble-in">Sure, how can I help?</p>

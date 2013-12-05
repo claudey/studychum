@@ -1,7 +1,7 @@
 checkBadgeNumber();
 
 function addOtherChat(){
-    $(".chat").append("<div class=\"row receiver\"><div class=\"col-md-3\"><img src=\"assets/img/akua.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div><div class=\"message col-md-9\"><p class=\"well well-lg\">No worries, I can share some files with you.</p></div></div>");
+    $(".chat").append("<div class=\"row receiver\"><div class=\"col-md-3\"><img src=\"assets/img/maud.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div><div class=\"message col-md-9\"><p class=\"well well-lg\">No worries, I can share some files with you.</p></div></div>");
 }
 
 window.setTimeout(addOtherChat, 2000);
