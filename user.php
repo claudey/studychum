@@ -93,7 +93,7 @@
 	</nav>
 
 	<div class="main-body">
-		<div class="side-nav well-lg col-sm-2">		
+		<div class="well side-nav well-lg col-sm-2">		
 			<ul class="nav nav-pills nav-stacked">
 			    <li><a href="/mychums">My Chums</a></li>
 			    <li><a href="/chums">Find Chums</a></li>
@@ -103,7 +103,7 @@
 			    <li><a href="#">Settings</a></li>
 			</ul>
 		</div>
-		<div class="col-sm-10 content">
+		<div class="col-sm-9 content">
 			<div class="row welcome" data-intro="This is where the rest of the magic happens" data-position="top">
 				<h3 class="welcome-heading">Welcome to StudyChum.</h3>
 				<p>StudyChum is the best online collaborative tool you can find.</p>

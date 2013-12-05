@@ -108,7 +108,7 @@
 	</nav>
 
 	<div class="main-body">
-		<div class="side-nav well-lg col-sm-2">
+		<div class="well side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 			    <li><a href="/mychums">My Chums</a></li>
 			    <li><a href="/chums">Find Chums</a></li>
@@ -119,7 +119,7 @@
 			</ul>
 
 		</div>
-		<div class="col-sm-10 content">
+		<div class="col-sm-9 content">
 			<div class="row">
 				<h3 class="profile-heading">StudyChum Forums</h3>
 				<p><a class="press orange" href="/create_discussion">Start a Discussion</a></p>
