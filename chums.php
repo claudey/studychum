@@ -130,7 +130,7 @@
 	</nav>
 
 	<div class="main-body">
-		<div class="side-nav well-lg col-sm-2">
+		<div class="well side-nav well-lg col-sm-2">
 
 			<ul class="nav nav-pills nav-stacked">
 			    <li><a href="/mychums">My Chums</a></li>

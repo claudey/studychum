@@ -36,9 +36,6 @@
 .sender{
 	float: right
 }
-.sender-text{
-
-}
 .receiver{
 	/*float: right*/
 	text-align: left;
@@ -50,9 +47,6 @@
 }
 .receiver-image{
 	width: inherit
-}
-.receiver-text{
-	
 }
 .chat-area{
 	margin: 10px 0 20px 0;
