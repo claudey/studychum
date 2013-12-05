@@ -101,12 +101,12 @@
         
                     <div class="col-md-3">
                         <div>
-                            <p class="chum-chat">Osborn Kwarteng</p>
-                            <p class="chum-chat active">Mau Cannes</p>
-                            <p class="chum-chat">MEST 2014</p>
-                            <p class="chum-chat">Elisha Senoo</p>
-                            <p class="chum-chat">Thea Sokolowski</p>
-                            <p class="chum-chat">MEST 2015</p>
+                            <!-- <p class="chum-chat">Osborn Kwarteng</p> -->
+                            <p class="chum-chat active">Maude Cannes</p>
+                            <!-- <p class="chum-chat">MEST 2014</p> -->
+                            <!-- <p class="chum-chat">Elisha Senoo</p> -->
+                            <!-- <p class="chum-chat">Thea Sokolowski</p> -->
+                            <!-- <p class="chum-chat">MEST 2015</p> -->
                         </div>
                     </div>
                     <div class="col-md-8">
@@ -150,23 +150,6 @@
 
                     </div>
 
-        <!-- <div>
-        <a href="#" class="press blue">Pressable</a>
-        <a href="#" class="press orange">Pressable</a>
-        <a href="#" class="press green">Pressable</a>
-        </div>
-
-        <div>
-        <a href="#" class="press pink">Pressable</a>
-        <a href="#" class="press red">Pressable</a>
-        <a href="#" class="press violet">Pressable</a>
-        </div>
-
-        <div>
-        <a href="#" class="press seagreen">Pressable</a>
-        <a href="#" class="press yellow">Pressable</a>
-        <a href="#" class="press gray">Pressable</a>
-        </div> -->
 
         </div>
         </div>
