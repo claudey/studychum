@@ -124,7 +124,7 @@
     						</a>
     					</div>
     					<div class="col-md-9 media-body">
-    						<h4 class="media-heading"><em>Maud Cannes</em></h4>
+    						<h4 class="media-heading"><em>Maude Cannes</em></h4>
     						<p><strong>Educational Level:</strong> College Graduate</p>
     						<p><strong>Gender:</strong> Female</p>
     						<p><strong>Country:</strong> Cote d'Ivoire</p>
