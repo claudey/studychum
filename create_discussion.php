@@ -27,62 +27,63 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
-			<a class="navbar-brand" href="/user">StudyChum</a>
-			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
-		</div>
+	 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
+            <a class="navbar-brand" href="/user">StudyChum</a>
+        </div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			<ul class="nav navbar-nav">
-				<!-- <li class="active"><a href="#">Courses</a></li>
-				<li><a href="#">Tutors</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">School chums</a></li>
-						<li><a href="#">Bffs</a></li>
-						<li><a href="#">Algebra chums</a></li>
-						<li role="presentation" class="divider"></li>
-						<li><a href="#">New Language chums</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Resources</a></li>
-				<li>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control search-bar" placeholder="Search">
-						</div>
-						<button type="submit" class="btn btn-default">Search</button>
-					</form>
-    			</li> -->
-			</ul>
+            <ul class="nav navbar-nav">
+                <!-- <li class="active"><a href="#">Courses</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">School chums</a></li>
+                        <li><a href="#">Bffs</a></li>
+                        <li><a href="#">Algebra chums</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Resources</a></li> -->
+                <li>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control search-bar" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </li>
+            </ul>
 
-
-			<ul class="nav navbar-nav navbar-right">
-				<!--li><a href="#">Notifications <span class="badge">0</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
-
-				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-			        </ul>
-			      </li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
-	</nav>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="#">Notifications <span class="badge">0</span></a></li> -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">1</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="assets/img/amma.webp" alt="" class="profile-pic"></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Amma Baffoe <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/profile">Profile</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="/">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
 
 	<div class="main-body">
 		<div class="well side-nav well-lg col-sm-2">
@@ -90,13 +91,13 @@
 			    <li><a href="/mychums">My Chums</a></li>
 			    <li><a href="/chums">Find Chums</a></li>
 			    <li><a href="/chat">Chat</a></li>
-			    <li class="active"><a href="#">Forums</a></li>
+			    <li class="active"><a href="/forum">Forums</a></li>
 			    <li><a href="/share">Share</a></li>
 			    <li><a href="#">Settings</a></li>
 			</ul>
 
 		</div>
-		<div class="col-sm-19 content">
+		<div class="col-sm-9 content">
 			<div class="row">
 				<h3 class="profile-heading">Create a Discussion</h3>
 
@@ -118,9 +119,9 @@
 									<textarea rows="4" cols="50" name="discussion" class="form-control" required></textarea>
 								</div>
 							</div>
-							<div class="form-group">
+							<div class="row form-group">
 								<p class="form-action">
-									<input type="submit" value="Submit" name="submit">
+									<input class="btn btn-success" type="submit" value="Submit" name="submit">
 								</p>
 							</div>
 						</fieldset>
