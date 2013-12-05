@@ -34,12 +34,12 @@
 
 <html>
 <head>
-	<title>StudyChum - Complete your profile</title>
+	<title>StudyChum - Your Profile</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Actor'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/create.css">
@@ -91,7 +91,7 @@
 	               <li class="dropdown">
 	                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">1</span></a>
 	                   <ul class="dropdown-menu">
-	                       <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
+	                       <li><a href="/share">Maude shared "French for Beginners" with you.</a></li>
 	                   </ul>
 	               </li>
 	               <li><a href="#"><img src="assets/img/amma.webp" alt="" class="profile-pic"></a></li>
@@ -126,7 +126,7 @@
 					</div>
 				</div>
 
-				<div class="col-md-6">
+				<div class="col-md-5">
 					
 						<fieldset>
 							<div class="row">
@@ -141,12 +141,12 @@
 							</div>
 
 							<div class="row">
-								<div class="form-group col-md-6">
+								<div class="form-group col-md-5">
 									<p>Date of birth<p>
 									<input type="date" name="dob" class="form-control" required>
 								</div>
 
-								<div class="form-group col-md-6">
+								<div class="form-group col-md-7">
 									<p>Location<p>
 									<input type="text" name="country" class="form-control countries" required>
 								</div>

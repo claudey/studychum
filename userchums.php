@@ -36,7 +36,7 @@
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Oxygen'>
+        <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Actor'>
 		<link rel="stylesheet" href="assets/css/bs.min.css">
 		<link rel="stylesheet" href="assets/css/app.css">
 		<link rel="stylesheet" href="assets/css/activity.css">
@@ -87,7 +87,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">1</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
+                        <li><a href="/share">Maude shared "French for Beginners" with you.</a></li>
                     </ul>
                 </li>
                 <li><a href="#"><img src="assets/img/amma.webp" alt="" class="profile-pic"></a></li>
@@ -128,7 +128,7 @@
     						</a>
     					</div>
     					<div class="col-md-9 media-body">
-    						<h4 class="media-heading"><em>Maude Cannes</em></h4>
+    						<h4 class="media-heading"><em>Maud Cannes</em></h4>
     						<p><strong>Educational Level:</strong> College Graduate</p>
     						<p><strong>Gender:</strong> Female</p>
     						<p><strong>Country:</strong> Cote d'Ivoire</p>
