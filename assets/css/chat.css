@@ -23,7 +23,7 @@
 	border-left: 3px solid #2E2E2C
 }
 .chum-chat.active{
-	background: rgba(255, 133, 0, 0.36);
+	background: rgba(128, 128, 128, 0.36);
 }
 .prof-img{
 	width: 80px;
@@ -64,4 +64,33 @@
 }
 .chat-reset{
 	float: left
+}
+.well.bubble {
+	background: rgb(190, 214, 206)
+}
+.well.bubble,.well.bubble-in{
+	position: relative;
+}
+
+.well.bubble:after,
+.well.bubble-in:after{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	display: block;
+	width: 0;
+	z-index: 1;
+	top: 12px;
+}
+
+.well.bubble:after{
+	border-color: transparent rgb(190, 214, 206);
+	border-width: 15px 0 15px 15px;
+	right: -15px
+}
+
+.well.bubble-in:after {
+	border-color: transparent #FFFFFF;
+	left: -15px;
+	border-width: 15px 15px 15px 0;
 }

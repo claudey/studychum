@@ -48,4 +48,3 @@ handlers:
 
 - url: /share
   script: share.php
-

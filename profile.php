@@ -86,12 +86,12 @@
 	<div class="main-body">
 		<div class="side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
-
-				<li><a href="/chums">Find Chums</a></li>
-				<li><a href="/mychums">My Chums</a></li>
-
-				<li><a href="/forum">Forum</a></li>
-				<!-- <li><a href="#">Settings</a></li> -->
+			    <li><a href="/mychums">My Chums</a></li>
+			    <li><a href="/chums">Find Chums</a></li>
+			    <li><a href="/chat">Chat</a></li>
+			    <li><a href="/forum">Forums</a></li>
+			    <li><a href="#">Schedule</a></li>
+			    <li><a href="#">Settings</a></li>
 			</ul>
 
 		</div>

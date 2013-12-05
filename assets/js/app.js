@@ -1,7 +1,7 @@
 checkBadgeNumber();
 
 function addOtherChat(){
-    $(".chat").append("<div class=\"row receiver\"><div class=\"col-md-3\"><img src=\"assets/img/profile.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div><div class=\"message col-md-9\"><p>No worries, I can share some files with you.</p></div></div>");
+    $(".chat").append("<div class=\"row receiver\"><div class=\"col-md-3\"><img src=\"assets/img/akua.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div><div class=\"message col-md-9\"><p class=\"well well-lg\">No worries, I can share some files with you.</p></div></div>");
 }
 
 window.setTimeout(addOtherChat, 2000);
@@ -16,16 +16,14 @@ $('.tooltip-social').tooltip({
   selector: "a[data-toggle=tooltip]"
 })
 
-$(".chat-reset").click(function(e) {
-	// console.log("This works");
-    e.preventDefault();
+$(".chat-reset").click(function() {
     var textAreaInput = $(".chat-box").val();
+    var fullText = "<div class=\"row sender\"><div class=\"message col-md-9\"><p class=\"well bubble\">" + textAreaInput + "</p></div><div class=\"col-md-3\"><img src=\"assets/img/amma.webp\" alt=\"Your chum's picture\" class=\"prof-img\"></div></div>";
     if (textAreaInput != ""){
-
-        // $(".chat").append("<div class=\"row sender\"><div class=\"message col-md-9\"><p>" + textAreaInput + "</p></div><div class=\"col-md-3\"><img src=\"assets/img/profile.webp\" alt=\"Your profile picture\" class=\"prof-img\"></div></div>");
-        
-        $(".chat").append("<div class=\"row sender\"><div class=\"message col-md-9\"><p>" + textAreaInput + "</p></div><div class=\"col-md-3\"><img src=\"assets/img/profile.webp\" alt=\"Your chum's picture\" class=\"prof-img\"></div></div>");
-
+        // alert("Food is good.")
+        console.log(fullText);
+        // console.log(typeof(fullText));
+        $(".chat").append(fullText);
         $(".chat-box").val("");
         window.setTimeout(increaseNotification, 3000);
     }
