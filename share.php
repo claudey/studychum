@@ -74,11 +74,12 @@
 	<div class="main-body">
 		<div class="well side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
-				<li><a href="#">My Chums</a></li>
-				<li><a href="/forum">Forums</a></li>
-				<li><a href="/chat">Chat</a></li>
-				<li class="active"><a href="#">Share</a></li>
-				<li><a href="#">Settings</a></li>
+			    <li><a href="/mychums">My Chums</a></li>
+			    <li class="active"><a href="#">Find Chums</a></li>
+			    <li><a href="/chat">Chat</a></li>
+			    <li><a href="/forum">Forums</a></li>
+			    <li><a href="/share">Share</a></li>
+			    <li><a href="#">Settings</a></li>
 			</ul>
 		</div>
 
@@ -139,7 +140,7 @@
 			</div>
 			
 
-			<div class="row pages">
+			<!-- <div class="row pages">
 				<ul class="pagination">
 					<li><a href="#">&laquo;</a></li>
 					<li><a href="#">1</a></li>
@@ -147,7 +148,7 @@
 					<li><a href="#">3</a></li>
 					<li><a href="#">&raquo;</a></li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</div>
 

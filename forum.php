@@ -39,7 +39,7 @@
 
 <html>
 <head>
-	<title>StudyChum - Your Profile</title>
+	<title>StudyChum - Forums</title>
 	<meta charset="utf-8">
         <meta name="description" content="">
         <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -133,6 +133,8 @@
 							<th>Category</th>
 							<th>Discussions</th>
 							<th>Author</th>
+							<th>Date</th>
+							<th>Contributions</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -171,7 +173,7 @@
 								echo "<tr>
 										<td> ".$category." </td>
 										<td><a href='/discussions?topic_cat=".$cat_id."&topic_id=".$topic_id."'> ".$subject." </a></td>
-										<td> Started By:".$res["FirstName"]. " ". $res["LastName"]." </td>
+										<td> ".$res["FirstName"]. " ". $res["LastName"]." </td>
 										<td> ".$date."</td>
 										<td> ".$contributions." Contributions </td>
 									</tr>";

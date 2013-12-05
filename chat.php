@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>StudyChum - Your Profile</title>
+    <title>StudyChum - Chat with your chums</title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -53,7 +53,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="#">Notifications <span class="badge">0</span></a></li> -->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">1</span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">0</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
                     </ul>
@@ -91,7 +91,7 @@
                     <div class="col-md-3">
                         <div>
                             <p class="chum-chat">Osborn Kwarteng</p>
-                            <p class="chum-chat active">Akua Baning</p>
+                            <p class="chum-chat active">Mau Cannes</p>
                             <p class="chum-chat">MEST 2014</p>
                             <p class="chum-chat">Elisha Senoo</p>
                             <p class="chum-chat">Thea Sokolowski</p>

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>StudyChum - Your Profile</title>
+    <title>StudyChum - Playground</title>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="keyowrds" content="online learning, online student program, study chum, studychum, find students, students with same course">
@@ -260,3 +260,125 @@
                                 }
 
                         ?>
+
+
+======================================
+    CODE FROM THE CHUMS.PHP PAGE
+======================================
+
+                <?php
+                    // users are directed here when they accept the invitation
+                    if (!empty($_GET['sender'])) {
+                        
+
+                        // creating a database instance
+                        $db = new Database();
+                        $db->connect();
+                        $db->sql("SELECT * FROM Users WHERE EmailAddress='".$_GET['sender']."'");
+                        $res = $db->getResult();
+
+                        echo "You are now connected to " . $res['FirstName'] . " " . $res['LastName'] . ".<br>";
+                        echo "Find and connect with people of like interests below.<br>";
+
+                        $Chum_Id = $res['User_Id'];
+                        $db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
+                        $res = $db->getResult();
+                        $User_Id = $res['User_Id'];
+
+                        //inserting chum partnership into database
+                        $db->insert('Chums', array('User_Id' => $User_Id, 'chum_Id' => $Chum_Id));
+                        $db->insert('Chums', array('User_Id' => $Chum_Id, 'chum_Id' => $User_Id));
+
+                        //getting current users details from the database
+                        $db->sql("SELECT * FROM Users WHERE EmailAddress='".$email."'");
+                        $res = $db->getResult();
+
+                        $message_body = $res["FirstName"] . " " . $res["LastName"] . " has accepted your chum request.\n";
+                        $message_body .= "Click the link below to see your chums.\n";
+                        $message_body .= "studychumapp.appspot.com/mychums";
+
+                        $mail_options = [
+                            "sender" => 'studychumgh@gmail.com',
+                            "to" => $_GET['sender'],
+                            "subject" => "Your chum request has been accepted",
+                            "textBody" => $message_body
+                    ];
+
+                        try {
+                            $message = new Message($mail_options);
+                            $message->send();
+                        } catch (InvalidArgumentException $e) {
+                            echo $e;
+                        }
+                        
+                        
+                    }
+                ?>
+
+                <h3 class="profile-heading">Recommended chums</h3>
+
+
+                <?php
+
+                    // instantiating database
+                    $db = new Database();
+                    $db->connect();
+
+                    //selecting all users
+                    $db->sql('SELECT * FROM Users WHERE EmailAddress!="osborn.kwarteng.adu@meltwater.org" AND EmailAddress!="' . $email .'"');
+                    $res = $db->getResult();
+
+
+                    if (!empty($_POST['email'])) {
+                        $db->sql('SELECT * FROM Users WHERE EmailAddress!="' . $_POST['email'] .'" AND EmailAddress!="osborn.kwarteng.adu@meltwater.org"');
+                        $res = $db->getResult();
+                            
+                        }
+
+                    foreach ($res as $chum) {
+                        
+                        $id = $chum["User_Id"];
+
+                        $db->sql('SELECT * FROM Users_Interests WHERE User_Id=' .$id.'');
+                        $interests = $db->getResult();
+                        
+                        echo '<div class="col-md-6 col-lg-6 col-sm-6">
+                                <div class="row media chum-list">
+                                    <div class="col-md-3 col-lg-3 col-sm-3">
+                                        <a class="pull-left" href="#">
+                                            <img class="media-object" src="assets/img/profile.webp" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-9 col-lg-9 media-body">';
+
+                        echo '<h4 class="media-heading"><em>' . $chum['FirstName'] . ' ' . $chum['LastName'] .'</em></h4>
+                                <p><strong>Educational Level:</strong> '.$chum['EducationLevel'].'</p>
+                                <p><strong>Gender:</strong> '.$chum['Gender'].'</p>
+                                <p><strong>Country:</strong> '.$chum['Country'].'</p>';
+
+
+                            // Displaying User's Interests
+                            echo "<span><strong>Interests:</strong></span>";
+
+                            foreach ($interests as $interest) {
+                                echo "<span>" . $interest['Interest'] . " </span>";
+                            }
+                                
+                            
+                        
+                        
+
+                        echo '          <br>
+                                        <form action="/chums" method="POST">
+                                            <input type="hidden" name="email" value="' . $chum['EmailAddress'] . '">
+                                            <input type="submit" class="btn btn-default orange" id="chum_request" value="Send a Chum Request">
+                                        </form>
+                                    </div>  
+                                </div>
+                            </div>';
+                        
+                    }
+
+                    $db->disconnect();
+
+                ?>
