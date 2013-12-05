@@ -37,8 +37,15 @@ function increaseNotification(){
     checkBadgeNumber();
 }
 
+function checkBadgeNumber(){
+    var badgeNumber = $(".badge").text();
+    if (badgeNumber != "0"){
+        $(".badge").css("background", "rgb(33, 148, 47)");    
+    }
+}
+
 $(".delete-file").on("click", function(){
-	$("#item-1").css("display", "none");
+    $("#item-1").css("display", "none");
 });
 
 $(".groups").click(function(){
@@ -53,10 +60,3 @@ $(".groups").click(function(){
     }
     $(".shared-with").html(mainText + " <span class=\"caret\"></span>");
 });
-
-function checkBadgeNumber(){
-    var badgeNumber = $(".badge").text();
-    if (badgeNumber != "0"){
-        $(".badge").css("background", "rgb(33, 148, 47)");    
-    }
-}
