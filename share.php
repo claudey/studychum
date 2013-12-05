@@ -184,10 +184,11 @@
 						</span><!-- /btn-group -->
 						<input type="text" class="form-control">
 					</span><!-- /input-group -->
-					<span class="glyphicon glyphicon-plus"></span>
+					<!-- <span class="glyphicon glyphicon-plus"></span> -->
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Share</button>
 				</div>
 			</div><!-- /.modal-content -->
 		</div><!-- /.modal-dialog -->

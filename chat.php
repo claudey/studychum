@@ -71,9 +71,9 @@
                             <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
                         </ul>
                     </li>
-                    <li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li>
+                    <li><a href="#"><img src="assets/img/amma.webp" alt="" class="profile-pic"></a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Amma Baffoe <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="/profile">Profile</a></li>
                             <li role="presentation" class="divider"></li>
@@ -85,7 +85,7 @@
         </nav>
 
         <div class="main-body">
-            <div class="side-nav well-lg col-sm-2">
+            <div class="well side-nav well-lg col-sm-2">
 
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="/mychums">My Chums</a></li>
@@ -107,8 +107,7 @@
                             <p class="chum-chat active">Akua Baning</p>
                             <p class="chum-chat">MEST 2014</p>
                             <p class="chum-chat">Elisha Senoo</p>
-                            <p class="chum-chat">Godwin Adjaho</p>
-                            <p class="chum-chat">Thea Sokolwski</p>
+                            <p class="chum-chat">Thea Sokolowski</p>
                             <p class="chum-chat">MEST 2015</p>
                         </div>
                     </div>
@@ -116,28 +115,28 @@
                         <div class="chat">
                             <div class="row sender">
                                 <div class="message col-md-9">
-                                    <p>Hi Akua, I'm Amma. I'm looking to learn conversational French. I have tried some apps but they haven't helped much. Since you are a pro, I'm sure I'll be able to learn so much from you.
+                                    <p class="well bubble">Hi Akua, I'm Amma. I'm looking to learn conversational French. I have tried some apps but they haven't helped much. Since you are a pro, I'm sure I'll be able to learn so much from you.
                                     </p>
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
+                                    <img src="assets/img/amma.webp" alt="Your chum's picture" class="prof-img">
                                 </div>
                             </div>
                             <div class="row receiver">
                                 <div class="col-md-3">
-                                    <img src="assets/img/profile.webp" alt="Your profile picture" class="prof-img">
+                                    <img src="assets/img/akua.webp" alt="Your profile picture" class="prof-img">
                                 </div>
                                 <div class="message col-md-9">
-                                    <p>Sure, how can I help?</p>
+                                    <p class="well bubble-in">Sure, how can I help?</p>
                                 </div>
                             </div>
                             <div class="row sender">
                                 <div class="message col-md-9">
-                                    <p>If you have some materials, you can send them over. I can learn them in the mean time so we have a live chat later.
+                                    <p class="well bubble">If you have some materials, you can send them over. I can learn them in the mean time so we have a live chat later.
                                     </p>
                                 </div>
                                 <div class="col-md-3">
-                                    <img src="assets/img/profile.webp" alt="Your chum's picture" class="prof-img">
+                                    <img src="assets/img/amma.webp" alt="Your chum's picture" class="prof-img">
                                 </div>
                             </div>
                         </div>
@@ -147,7 +146,7 @@
                                 <a href="#" class="press seagreen chat-reset">Send</a>
                             </div>
                             <div class="col-md-3">
-                                <img src="assets/img/profile.webp" class="prof-img" class="pull-right">
+                                <img src="assets/img/amma.webp" class="prof-img" class="pull-right">
                             </div>
                         </div>
 

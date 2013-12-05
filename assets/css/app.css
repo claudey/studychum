@@ -84,8 +84,9 @@ h1, h2 ,h3 ,h4, h5, h6{
 	color: #FF6B34;
 }
 .side-nav{
-	/* margin-top: 80px; */
+	padding-top: 80px;
 	border-radius: 0;
+	height: 100%;
 }
 .nav-pills > li {
   float: left
@@ -111,9 +112,8 @@ h1, h2 ,h3 ,h4, h5, h6{
   margin-top: 2px;
   margin-left: 0
 }
-.well-lg.col-sm-2{}
 .content{
-	border-left: 1px solid rgb(136, 136, 136);
+	/*border-left: 1px solid rgb(136, 136, 136);*/
 	margin-left: 10px
 }
 .pages{
