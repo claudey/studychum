@@ -1,3 +1,31 @@
+<?php
+// adding Google's user service
+	require_once 'google/appengine/api/users/UserService.php';
+
+	// adding google's mail service
+	require_once 'google/appengine/api/mail/Message.php';
+
+	use google\appengine\api\mail\Message;
+	use google\appengine\api\users\User;
+    use google\appengine\api\users\UserService;
+
+    // adding file that conatains database class
+	include 'classes/crud.php';
+
+    //require_once 'google/appengine/api/mail/MailService.php';
+    //use google\appengine\api\mail\MailService;
+
+    // creating a new instance of user
+    $user = UserService::getCurrentUser();
+
+     if (!$user){
+    	
+    	header('Location: ' .
+        UserService::createLoginURL($_SERVER['REQUEST_URI']));
+    }
+
+    $email = $user->getEmail();
+?>
 <html>
 <head>
 	<title>StudyChum - Files and Resources</title>
