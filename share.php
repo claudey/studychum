@@ -26,6 +26,7 @@
 
     $email = $user->getEmail();
 ?>
+
 <html>
 <head>
 	<title>StudyChum - Files and Resources</title>
@@ -71,13 +72,13 @@
                 <li>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control search-bar" placeholder="Search">
+                            <input type="text" class="form-control search-bar" placeholder="People, groups, files">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Search</button>
                     </form>
                 </li>
             </ul>
-
+            
             <ul class="nav navbar-nav navbar-right">
                 <!-- <li><a href="#">Notifications <span class="badge">0</span></a></li> -->
                 <li class="dropdown">
@@ -103,10 +104,10 @@
 		<div class="well side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 			    <li><a href="/mychums">My Chums</a></li>
-			    <li class="active"><a href="#">Find Chums</a></li>
+			    <li><a href="#">Find Chums</a></li>
 			    <li><a href="/chat">Chat</a></li>
 			    <li><a href="/forum">Forums</a></li>
-			    <li><a href="/share">Share</a></li>
+			    <li class="active"><a href="/share">Share</a></li>
 			    <li><a href="#">Settings</a></li>
 			</ul>
 		</div>
@@ -126,14 +127,16 @@
 								<em>French for Beginners</em>
 							</h4>
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col-md-7">
 									<div>tags</div>
 									<strong>Last accessed: </strong>28th November, 2013
+									<strong>Received from: </strong>Maude Cannes
 								</div>
-								<div class="col-md-4">
+								<div class="col-md-5">
 									<span>
+										<a href="#" class="press green" data-toggle="modal" data-target="#myModal">Download</a>
 										<a href="#" class="press orange" data-toggle="modal" data-target="#shareModal">Share</a>
-										<a href="#" class="press red" data-toggle="modal" data-target="#myModal">Delete</a>
+										<!-- <a href="#" class="press red" data-toggle="modal" data-target="#myModal">Delete</a> -->
 									</span>
 								</div>
 							</div>
@@ -151,14 +154,15 @@
 								<em>Learn French in a Month</em>
 							</h4>
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col-md-7">
 									<div>tags</div>
 									<strong>Last accessed: </strong>28th November, 2013
 								</div>
-								<div class="col-md-4">
+								<div class="col-md-5">
 									<span>
+										<a href="#" class="press green" data-toggle="modal" data-target="#myModal">Download</a>
 										<a href="#" class="press orange" data-toggle="modal" data-target="#shareModal">Share</a>
-										<a href="#" class="press red" data-toggle="modal" data-target="#myModal">Delete</a>
+										<!-- <a href="#" class="press red" data-toggle="modal" data-target="#myModal">Delete</a> -->
 									</span>
 								</div>
 							</div>
