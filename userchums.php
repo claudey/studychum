@@ -100,6 +100,7 @@
     </nav>
 
 	<div class="main-body">
+	
 		<div class="well side-nav well-lg col-sm-2">
 			<ul class="nav nav-pills nav-stacked">
 				<li class="active"><a href="#">My Chums</a></li>
@@ -114,37 +115,26 @@
 		<div class="col-sm-9 content">
 			<div class="row">
 				<h3 class="profile-heading">My Chums</h3>
-				<div class="col-md-6">
-					<div class="media row chum-list">
-						<div class="col-md-3">
-							<a class="pull-left" href="#">
-								<img class="media-object" src="assets/img/profile.webp" alt="...">
-							</a>
-						</div>
-						<div class="col-md-9 media-body">
-							<h4 class="media-heading">
-								<em>Isaac Newton</em>
-							</h4>
-							<p><strong>Educational Level: </strong>College Graduate</p>
-							<p><strong>Interests: </strong>Analytics, Geometry, Geodetics</p>
-							<p class="row">
-								<span class="col-md-8"><strong>Country: </strong>United Arab Emirates</span>
-								<span class="col-md-4"><strong>Age: </strong>27</span>
-							</p>
-						</div>	
-					</div>
-				</div>
-			</div>
-			
 
-			<div class="row pages">
-				<ul class="pagination">
-					<li><a href="#">&laquo;</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">&raquo;</a></li>
-				</ul>
+    			<div class="well well.lg chum-well col-md-6">
+    				<div class="row media chum-list">
+    					<div class="col-md-3 col-sm-3">
+    						<a class="pull-left" href="#">
+    							<img class="media-object" src="assets/img/maud.webp" alt="...">
+    						</a>
+    					</div>
+    					<div class="col-md-9 media-body">
+    						<h4 class="media-heading"><em>Maud Cannes</em></h4>
+    						<p><strong>Educational Level:</strong> College Graduate</p>
+    						<p><strong>Gender:</strong> Female</p>
+    						<p><strong>Country:</strong> Cote d'Ivoire</p>
+    						<p><strong>Interests:</strong><span> French, Spanish</span></p>
+
+							<input type="submit" class="btn btn-default orange" id="chum_request" value="Chat">
+    					</div>	
+    				</div>
+    			</div>
+
 			</div>
 		</div>
 	</div>
