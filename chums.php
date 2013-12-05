@@ -107,12 +107,12 @@ if (!empty($_POST['email'])) {
                 </li>
                 <li><a href="#">Resources</a></li> -->
                 <li>
-                	<form class="navbar-form navbar-left" role="search">
-                		<div class="form-group">
-                			<input type="text" class="form-control search-bar" placeholder="Search">
-                		</div>
-                		<button type="submit" class="btn btn-default">Submit</button>
-                	</form>
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control search-bar" placeholder="People, groups, files">
+                        </div>
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </form>
                 </li>
             </ul>
 
