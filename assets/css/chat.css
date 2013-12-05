@@ -8,7 +8,7 @@
 }
 .chum-chat{
 	margin: 0;
-	padding: 10px;
+	padding: 20px;
 	border-bottom: gray 1px dashed;
 	-webkit-transition: all .25s linear;
 	   -moz-transition: all .25s linear;
@@ -17,28 +17,31 @@
 	        transition: all .25s linear
 }
 .chum-chat:hover{
-	padding: 10px;
+	padding-left: 25px;
 	cursor: pointer;
 	background-color: #CFCAC6;
 	border-left: 3px solid #2E2E2C
+}
+.chum-chat.active{
+	background: rgba(255, 133, 0, 0.36);
 }
 .prof-img{
 	width: 80px;
 	margin-bottom: 10px
 }
 .sender, .receiver{
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.3);
 	margin: 10px 0 20px 0;
 }
 .sender{
-	float: left
+	float: right
 }
 .sender-text{
 
 }
 .receiver{
 	/*float: right*/
-	text-align: right;
+	text-align: left;
 /*	-webkit-transition: all 3s linear;
 	   -moz-transition: all 3s linear;
 	    -ms-transition: all 3s linear;
@@ -60,5 +63,5 @@
 	        transition: all .25s linear	*/
 }
 .chat-reset{
-	float: right
+	float: left
 }
