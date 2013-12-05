@@ -39,7 +39,6 @@
 			</button>
 			<img class="header-logo" src="assets/img/header_logo.webp" alt="studychum logo">
 			<a class="navbar-brand" href="/user">StudyChum</a>
-			<!-- <img src="header-logo" src="assets/img/header_logo.webp" alt="studychum logo"> -->
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -47,7 +46,6 @@
 
 			<ul class="nav navbar-nav">
 				<!-- <li class="active"><a href="#">Courses</a></li>
-				<li><a href="#">Tutors</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Groups <b class="caret"></b></a>
 					<ul class="dropdown-menu">
@@ -56,7 +54,7 @@
 						<li><a href="#">New Language chums</a></li>
 					</ul>
 				</li>
-				<li><a href="#">Resources</a></li>
+				<li><a href="#">Resources</a></li> -->
 				<li>
 					<form class="navbar-form navbar-left" role="search">
 						<div class="form-group">
@@ -64,21 +62,26 @@
 						</div>
 						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-    			</li> -->
+    			</li>
 			</ul>
 
-
 			<ul class="nav navbar-nav navbar-right">
-				<!--li><a href="#">Notifications <span class="badge">0</span></a></li>
-				<li><a href="#"><img src="assets/img/profile.webp" alt="" class="profile-pic"></a></li-->
 
 				<li class="dropdown">
-			        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $user->getEmail(); ?> <b class="caret"></b></a>
-			        <ul class="dropdown-menu">
-			          <li><a href="/profile">Profile</a></li>
-			          <li><a href="<?php echo UserService::createLogoutUrl('/'); ?>">Log out</a></li>
-			        </ul>
-			      </li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Notifications <span class="badge">1</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/share">Akua shared "French for Beginners" with you.</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><img src="assets/img/amma.webp" alt="" class="profile-pic"></a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Amma Baffoe <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/profile">Profile</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li><a href="index.html">Log out</a></li>
+                    </ul>
+                </li>
 			</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
@@ -91,106 +94,38 @@
 			    <li><a href="/chat">Chat</a></li>
 			    <li><a href="/forum">Forums</a></li>
 			    <li><a href="#">Schedule</a></li>
-			    <li><a href="#">Settings</a></li>
+			    <li class="active"><a href="#">Settings</a></li>
 			</ul>
 
 		</div>
 		<div class="col-sm-9 content">
 			<div class="row">
-				<h3 class="profile-heading">Your profile</h3>
-				<?php
-					// function to form input sanitise input
-					function test_input($data)
-					{
-					   $data = trim($data);
-					   $data = stripslashes($data);
-					   $data = htmlspecialchars($data);
-					   return $data;
-					}
+				<h3 class="profile-heading">My profile</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="assets/img/amma.webp" alt="" class="prof-img">
+					</div>
+					<div class="col-md-9">
+					
+						<p class="profile-name">Amma Baffoe</p>
+						<p>College Graduate</p>
+						<p>24th December, 2000</p>
+						<p>Ghana</p><p>Gender</p>
+						<p>French, Cuisine, Social Media</p>
 
-					// getting users profile details from form
-					if ($_SERVER["REQUEST_METHOD"] == "POST")
-					{
 
-						$gender = test_input($_POST["gender"]);
-
-						$country = test_input($_POST["country"]);
-
-						$fname = test_input($_POST["fname"]);
-						$lname = test_input($_POST["lname"]);
-						$dob = test_input($_POST["dob"]);
-						$education = test_input($_POST["education"]);		
-
-						$image = test_input($_POST["image"]);
-
-						$email = $user->getEmail();
-
-					    // new instance of database
-						$db = new Database();
-					    $db->connect();
-
-					    //array to hold user details from form input
-					    $new_user = array('FirstName' => $fname, 'LastName' => $lname, 'DOB' => $dob, 'EducationLevel' => $education, 'EmailAddress' => $email, 'Image' => $image, 'Country' => $country, 'Gender' => $gender);
-
-					    // inserting data into database
-					    $db->insert('Users', $new_user);
-
-					    // selecting last id from the database
-					    $db->sql("SELECT * FROM Users ORDER BY User_Id DESC LIMIT 1");
-					    $res = $db->getResult();
-					    $id = $res[User_Id];
-
-					    // using the tags
-
-					    $tags = $_POST["tags"];
-						$interests = explode(",", $tags);
-
-						foreach ($interests as $interest) {
-							//making first letter of interest capitl
-							$formatted_interest = ucfirst(strtolower($interest));
-							$db->insert('Users_Interests', array('User_Id' => $id, 'Interest' => $formatted_interest));
-						}
-
-					    $db->disconnect();
-
-						}
-
-		    
-				    // displaying information about user 
-					$db = new Database();
-				    $db->connect();
-				    $db->sql("SELECT * FROM Users WHERE EmailAddress='" .$user->getEmail()."'");
-				    $res = $db->getResult();
-
-				    echo "<p>Name: ". "<em>" . $res["FirstName"] . " " . $res["LastName"] . "</em>". "</p>";
-				    echo "<p>Educational Level: ". $res["EducationLevel"] . "</p>";
-				    echo "<p>Date of Birth: " . $res["DOB"];
-				    echo "<p>Country: " . $res["Country"];
-				    echo "<p>Gender: " . $res["Gender"];
-
-				    // echo "<br>Image:";
-				    // $destination = "assets/images/";
-				    // $img = $res['Image'];
-				    // imagejpeg($img, $destination);
-				    
-
-				    $db->sql("SELECT * FROM Users_Interests WHERE User_Id = (SELECT User_Id FROM Users WHERE EmailAddress='".$user->getEmail()."')");
-				    //echo "<p>Interests: " . $Engineering . " " . $Programming . " " . $Mathematics . " " . $Biology . "</p>";
-				    $res = $db->getResult();
-
-				    echo "<p><b>Interests:</b></p>";
-						foreach ($res as $interest) {
-							echo "<p>" . $interest['Interest'] . "</p>";
-						}
-
-				?>
+					</div>
+						
+				</div>
 				
+
 			</div>
 		</div>
 	</div>
 
 	<script src="assets/js/jquery-2.0.3.min.js"></script>
 	<script src="assets/js/bs.min.js"></script>
+	<script src="assets/js/app.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

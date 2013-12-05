@@ -14,8 +14,15 @@
 .profile-heading{
 	padding-bottom: 20px
 }
+.profile-name{
+    font-size: xx-large;	
+}
 .fname{
 	margin-right: 10px
+}
+.prof-img{
+	width: 220px;
+	margin: 12px;
 }
 .comment{
 	margin-bottom: 15px
