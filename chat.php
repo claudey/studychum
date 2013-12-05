@@ -75,7 +75,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="/profile">Profile</a></li>
                         <li role="presentation" class="divider"></li>
-                        <li><a href="index.html">Log out</a></li>
+                        <li><a href="/">Log out</a></li>
                     </ul>
                 </li>
             </ul>
@@ -90,7 +90,7 @@
                     <li><a href="/chums">Find Chums</a></li>
                     <li class="active"><a href="#">Chat</a></li>
                     <li><a href="/forum">Forums</a></li>
-                    <li><a href="#">Schedule</a></li>
+                    <li><a href="/share">Share</a></li>
                     <li><a href="#">Settings</a></li>
                 </ul>
 
