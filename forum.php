@@ -150,10 +150,10 @@
 
 								$db->sql("SELECT * FROM topics WHERE topic_cat='".$cat_id."'");
 								$res = $db->getResult();
-								$user_id = $res['topic_by'];
-								$topic_id = $res['topic_id'];
-								$subject = $res['topic_subject'];
-								$date = $res['topic_date'];
+								$user_id = @$res['topic_by'];
+								$topic_id = @$res['topic_id'];
+								$subject = @$res['topic_subject'];
+								$date = @$res['topic_date'];
 
 								$db->sql("SELECT * FROM posts WHERE post_topic='".$topic_id."'");
 								$res = $db->getResult();
@@ -173,7 +173,7 @@
 								echo "<tr>
 										<td> ".$category." </td>
 										<td><a href='/discussions?topic_cat=".$cat_id."&topic_id=".$topic_id."'> ".$subject." </a></td>
-										<td> ".$res["FirstName"]. " ". $res["LastName"]." </td>
+										<td> ".@$res["FirstName"]. " ". @$res["LastName"]." </td>
 										<td> ".$date."</td>
 										<td> ".$contributions." Contributions </td>
 									</tr>";
