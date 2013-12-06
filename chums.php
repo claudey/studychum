@@ -184,7 +184,7 @@ if (!empty($_POST['email'])) {
     					<div class="col-md-9 media-body">
     						<h4 class="media-heading"><em>Akua Baning</em></h4>
     						<p><strong>Educational Level:</strong> College Graduate</p>
-    						<p><strong>Gender:</strong> Male</p>
+    						<p><strong>Gender:</strong> Female</p>
     						<p><strong>Country:</strong> Accra, Ghana</p>
     						<p><strong>Interests:</strong><span> African Literature, Design </span></p>
 
