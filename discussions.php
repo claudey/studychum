@@ -217,7 +217,7 @@
 							</div>
 							<div class="form-group">
 								<p class="form-action col-md-4">
-									<input type="submit" value="Submit" name="submit">
+									<input type="submit" value="Submit" name="submit" class="btn btn-success">
 								</p>
 							</div>
 						</fieldset>
