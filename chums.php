@@ -163,7 +163,7 @@ if (!empty($_POST['email'])) {
     						</a>
     					</div>
     					<div class="col-md-9 media-body">
-    						<h4 class="media-heading"><em>David Mumuni</em></h4>
+    						<h4 class="media-heading"><em>Nikunj Handa</em></h4>
     						<p><strong>Educational Level:</strong> College Graduate</p>
     						<p><strong>Gender:</strong> Female</p>
     						<p><strong>Country:</strong> Accra, Ghana</p>
